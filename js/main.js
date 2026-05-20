@@ -60,12 +60,14 @@ if (contactForm) {
 
     const nombre = document.getElementById("nombre")?.value.trim() || "";
     const equipo = document.getElementById("equipo")?.value || "";
+    const zona = document.getElementById("zona")?.value || "";
     const servicio = document.getElementById("servicio")?.value || "";
     const detalle = document.getElementById("detalle")?.value.trim() || "";
 
     const mensaje = `Hola, quiero pedir un presupuesto.%0A%0A` +
       `Nombre: ${encodeURIComponent(nombre)}%0A` +
       `Equipo: ${encodeURIComponent(equipo)}%0A` +
+      `Zona: ${encodeURIComponent(zona)}%0A` +
       `Servicio: ${encodeURIComponent(servicio)}%0A` +
       `Detalle: ${encodeURIComponent(detalle || "No especificado")}`;
 

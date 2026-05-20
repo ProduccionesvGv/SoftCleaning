@@ -90,3 +90,8 @@ CAMBIO V13:
   2. Plan SoftReset - Formateo + software
   3. Plan SoftFull - Limpieza + formateo completo
   4. Plan SoftGPU - Limpieza de placa de video gamer
+
+CAMBIO V14:
+- Se agregó el campo Zona en el formulario.
+- La zona incluye CABA y los 135 municipios/partidos de la Provincia de Buenos Aires.
+- El mensaje de WhatsApp ahora también envía la zona seleccionada.
