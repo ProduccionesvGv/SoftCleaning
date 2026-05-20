@@ -54,3 +54,9 @@ CAMBIO V7:
 - Se unieron los servicios en 2 categorías: Limpieza + Mantenimiento y Formateo + Software.
 - Se dejaron 2 planes: Plan SoftClean y Plan SoftReset.
 - Los planes ahora se muestran en vertical, uno debajo del otro, también en celular.
+
+CAMBIO V8:
+- Se agregó un tercer plan combinado.
+- Nuevo plan: Plan SoftFull.
+- SoftFull incluye limpieza, mantenimiento, formateo, Windows, drivers, programas y optimización final.
+- En celular los planes siguen en vertical. En escritorio se muestran en 3 columnas.
