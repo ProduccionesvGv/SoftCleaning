@@ -1684,3 +1684,38 @@ main {
 #inicio {
   margin-top: 0 !important;
 }
+
+
+/* Corrección V32: fondo claro para Servicios */
+#servicios {
+  background: #f8fafc !important;
+}
+
+#servicios .section-title {
+  background: transparent !important;
+}
+
+#servicios .section-title h2 {
+  color: #0f172a !important;
+}
+
+#servicios .section-title span {
+  color: #16a34a !important;
+}
+
+#servicios .section-title p {
+  color: #64748b !important;
+}
+
+/* Evita que el degradado oscuro del main afecte el título de Servicios */
+main {
+  background: #f8fafc !important;
+}
+
+.hero-clean,
+.hero {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(34, 197, 94, 0.22), transparent 32%),
+    radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.13), transparent 30%),
+    linear-gradient(135deg, #0f172a 0%, #111827 56%, #0f2a24 100%) !important;
+}

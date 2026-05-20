@@ -176,3 +176,8 @@ CAMBIO V30:
 CAMBIO V31:
 - Se eliminó la franja blanca entre el header del logo y el inicio.
 - Se mantiene el logo y el bloque superior más abajo, pero sin dejar fondo blanco visible.
+
+CAMBIO V32:
+- Se aclaró el fondo del sector Servicios.
+- Se eliminó el gris oscuro detrás del título "Servicios / Soluciones para PC y notebooks".
+- Se mantuvo el inicio con fondo oscuro.
