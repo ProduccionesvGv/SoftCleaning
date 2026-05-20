@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Servicio técnico de PC y notebooks: limpieza, mantenimiento, formateo, instalación de programas y actualización de software." />
+  <title>Servicio Técnico PC & Notebooks</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Barra superior -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-content">
+      <a href="#inicio" class="brand">
+        <span class="brand-icon">PC</span>
+        <span>
+          <strong>Servicio Técnico</strong>
+          <small>PC & Notebooks</small>
+        </span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#planes">Planes</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#contacto" class="nav-cta">Contactar</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <span class="badge">Diagnóstico • Limpieza • Formateo</span>
+          <h1>Tu PC o notebook más rápida, limpia y segura.</h1>
+          <p>
+            Servicio técnico para limpieza interna, mantenimiento preventivo,
+            formateo, instalación de programas, drivers y actualización de software.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-primary">Pedir presupuesto</a>
+            <a href="#servicios" class="btn btn-secondary">Ver servicios</a>
+          </div>
+
+          <div class="trust-row">
+            <div>
+              <strong>+ Rapidez</strong>
+              <span>Optimización del sistema</span>
+            </div>
+            <div>
+              <strong>+ Cuidado</strong>
+              <span>Limpieza y revisión</span>
+            </div>
+            <div>
+              <strong>+ Seguridad</strong>
+              <span>Software actualizado</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <img src="assets/img/hero-notebook.svg" alt="Notebook en mantenimiento" />
+          <div class="status-card">
+            <span class="status-dot"></span>
+            Equipo optimizado
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Servicios</span>
+          <h2>Soluciones para PC y notebooks</h2>
+          <p>Podés cambiar las imágenes dentro de la carpeta <strong>assets/img</strong>.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <img src="assets/img/limpieza.svg" alt="Limpieza de notebook" />
+            <h3>Limpieza interna</h3>
+            <p>Eliminación de polvo, revisión de ventiladores, temperatura y estado general del equipo.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <img src="assets/img/mantenimiento.svg" alt="Mantenimiento de PC" />
+            <h3>Mantenimiento preventivo</h3>
+            <p>Revisión del sistema, optimización, control de errores y mejoras para evitar fallas.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <img src="assets/img/formateo.svg" alt="Formateo de PC" />
+            <h3>Formateo e instalación</h3>
+            <p>Instalación limpia de Windows, drivers, programas básicos y configuración inicial.</p>
+          </article>
+
+          <article class="service-card reveal">
+            <img src="assets/img/software.svg" alt="Actualización de software" />
+            <h3>Actualización de software</h3>
+            <p>Actualización de sistema, drivers, antivirus, navegadores y programas necesarios.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Proceso</span>
+          <h2>Cómo trabajo</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <span>01</span>
+            <h3>Consulta</h3>
+            <p>Me contás qué problema tiene el equipo y coordinamos el diagnóstico.</p>
+          </div>
+
+          <div class="step reveal">
+            <span>02</span>
+            <h3>Diagnóstico</h3>
+            <p>Reviso estado del sistema, temperatura, rendimiento y posibles fallas.</p>
+          </div>
+
+          <div class="step reveal">
+            <span>03</span>
+            <h3>Solución</h3>
+            <p>Realizo limpieza, mantenimiento, formateo o actualización según el caso.</p>
+          </div>
+
+          <div class="step reveal">
+            <span>04</span>
+            <h3>Entrega</h3>
+            <p>Te explico qué se hizo y cómo cuidar mejor el equipo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Galería</span>
+          <h2>Espacio para tus trabajos</h2>
+          <p>Reemplazá estas imágenes por fotos reales de limpieza, antes/después o equipos reparados.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <button class="gallery-item reveal" data-img="assets/img/galeria-1.svg">
+            <img src="assets/img/galeria-1.svg" alt="Trabajo de limpieza 1" />
+          </button>
+          <button class="gallery-item reveal" data-img="assets/img/galeria-2.svg">
+            <img src="assets/img/galeria-2.svg" alt="Trabajo de limpieza 2" />
+          </button>
+          <button class="gallery-item reveal" data-img="assets/img/galeria-3.svg">
+            <img src="assets/img/galeria-3.svg" alt="Trabajo de limpieza 3" />
+          </button>
+          <button class="gallery-item reveal" data-img="assets/img/galeria-4.svg">
+            <img src="assets/img/galeria-4.svg" alt="Trabajo de limpieza 4" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planes -->
+    <section class="section" id="planes">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Planes</span>
+          <h2>Precios orientativos</h2>
+          <p>Cambiá los precios según tu zona y el tipo de trabajo.</p>
+        </div>
+
+        <div class="plans-grid">
+          <article class="plan-card reveal">
+            <h3>Limpieza básica</h3>
+            <p class="price">Desde $____</p>
+            <ul>
+              <li>Limpieza externa</li>
+              <li>Revisión básica</li>
+              <li>Diagnóstico general</li>
+            </ul>
+            <a href="#contacto" class="btn btn-secondary">Consultar</a>
+          </article>
+
+          <article class="plan-card plan-featured reveal">
+            <span class="plan-label">Recomendado</span>
+            <h3>Mantenimiento completo</h3>
+            <p class="price">Desde $____</p>
+            <ul>
+              <li>Limpieza interna</li>
+              <li>Revisión de temperatura</li>
+              <li>Optimización del sistema</li>
+              <li>Control de errores</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary">Consultar</a>
+          </article>
+
+          <article class="plan-card reveal">
+            <h3>Formateo + programas</h3>
+            <p class="price">Desde $____</p>
+            <ul>
+              <li>Instalación de Windows</li>
+              <li>Drivers actualizados</li>
+              <li>Programas básicos</li>
+              <li>Configuración inicial</li>
+            </ul>
+            <a href="#contacto" class="btn btn-secondary">Consultar</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-light" id="faq">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Preguntas frecuentes</span>
+          <h2>Dudas comunes</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <button class="faq-question">
+            ¿Cada cuánto conviene limpiar una notebook?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Depende del uso y del ambiente. En general, una limpieza preventiva cada 6 a 12 meses ayuda a evitar temperatura alta y pérdida de rendimiento.</p>
+          </div>
+
+          <button class="faq-question">
+            ¿El formateo borra mis archivos?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, por eso antes se puede hacer una copia de seguridad si el disco está en buen estado.</p>
+          </div>
+
+          <button class="faq-question">
+            ¿Instalás programas y drivers?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí. Se pueden instalar drivers, navegador, antivirus, paquete de oficina y otros programas necesarios.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <span class="badge">Contacto</span>
+          <h2>Pedí tu presupuesto por WhatsApp</h2>
+          <p>Completá el formulario y se abre WhatsApp con el mensaje listo para enviar.</p>
+
+          <div class="contact-data">
+            <p><strong>WhatsApp:</strong> +54 9 XX XXXX-XXXX</p>
+            <p><strong>Zona:</strong> Indicar ciudad o barrio</p>
+            <p><strong>Horario:</strong> Lunes a sábado de 9:00 a 19:00</p>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <label>
+            Nombre
+            <input type="text" id="nombre" placeholder="Tu nombre" required />
+          </label>
+
+          <label>
+            Equipo
+            <select id="equipo" required>
+              <option value="">Seleccionar</option>
+              <option value="Notebook">Notebook</option>
+              <option value="PC de escritorio">PC de escritorio</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </label>
+
+          <label>
+            Servicio
+            <select id="servicio" required>
+              <option value="">Seleccionar</option>
+              <option value="Limpieza">Limpieza</option>
+              <option value="Mantenimiento">Mantenimiento</option>
+              <option value="Formateo">Formateo</option>
+              <option value="Actualización de software">Actualización de software</option>
+              <option value="Instalación de programas">Instalación de programas</option>
+            </select>
+          </label>
+
+          <label>
+            Detalle
+            <textarea id="detalle" rows="4" placeholder="Contame qué problema tiene el equipo"></textarea>
+          </label>
+
+          <button type="submit" class="btn btn-primary">Enviar por WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de galería -->
+  <div class="modal" id="imageModal">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar imagen">×</button>
+    <img src="" alt="Imagen ampliada" id="modalImage" />
+  </div>
+
+  <!-- Botón flotante -->
+  <a class="whatsapp-float" href="https://wa.me/549XXXXXXXXXX" target="_blank" aria-label="Contactar por WhatsApp">
+    WhatsApp
+  </a>
+
+  <!-- Barra inferior móvil -->
+  <nav class="mobile-bottom-bar">
+    <a href="#servicios">Servicios</a>
+    <a href="#planes">Planes</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Servicio Técnico PC & Notebooks. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
