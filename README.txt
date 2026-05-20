@@ -131,3 +131,8 @@ CAMBIO V21:
 - Se simplificó el formato del mensaje de WhatsApp.
 - Se quitaron los separadores largos.
 - Se mantuvieron títulos y espacios para que el mensaje sea claro sin verse exagerado.
+
+CAMBIO V22:
+- Se agregó el logo generado en assets/img/softcleaning-logo.png.
+- Se eliminó del header el ícono PC y el texto SoftCleaning / Limpieza y formateo.
+- Se mantiene solamente el logo y el botón de menú hamburguesa.

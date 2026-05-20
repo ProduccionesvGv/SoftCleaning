@@ -1182,3 +1182,46 @@ body {
   position: relative;
   z-index: 1;
 }
+
+
+/* Corrección V22: logo real en el header */
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  max-width: calc(100% - 74px);
+}
+
+.brand-logo img {
+  display: block;
+  height: 54px;
+  width: auto;
+  max-width: 245px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.brand-icon,
+.brand-logo span,
+.brand-logo strong,
+.brand-logo small {
+  display: none !important;
+}
+
+.header-content {
+  gap: 14px;
+}
+
+@media (max-width: 420px) {
+  .brand-logo img {
+    height: 48px;
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 920px) {
+  .brand-logo img {
+    height: 58px;
+    max-width: 285px;
+  }
+}
