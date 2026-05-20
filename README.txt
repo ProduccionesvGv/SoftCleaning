@@ -151,3 +151,8 @@ CAMBIO V26:
 - Se reemplazó el logo por la imagen enviada por el usuario.
 - Se ajustó el tamaño del header para que el logo horizontal se vea correcto.
 - Se mantiene el menú hamburguesa.
+
+CAMBIO V27:
+- Se centró el logo en el header.
+- Se alargó el logo para que se vea como marca principal y no como subtítulo.
+- El menú hamburguesa quedó fijo a la derecha.

@@ -1348,3 +1348,62 @@ body {
     max-height: 76px !important;
   }
 }
+
+
+/* Corrección V27: logo centrado y más alargado en el header */
+.site-header .header-content {
+  position: relative !important;
+  min-height: 104px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-left: 78px !important;
+  padding-right: 78px !important;
+}
+
+.brand-logo {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.brand-logo img {
+  width: min(560px, calc(100vw - 170px)) !important;
+  height: auto !important;
+  max-height: 86px !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+}
+
+.menu-btn {
+  position: absolute !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+@media (max-width: 420px) {
+  .site-header .header-content {
+    min-height: 96px !important;
+    padding-left: 62px !important;
+    padding-right: 74px !important;
+  }
+
+  .brand-logo img {
+    width: min(430px, calc(100vw - 146px)) !important;
+    max-height: 78px !important;
+  }
+}
+
+@media (min-width: 920px) {
+  .site-header .header-content {
+    min-height: 110px !important;
+  }
+
+  .brand-logo img {
+    width: 620px !important;
+    max-height: 92px !important;
+  }
+}
