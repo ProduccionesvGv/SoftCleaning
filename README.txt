@@ -196,3 +196,25 @@ CAMBIO V36:
 - Se corrigió el recorte de las imágenes de Servicios.
 - Las fotos ahora se muestran completas usando object-fit: contain.
 - Se ajustó la proporción visual para que no se corten el ventilador ni la pantalla de Windows 11.
+
+CAMBIO V37:
+- Se generaron imágenes nuevas con más contenido horizontal.
+- limpieza.png muestra limpieza de ventilador interno con más ancho visual.
+- formateo.png muestra instalación de Windows 11 con más ancho visual.
+- Se ajustó CSS para que las imágenes llenen mejor el contenedor.
+
+CAMBIO V38:
+- Se reemplazaron las imágenes por fotos limpias sin títulos ni bordes generados.
+- limpieza.png: limpieza realista del ventilador interno de notebook.
+- formateo.png: instalación de Windows 11 en notebook.
+- Ambas imágenes están en formato horizontal 16:9 para encajar mejor en los contenedores.
+
+CAMBIO V39:
+- Se reemplazó limpieza.png por una imagen más abierta.
+- Ahora se ve más contenido: notebook completa, mesa, herramientas y manos/persona.
+- Se ajustó CSS para evitar zoom excesivo usando object-fit: contain.
+
+CAMBIO V40:
+- Se reemplazó formateo.png por una imagen más abierta.
+- Ahora se ve más la notebook completa, las manos y el contexto de escritorio.
+- Se mantiene la pantalla de instalación de Windows 11.

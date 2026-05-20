@@ -1743,3 +1743,57 @@ main {
     object-fit: contain !important;
   }
 }
+
+
+/* Corrección V37: imágenes horizontales que llenan mejor el contenedor */
+.service-card img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  background: #f8fafc !important;
+  border-radius: 18px !important;
+}
+
+
+/* Corrección V38: fotos limpias sin títulos ni bordes generados */
+.service-card img {
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 18px !important;
+  background: transparent !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+
+/* Corrección V39: mostrar más contenido de la foto de limpieza */
+.service-card img {
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #f8fafc !important;
+  border-radius: 18px !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+
+/* Corrección V40: foto de formateo más abierta, sin zoom */
+.service-card img {
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #f8fafc !important;
+  border-radius: 18px !important;
+  padding: 0 !important;
+  display: block !important;
+}
