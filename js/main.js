@@ -62,15 +62,34 @@ if (contactForm) {
     const equipo = document.getElementById("equipo")?.value || "";
     const zona = document.getElementById("zona")?.value || "";
     const servicio = document.getElementById("servicio")?.value || "";
-    const detalle = document.getElementById("detalle")?.value.trim() || "";
+    const detalle = document.getElementById("detalle")?.value.trim() || "No especificado";
 
-    const mensaje = `Hola, quiero pedir un presupuesto.%0A%0A` +
-      `Nombre: ${encodeURIComponent(nombre)}%0A` +
-      `Equipo: ${encodeURIComponent(equipo)}%0A` +
-      `Zona: ${encodeURIComponent(zona)}%0A` +
-      `Servicio: ${encodeURIComponent(servicio)}%0A` +
-      `Detalle: ${encodeURIComponent(detalle || "No especificado")}`;
+    const mensaje = `
+*NUEVA CONSULTA - SOFTCLEANING*
 
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${mensaje}`, "_blank");
+━━━━━━━━━━━━━━━━━━━━
+
+*DATOS DEL CLIENTE*
+
+*Nombre:* ${nombre}
+*Equipo:* ${equipo}
+*Zona:* ${zona}
+
+━━━━━━━━━━━━━━━━━━━━
+
+*SERVICIO SOLICITADO*
+
+${servicio}
+
+━━━━━━━━━━━━━━━━━━━━
+
+*DETALLE DEL PROBLEMA*
+
+${detalle}
+
+━━━━━━━━━━━━━━━━━━━━
+`.trim();
+
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`, "_blank");
   });
 }

@@ -120,3 +120,9 @@ CAMBIO V18:
 CAMBIO V19:
 - Se eliminó la frase: "Esos trabajos se cotizan aparte."
 - Se corrigió el degradado derecho que afectaba la lectura de la nota de precios.
+
+CAMBIO V20:
+- Se mejoró el formato del mensaje de WhatsApp.
+- Ahora llega con título, separadores y secciones:
+  DATOS DEL CLIENTE, SERVICIO SOLICITADO y DETALLE DEL PROBLEMA.
+- Se usa negrita compatible con WhatsApp mediante asteriscos.
