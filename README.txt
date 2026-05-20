@@ -181,3 +181,9 @@ CAMBIO V32:
 - Se aclaró el fondo del sector Servicios.
 - Se eliminó el gris oscuro detrás del título "Servicios / Soluciones para PC y notebooks".
 - Se mantuvo el inicio con fondo oscuro.
+
+CAMBIO V33:
+- Se agregaron nuevas imágenes para los servicios.
+- formateo.svg fue reemplazado por assets/img/formateo.png.
+- limpieza.svg fue reemplazado por assets/img/limpieza.png.
+- Se actualizó index.html para usar las nuevas imágenes.
