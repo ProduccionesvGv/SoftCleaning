@@ -143,16 +143,24 @@ textarea {
 
 /* Hero */
 .hero {
-  padding: 44px 0 28px;
+  padding: 38px 0 34px;
   background:
     radial-gradient(circle at top right, rgba(34,197,94,0.24), transparent 34%),
-    linear-gradient(180deg, #0f172a 0%, #1e293b 70%, var(--bg) 70%);
+    linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
   color: #fff;
+  overflow: hidden;
 }
 
 .hero-grid {
   display: grid;
-  gap: 28px;
+  gap: 24px;
+  position: relative;
+}
+
+.hero-text,
+.hero-card {
+  position: relative;
+  z-index: 1;
 }
 
 .badge {
@@ -169,10 +177,10 @@ textarea {
 }
 
 .hero h1 {
-  font-size: clamp(34px, 9vw, 64px);
-  line-height: 1.03;
-  letter-spacing: -1.5px;
-  margin-bottom: 18px;
+  font-size: clamp(31px, 8.5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -1.2px;
+  margin-bottom: 16px;
 }
 
 .hero p {
@@ -225,6 +233,7 @@ textarea {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+  margin-bottom: 4px;
 }
 
 .trust-row div {
@@ -248,8 +257,9 @@ textarea {
   position: relative;
   background: #fff;
   border-radius: var(--radius);
-  padding: 18px;
+  padding: 14px;
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .hero-card img {
@@ -258,10 +268,8 @@ textarea {
 }
 
 .status-card {
-  position: absolute;
-  left: 28px;
-  right: 28px;
-  bottom: 28px;
+  position: static;
+  margin-top: 12px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -427,17 +435,35 @@ textarea {
 
 /* Planes */
 .plans-grid {
-  display: grid;
+  display: flex;
   gap: 16px;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  padding: 4px 6px 18px;
+  margin: 0 -6px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.plans-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.plans-grid::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
 }
 
 .plan-card {
   position: relative;
+  min-width: min(86vw, 370px);
+  flex: 0 0 auto;
+  scroll-snap-align: center;
 }
 
 .plan-featured {
   border: 2px solid var(--primary);
-  transform: scale(1.01);
+  transform: none;
 }
 
 .plan-label {
@@ -676,7 +702,6 @@ footer {
   }
 
   .service-grid,
-  .plans-grid,
   .steps {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -736,17 +761,42 @@ footer {
     align-items: center;
   }
 
+  .hero-card {
+    padding: 18px;
+    overflow: visible;
+  }
+
+  .status-card {
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+    margin-top: 0;
+  }
+
   .service-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .steps,
-  .plans-grid {
+  .steps {
     grid-template-columns: repeat(4, 1fr);
   }
 
   .plans-grid {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+  }
+
+  .plan-card {
+    min-width: 0;
+    flex: initial;
+  }
+
+  .plan-featured {
+    transform: scale(1.01);
   }
 
   .contact-grid {

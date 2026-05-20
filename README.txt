@@ -1,4 +1,4 @@
-SERVICIO TÉCNICO PC & NOTEBOOKS - SITIO MOBILE FIRST
+SOFTCLEANING - SITIO MOBILE FIRST
 
 Archivos incluidos:
 - index.html
@@ -22,3 +22,9 @@ Cómo usar:
 Recomendación:
 Usá imágenes reales de trabajos: limpieza interna, antes/después, notebooks abiertas, escritorio de reparación.
 Eso vende mucho más que imágenes genéricas.
+
+
+Cambios de esta versión:
+- Nombre agregado: SoftCleaning.
+- Planes en celular con desplazamiento horizontal.
+- Hero corregido para evitar superposición visual en móvil.
