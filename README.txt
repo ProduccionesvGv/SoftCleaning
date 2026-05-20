@@ -60,3 +60,14 @@ CAMBIO V8:
 - Nuevo plan: Plan SoftFull.
 - SoftFull incluye limpieza, mantenimiento, formateo, Windows, drivers, programas y optimización final.
 - En celular los planes siguen en vertical. En escritorio se muestran en 3 columnas.
+
+CAMBIO V9:
+- Se rediseñó el inicio para que sea más agradable y legible.
+- Se corrigió el tamaño excesivo del título en móvil.
+- Se agregó un bloque tipo tarjeta con beneficios.
+- Se evitó el desborde horizontal del texto.
+
+CAMBIO V10:
+- Los planes vuelven a mostrarse en formato horizontal en celular.
+- Se agregó un indicador transparente 'Deslizá >>' para mostrar que hay más planes hacia la derecha.
+- En escritorio y tablet los planes se mantienen en 3 columnas.
