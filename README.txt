@@ -28,3 +28,11 @@ Cambios de esta versión:
 - Nombre agregado: SoftCleaning.
 - Planes en celular con desplazamiento horizontal.
 - Hero corregido para evitar superposición visual en móvil.
+
+
+CAMBIO V3:
+- Se eliminó el bloque visual 'Equipo optimizado' del inicio.
+
+
+CAMBIO V4:
+- Se eliminaron los botones del inicio: 'Pedir presupuesto' y 'Ver servicios'.

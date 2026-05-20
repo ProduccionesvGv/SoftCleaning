@@ -189,12 +189,6 @@ textarea {
   margin-bottom: 24px;
 }
 
-.hero-actions {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  margin-bottom: 24px;
-}
 
 .btn {
   min-height: 48px;
@@ -267,27 +261,6 @@ textarea {
   border-radius: 18px;
 }
 
-.status-card {
-  position: static;
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(15, 23, 42, 0.92);
-  color: #fff;
-  padding: 12px 14px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 800;
-}
-
-.status-dot {
-  width: 10px;
-  height: 10px;
-  background: var(--primary);
-  border-radius: 999px;
-  box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.18);
-}
 
 /* Secciones */
 .section {
@@ -692,11 +665,6 @@ footer {
     padding-bottom: 0;
   }
 
-  .hero-actions {
-    grid-template-columns: auto auto;
-    justify-content: flex-start;
-  }
-
   .trust-row {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -764,14 +732,6 @@ footer {
   .hero-card {
     padding: 18px;
     overflow: visible;
-  }
-
-  .status-card {
-    position: absolute;
-    left: 28px;
-    right: 28px;
-    bottom: 28px;
-    margin-top: 0;
   }
 
   .service-grid {
