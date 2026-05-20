@@ -155,8 +155,6 @@ textarea {
   display: block;
 }
 
-.hero-text,
-
 .badge {
   display: inline-flex;
   width: fit-content;
@@ -341,33 +339,6 @@ textarea {
   color: #cbd5e1;
 }
 
-/* Galería */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.gallery-item {
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
-}
-
-.gallery-item img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  transition: transform 0.25s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.06);
-}
-
 /* Planes */
 .plans-grid {
   display: flex;
@@ -521,44 +492,6 @@ textarea {
 .contact-form textarea:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 4px rgba(34,197,94,0.14);
-}
-
-/* Modal */
-.modal {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  background: rgba(2, 6, 23, 0.88);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.modal.active {
-  display: flex;
-}
-
-.modal img {
-  max-height: 82vh;
-  width: min(900px, 100%);
-  object-fit: contain;
-  border-radius: 18px;
-  background: #fff;
-}
-
-.modal-close {
-  position: fixed;
-  top: 18px;
-  right: 18px;
-  width: 46px;
-  height: 46px;
-  border: 0;
-  border-radius: 999px;
-  background: #fff;
-  color: var(--dark);
-  font-size: 30px;
-  cursor: pointer;
 }
 
 /* WhatsApp y barra móvil */
@@ -730,5 +663,91 @@ footer {
 @media (min-width: 920px) {
   .hero-text {
     max-width: 820px;
+  }
+}
+
+
+/* Corrección V6: mobile limpio y sin desbordes */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.hero {
+  padding: 42px 0 48px;
+}
+
+.hero-grid {
+  display: block;
+  width: 100%;
+}
+
+.hero-text {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  min-width: 0;
+}
+
+.hero h1 {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+.hero p {
+  max-width: 680px;
+}
+
+#planes {
+  scroll-margin-top: 86px;
+}
+
+#proceso {
+  scroll-margin-top: 86px;
+}
+
+/* Los planes quedan debajo de Servicios y en celular se deslizan horizontalmente */
+@media (max-width: 619px) {
+  .plans-grid {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 4px 16px 18px;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  .plan-card {
+    min-width: 82vw;
+    max-width: 82vw;
+    scroll-snap-align: start;
+  }
+
+  .section {
+    padding: 46px 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 11vw, 48px);
+    line-height: 1.04;
+  }
+}
+
+@media (min-width: 620px) {
+  .plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+  }
+
+  .plan-card {
+    min-width: 0;
+    max-width: none;
   }
 }

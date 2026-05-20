@@ -42,3 +42,10 @@ CAMBIO V5:
 - Se eliminó el residuo blanco del inicio.
 - Se eliminaron las tarjetas '+ Rapidez', '+ Cuidado' y '+ Seguridad'.
 - Se limpió el hero para que no se superponga nada en móvil.
+
+CAMBIO V6:
+- Se eliminó la sección Galería.
+- Se reordenó la página: Servicios -> Planes -> Proceso -> Preguntas frecuentes -> Contacto.
+- Se corrigió el error visual del inicio en móvil.
+- Se corrigió el CSS que hacía que el texto del hero se desbordara horizontalmente.
+- Los planes quedan debajo de Servicios y en celular se muestran como tarjetas horizontales deslizables.
