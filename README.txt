@@ -71,3 +71,15 @@ CAMBIO V10:
 - Los planes vuelven a mostrarse en formato horizontal en celular.
 - Se agregó un indicador transparente 'Deslizá >>' para mostrar que hay más planes hacia la derecha.
 - En escritorio y tablet los planes se mantienen en 3 columnas.
+
+CAMBIO V11:
+- Se eliminó la sección Proceso / Cómo trabajo.
+- Se quitó Proceso del menú superior.
+- La barra inferior móvil ahora muestra Servicios, Planes y Contacto.
+
+CAMBIO V12:
+- Se actualizaron los precios finales:
+  - Plan SoftClean: Desde $40.000
+  - Plan SoftReset: Desde $35.000
+  - Plan SoftFull: Desde $65.000
+- Se agregó una nota aclarando que los precios pueden variar según el equipo y el trabajo necesario.
