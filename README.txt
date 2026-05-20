@@ -182,8 +182,17 @@ CAMBIO V32:
 - Se eliminó el gris oscuro detrás del título "Servicios / Soluciones para PC y notebooks".
 - Se mantuvo el inicio con fondo oscuro.
 
-CAMBIO V33:
-- Se agregaron nuevas imágenes para los servicios.
-- formateo.svg fue reemplazado por assets/img/formateo.png.
-- limpieza.svg fue reemplazado por assets/img/limpieza.png.
-- Se actualizó index.html para usar las nuevas imágenes.
+CAMBIO V34:
+- Se reemplazaron las imágenes de servicios por fotos más realistas.
+- formateo.png: notebook en proceso de restablecimiento/formateo.
+- limpieza.png: limpieza de notebook con brocha.
+- Se actualizaron las rutas en index.html.
+
+CAMBIO V35:
+- Se reemplazó la imagen de formateo por una escena de instalación de Windows 11.
+- Se reemplazó la imagen de limpieza por una escena limpiando el ventilador interno de una notebook.
+
+CAMBIO V36:
+- Se corrigió el recorte de las imágenes de Servicios.
+- Las fotos ahora se muestran completas usando object-fit: contain.
+- Se ajustó la proporción visual para que no se corten el ventilador ni la pantalla de Windows 11.

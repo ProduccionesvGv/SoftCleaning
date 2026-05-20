@@ -1719,3 +1719,27 @@ main {
     radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.13), transparent 30%),
     linear-gradient(135deg, #0f172a 0%, #111827 56%, #0f2a24 100%) !important;
 }
+
+
+/* Corrección V36: imágenes de servicios sin recorte */
+.service-card {
+  overflow: hidden;
+}
+
+.service-card img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #f8fafc !important;
+  border-radius: 18px !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 619px) {
+  .service-card img {
+    aspect-ratio: 16 / 10 !important;
+    object-fit: contain !important;
+  }
+}
