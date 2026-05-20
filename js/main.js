@@ -65,29 +65,18 @@ if (contactForm) {
     const detalle = document.getElementById("detalle")?.value.trim() || "No especificado";
 
     const mensaje = `
-*NUEVA CONSULTA - SOFTCLEANING*
+*Nueva consulta - SoftCleaning*
 
-━━━━━━━━━━━━━━━━━━━━
+*Datos del cliente*
+Nombre: ${nombre}
+Equipo: ${equipo}
+Zona: ${zona}
 
-*DATOS DEL CLIENTE*
-
-*Nombre:* ${nombre}
-*Equipo:* ${equipo}
-*Zona:* ${zona}
-
-━━━━━━━━━━━━━━━━━━━━
-
-*SERVICIO SOLICITADO*
-
+*Servicio solicitado*
 ${servicio}
 
-━━━━━━━━━━━━━━━━━━━━
-
-*DETALLE DEL PROBLEMA*
-
+*Detalle del problema*
 ${detalle}
-
-━━━━━━━━━━━━━━━━━━━━
 `.trim();
 
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`, "_blank");

@@ -126,3 +126,8 @@ CAMBIO V20:
 - Ahora llega con título, separadores y secciones:
   DATOS DEL CLIENTE, SERVICIO SOLICITADO y DETALLE DEL PROBLEMA.
 - Se usa negrita compatible con WhatsApp mediante asteriscos.
+
+CAMBIO V21:
+- Se simplificó el formato del mensaje de WhatsApp.
+- Se quitaron los separadores largos.
+- Se mantuvieron títulos y espacios para que el mensaje sea claro sin verse exagerado.
