@@ -116,3 +116,7 @@ CAMBIO V18:
 - Se eliminó el texto: "Cambiá los precios según tu zona y el tipo de trabajo."
 - Se eliminaron los datos de contacto: Zona y Horario.
 - Se actualizó la nota de precios aclarando que no incluyen limpieza de placas de video, cambio de hardware ni repuestos.
+
+CAMBIO V19:
+- Se eliminó la frase: "Esos trabajos se cotizan aparte."
+- Se corrigió el degradado derecho que afectaba la lectura de la nota de precios.

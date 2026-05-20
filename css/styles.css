@@ -1171,3 +1171,14 @@ body {
     text-align: left;
   }
 }
+
+
+/* Corrección V19: evitar que el degradado del carrusel tape la nota de precios */
+#planes .container::after {
+  display: none !important;
+}
+
+.prices-note {
+  position: relative;
+  z-index: 1;
+}
