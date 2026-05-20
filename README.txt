@@ -83,3 +83,10 @@ CAMBIO V12:
   - Plan SoftReset: Desde $35.000
   - Plan SoftFull: Desde $65.000
 - Se agregó una nota aclarando que los precios pueden variar según el equipo y el trabajo necesario.
+
+CAMBIO V13:
+- Se actualizó la lista desplegable de Servicio:
+  1. Plan SoftClean - Limpieza + mantenimiento
+  2. Plan SoftReset - Formateo + software
+  3. Plan SoftFull - Limpieza + formateo completo
+  4. Plan SoftGPU - Limpieza de placa de video gamer
