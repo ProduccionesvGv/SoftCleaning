@@ -152,16 +152,10 @@ textarea {
 }
 
 .hero-grid {
-  display: grid;
-  gap: 24px;
-  position: relative;
+  display: block;
 }
 
 .hero-text,
-.hero-card {
-  position: relative;
-  z-index: 1;
-}
 
 .badge {
   display: inline-flex;
@@ -223,43 +217,11 @@ textarea {
   border: 1px solid var(--line);
 }
 
-.trust-row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-bottom: 4px;
-}
 
-.trust-row div {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.09);
-  border-radius: 16px;
-  padding: 14px;
-}
 
-.trust-row strong,
-.trust-row span {
-  display: block;
-}
 
-.trust-row span {
-  color: #cbd5e1;
-  font-size: 13px;
-}
 
-.hero-card {
-  position: relative;
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 14px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
 
-.hero-card img {
-  width: 100%;
-  border-radius: 18px;
-}
 
 
 /* Secciones */
@@ -665,9 +627,7 @@ footer {
     padding-bottom: 0;
   }
 
-  .trust-row {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  
 
   .service-grid,
   .steps {
@@ -725,14 +685,10 @@ footer {
   }
 
   .hero-grid {
-    grid-template-columns: 1.05fr 0.95fr;
-    align-items: center;
-  }
+  display: block;
+}
 
-  .hero-card {
-    padding: 18px;
-    overflow: visible;
-  }
+  
 
   .service-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -762,5 +718,17 @@ footer {
   .contact-grid {
     grid-template-columns: 0.9fr 1.1fr;
     align-items: start;
+  }
+}
+
+
+/* Corrección V5: hero limpio, sin tarjetas ni placeholder */
+.hero-text {
+  max-width: 760px;
+}
+
+@media (min-width: 920px) {
+  .hero-text {
+    max-width: 820px;
   }
 }

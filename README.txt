@@ -36,3 +36,9 @@ CAMBIO V3:
 
 CAMBIO V4:
 - Se eliminaron los botones del inicio: 'Pedir presupuesto' y 'Ver servicios'.
+
+
+CAMBIO V5:
+- Se eliminó el residuo blanco del inicio.
+- Se eliminaron las tarjetas '+ Rapidez', '+ Cuidado' y '+ Seguridad'.
+- Se limpió el hero para que no se superponga nada en móvil.
