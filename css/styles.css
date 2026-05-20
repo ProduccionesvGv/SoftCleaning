@@ -1225,3 +1225,126 @@ body {
     max-width: 285px;
   }
 }
+
+
+/* Corrección V23: logo más grande en el header */
+.site-header .header-content {
+  min-height: 92px;
+}
+
+.brand-logo img {
+  height: 78px !important;
+  max-width: 360px !important;
+}
+
+@media (max-width: 420px) {
+  .site-header .header-content {
+    min-height: 86px;
+  }
+
+  .brand-logo img {
+    height: 68px !important;
+    max-width: 280px !important;
+  }
+}
+
+@media (min-width: 920px) {
+  .site-header .header-content {
+    min-height: 96px;
+  }
+
+  .brand-logo img {
+    height: 82px !important;
+    max-width: 390px !important;
+  }
+}
+
+
+/* Corrección V25: vuelve el logo original, recortado y más visible */
+.site-header .header-content {
+  min-height: 86px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  display: flex !important;
+  align-items: center !important;
+  max-width: calc(100% - 78px) !important;
+}
+
+.brand-logo img {
+  height: 72px !important;
+  width: auto !important;
+  max-width: 360px !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+}
+
+@media (max-width: 420px) {
+  .site-header .header-content {
+    min-height: 82px !important;
+  }
+
+  .brand-logo img {
+    height: 64px !important;
+    max-width: 285px !important;
+  }
+}
+
+@media (min-width: 920px) {
+  .site-header .header-content {
+    min-height: 90px !important;
+  }
+
+  .brand-logo img {
+    height: 76px !important;
+    max-width: 420px !important;
+  }
+}
+
+
+/* Corrección V26: usar el logo exacto enviado por el usuario */
+.site-header .header-content {
+  min-height: 86px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  display: flex !important;
+  align-items: center !important;
+  max-width: calc(100% - 78px) !important;
+}
+
+.brand-logo img {
+  height: auto !important;
+  width: min(360px, calc(100vw - 112px)) !important;
+  max-height: 70px !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+}
+
+@media (max-width: 420px) {
+  .site-header .header-content {
+    min-height: 82px !important;
+  }
+
+  .brand-logo img {
+    width: min(285px, calc(100vw - 104px)) !important;
+    max-height: 62px !important;
+  }
+}
+
+@media (min-width: 920px) {
+  .site-header .header-content {
+    min-height: 90px !important;
+  }
+
+  .brand-logo img {
+    width: 420px !important;
+    max-height: 76px !important;
+  }
+}

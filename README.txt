@@ -136,3 +136,18 @@ CAMBIO V22:
 - Se agregó el logo generado en assets/img/softcleaning-logo.png.
 - Se eliminó del header el ícono PC y el texto SoftCleaning / Limpieza y formateo.
 - Se mantiene solamente el logo y el botón de menú hamburguesa.
+
+CAMBIO V23:
+- Se agrandó el logo del header.
+- Se aumentó la altura del encabezado para que el logo no quede apretado.
+- Se mantuvo el menú hamburguesa.
+
+CAMBIO V25:
+- Se volvió al logo original generado.
+- Se recortó el logo para quitar los márgenes vacíos que lo hacían verse chico.
+- Se ajustó el tamaño del header para que el logo se vea como marca principal sin cambiar el diseño.
+
+CAMBIO V26:
+- Se reemplazó el logo por la imagen enviada por el usuario.
+- Se ajustó el tamaño del header para que el logo horizontal se vea correcto.
+- Se mantiene el menú hamburguesa.
