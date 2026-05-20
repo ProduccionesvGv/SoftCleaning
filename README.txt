@@ -49,3 +49,8 @@ CAMBIO V6:
 - Se corrigió el error visual del inicio en móvil.
 - Se corrigió el CSS que hacía que el texto del hero se desbordara horizontalmente.
 - Los planes quedan debajo de Servicios y en celular se muestran como tarjetas horizontales deslizables.
+
+CAMBIO V7:
+- Se unieron los servicios en 2 categorías: Limpieza + Mantenimiento y Formateo + Software.
+- Se dejaron 2 planes: Plan SoftClean y Plan SoftReset.
+- Los planes ahora se muestran en vertical, uno debajo del otro, también en celular.
