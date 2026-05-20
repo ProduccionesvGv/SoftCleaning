@@ -1407,3 +1407,91 @@ body {
     max-height: 92px !important;
   }
 }
+
+
+/* Corrección V28: logo grande sobresaliendo sin agrandar el fondo del header */
+.site-header {
+  overflow: visible !important;
+}
+
+.site-header .container,
+.site-header .header-content {
+  overflow: visible !important;
+}
+
+.site-header .header-content {
+  position: relative !important;
+  min-height: 82px !important;
+  height: 82px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-left: 72px !important;
+  padding-right: 72px !important;
+}
+
+.brand-logo {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 3 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  max-width: none !important;
+  pointer-events: auto !important;
+}
+
+.brand-logo img {
+  width: min(620px, calc(100vw - 130px)) !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+  transform: scale(1.18) !important;
+  transform-origin: center center !important;
+}
+
+.menu-btn {
+  position: absolute !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 5 !important;
+}
+
+.hero-clean,
+.hero {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* En móvil: logo grande, pero sin tapar el menú */
+@media (max-width: 420px) {
+  .site-header .header-content {
+    min-height: 78px !important;
+    height: 78px !important;
+    padding-left: 54px !important;
+    padding-right: 70px !important;
+  }
+
+  .brand-logo img {
+    width: min(500px, calc(100vw - 112px)) !important;
+    transform: scale(1.26) !important;
+  }
+}
+
+/* En escritorio: más alargado y protagonista */
+@media (min-width: 920px) {
+  .site-header .header-content {
+    min-height: 86px !important;
+    height: 86px !important;
+  }
+
+  .brand-logo img {
+    width: 720px !important;
+    transform: scale(1.16) !important;
+  }
+}

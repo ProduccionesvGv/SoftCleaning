@@ -156,3 +156,8 @@ CAMBIO V27:
 - Se centró el logo en el header.
 - Se alargó el logo para que se vea como marca principal y no como subtítulo.
 - El menú hamburguesa quedó fijo a la derecha.
+
+CAMBIO V28:
+- El logo ahora se agranda sin aumentar la altura/fondo del header.
+- El logo puede sobresalir del header.
+- Se mantiene el menú hamburguesa visible a la derecha.
