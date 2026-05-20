@@ -161,3 +161,18 @@ CAMBIO V28:
 - El logo ahora se agranda sin aumentar la altura/fondo del header.
 - El logo puede sobresalir del header.
 - Se mantiene el menú hamburguesa visible a la derecha.
+
+CAMBIO V29:
+- Se bajó un poco el logo para que no se vea recortado arriba.
+- Se eliminó el botón de menú hamburguesa del lado derecho.
+- Se eliminó el menú desplegable superior.
+- El logo puede sobresalir del header sin agrandar el fondo.
+
+CAMBIO V30:
+- Se bajó el bloque completo del header junto con el logo y su fondo.
+- Se agregó aire superior e inferior para evitar que el logo quede recortado.
+- Se mantuvo eliminado el menú hamburguesa.
+
+CAMBIO V31:
+- Se eliminó la franja blanca entre el header del logo y el inicio.
+- Se mantiene el logo y el bloque superior más abajo, pero sin dejar fondo blanco visible.

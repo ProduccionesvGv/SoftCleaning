@@ -1495,3 +1495,192 @@ body {
     transform: scale(1.16) !important;
   }
 }
+
+
+/* Corrección V29: logo más abajo y sin menú hamburguesa */
+.site-header {
+  overflow: visible !important;
+}
+
+.site-header .container,
+.site-header .header-content {
+  overflow: visible !important;
+}
+
+.site-header .header-content {
+  position: relative !important;
+  min-height: 82px !important;
+  height: 82px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.brand-logo {
+  position: absolute !important;
+  left: 50% !important;
+  top: 62% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 6 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+.brand-logo img {
+  width: min(720px, calc(100vw - 24px)) !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+  transform: scale(1.12) !important;
+  transform-origin: center center !important;
+}
+
+.menu-btn,
+.nav-menu {
+  display: none !important;
+}
+
+@media (max-width: 420px) {
+  .site-header .header-content {
+    min-height: 78px !important;
+    height: 78px !important;
+  }
+
+  .brand-logo {
+    top: 63% !important;
+  }
+
+  .brand-logo img {
+    width: min(560px, calc(100vw - 18px)) !important;
+    transform: scale(1.18) !important;
+  }
+}
+
+@media (min-width: 920px) {
+  .site-header .header-content {
+    min-height: 86px !important;
+    height: 86px !important;
+  }
+
+  .brand-logo {
+    top: 61% !important;
+  }
+
+  .brand-logo img {
+    width: 780px !important;
+    transform: scale(1.10) !important;
+  }
+}
+
+
+/* Corrección V30: bajar el bloque completo del header con el logo */
+.site-header {
+  padding-top: 16px !important;
+  padding-bottom: 10px !important;
+  overflow: visible !important;
+}
+
+.site-header .header-content {
+  min-height: 92px !important;
+  height: 92px !important;
+}
+
+.brand-logo {
+  top: 58% !important;
+}
+
+.brand-logo img {
+  width: min(720px, calc(100vw - 24px)) !important;
+  transform: scale(1.08) !important;
+}
+
+/* Dar aire debajo del header para que el logo no choque con el hero */
+.hero-clean,
+.hero {
+  margin-top: 18px !important;
+}
+
+@media (max-width: 420px) {
+  .site-header {
+    padding-top: 18px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .site-header .header-content {
+    min-height: 88px !important;
+    height: 88px !important;
+  }
+
+  .brand-logo {
+    top: 58% !important;
+  }
+
+  .brand-logo img {
+    width: min(560px, calc(100vw - 18px)) !important;
+    transform: scale(1.12) !important;
+  }
+
+  .hero-clean,
+  .hero {
+    margin-top: 20px !important;
+  }
+}
+
+@media (min-width: 920px) {
+  .site-header {
+    padding-top: 18px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .site-header .header-content {
+    min-height: 96px !important;
+    height: 96px !important;
+  }
+
+  .brand-logo {
+    top: 57% !important;
+  }
+
+  .brand-logo img {
+    width: 780px !important;
+    transform: scale(1.06) !important;
+  }
+
+  .hero-clean,
+  .hero {
+    margin-top: 22px !important;
+  }
+}
+
+
+/* Corrección V31: eliminar franja blanca entre header y hero */
+body {
+  background: #0f172a !important;
+}
+
+.site-header {
+  background: #1e293b !important;
+  margin-bottom: 0 !important;
+  border-bottom: 0 !important;
+}
+
+.hero-clean,
+.hero {
+  margin-top: 0 !important;
+  border-top: 0 !important;
+}
+
+/* Mantiene separación visual sin mostrar fondo blanco */
+main {
+  background: linear-gradient(180deg, #0b1f1d 0%, #f5f7fb 38%) !important;
+}
+
+#inicio {
+  margin-top: 0 !important;
+}

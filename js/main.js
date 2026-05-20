@@ -3,22 +3,6 @@
 // Ejemplo ficticio: 5491123456789
 const WHATSAPP_NUMBER = "5491158768929";
 
-// Menú móvil
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
-
-if (menuBtn && navMenu) {
-  menuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-  });
-
-  document.querySelectorAll(".nav-menu a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("active");
-    });
-  });
-}
-
 // Animación al hacer scroll
 const revealElements = document.querySelectorAll(".reveal");
 
