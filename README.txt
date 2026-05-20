@@ -95,3 +95,8 @@ CAMBIO V14:
 - Se agregó el campo Zona en el formulario.
 - La zona incluye CABA y los 135 municipios/partidos de la Provincia de Buenos Aires.
 - El mensaje de WhatsApp ahora también envía la zona seleccionada.
+
+CAMBIO V15:
+- Se reemplazó el listado largo de municipios de Provincia de Buenos Aires.
+- Zona ahora muestra las 15 comunas de CABA.
+- Provincia de Buenos Aires queda como una sola opción: AMBA / Provincia de Buenos Aires - consultar disponibilidad.
