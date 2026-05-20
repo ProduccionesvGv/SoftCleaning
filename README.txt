@@ -100,3 +100,8 @@ CAMBIO V15:
 - Se reemplazó el listado largo de municipios de Provincia de Buenos Aires.
 - Zona ahora muestra las 15 comunas de CABA.
 - Provincia de Buenos Aires queda como una sola opción: AMBA / Provincia de Buenos Aires - consultar disponibilidad.
+
+CAMBIO V16:
+- Se quitó el orden por comunas.
+- El campo Zona ahora lista los barrios de CABA en orden alfabético.
+- AMBA queda como una sola opción: AMBA / Provincia de Buenos Aires - consultar disponibilidad.
