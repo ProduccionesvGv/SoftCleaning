@@ -105,3 +105,14 @@ CAMBIO V16:
 - Se quitó el orden por comunas.
 - El campo Zona ahora lista los barrios de CABA en orden alfabético.
 - AMBA queda como una sola opción: AMBA / Provincia de Buenos Aires - consultar disponibilidad.
+
+CAMBIO V17:
+- Se actualizó el número de WhatsApp.
+- Número visible: +54 9 11 5876-8929
+- Link WhatsApp / wa.me: 5491158768929
+
+CAMBIO V18:
+- Se eliminó el texto: "Podés cambiar las imágenes dentro de la carpeta assets/img."
+- Se eliminó el texto: "Cambiá los precios según tu zona y el tipo de trabajo."
+- Se eliminaron los datos de contacto: Zona y Horario.
+- Se actualizó la nota de precios aclarando que no incluyen limpieza de placas de video, cambio de hardware ni repuestos.
