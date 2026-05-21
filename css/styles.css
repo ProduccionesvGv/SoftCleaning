@@ -1797,3 +1797,126 @@ main {
   padding: 0 !important;
   display: block !important;
 }
+
+
+/* Corrección V41: títulos de sección más trabajados */
+.section-title {
+  position: relative;
+  max-width: 860px !important;
+  margin: 0 auto 34px !important;
+  padding: 0 14px 18px !important;
+  text-align: center !important;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -18px;
+  width: 82px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #22c55e, #38bdf8);
+  transform: translateX(-50%);
+}
+
+.section-title span {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  margin: 0 auto 12px !important;
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+  background: rgba(34, 197, 94, 0.12) !important;
+  border: 1px solid rgba(34, 197, 94, 0.22) !important;
+  color: #16a34a !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+}
+
+.section-title h2 {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto !important;
+  color: #0f172a !important;
+  font-size: clamp(32px, 6.3vw, 58px) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -1.8px !important;
+  font-weight: 950 !important;
+}
+
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 42%;
+  min-width: 120px;
+  height: 10px;
+  margin: -8px auto 0;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.18);
+  position: relative;
+  z-index: -1;
+}
+
+.section-title p {
+  max-width: 620px;
+  margin: 14px auto 0 !important;
+  color: #64748b !important;
+  font-size: 17px !important;
+}
+
+/* Fondo sutil para separar mejor cada bloque */
+#servicios,
+#planes,
+#faq {
+  position: relative;
+}
+
+#servicios::before,
+#planes::before,
+#faq::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 18px;
+  width: min(560px, 82vw);
+  height: 120px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.10), transparent 65%);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+#servicios .container,
+#planes .container,
+#faq .container {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 619px) {
+  .section-title {
+    margin-bottom: 26px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .section-title span {
+    font-size: 12px !important;
+    padding: 7px 12px !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .section-title h2 {
+    font-size: clamp(30px, 9vw, 42px) !important;
+    letter-spacing: -1.1px !important;
+  }
+
+  .section-title h2::after {
+    height: 8px;
+    margin-top: -6px;
+  }
+}

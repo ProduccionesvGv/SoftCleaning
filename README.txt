@@ -218,3 +218,8 @@ CAMBIO V40:
 - Se reemplazó formateo.png por una imagen más abierta.
 - Ahora se ve más la notebook completa, las manos y el contexto de escritorio.
 - Se mantiene la pantalla de instalación de Windows 11.
+
+CAMBIO V41:
+- Se mejoraron visualmente los títulos de sección.
+- Se agregaron etiquetas tipo pill, líneas decorativas y subrayado verde suave.
+- Se aplicó a Servicios, Planes y Preguntas frecuentes.
