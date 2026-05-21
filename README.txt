@@ -342,3 +342,9 @@ CAMBIO V62:
 - La palabra Planes queda como una cápsula naranja arriba de Precios orientativos.
 - Se quitó el subrayado/decoración exagerada de Precios orientativos.
 - Precios orientativos volvió a un tamaño más normal.
+
+CAMBIO V63:
+- Se agregó desplazamiento suave en los planes para móvil.
+- Las tarjetas ahora se centran automáticamente al dejar de deslizar.
+- Se agregó un leve efecto visual sobre el plan centrado.
+- Se mantiene el indicador de deslizamiento.

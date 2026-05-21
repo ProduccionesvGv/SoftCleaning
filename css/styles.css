@@ -2333,3 +2333,41 @@ main {
     font-size: 16px !important;
   }
 }
+
+
+/* Corrección V63: planes con desplazamiento suave y centrado automático en móvil */
+@media (max-width: 619px) {
+  #planes .plans-grid,
+  #planes .plans-three-vertical {
+    scroll-snap-type: x mandatory !important;
+    scroll-padding-left: 8vw !important;
+    scroll-padding-right: 8vw !important;
+    scroll-behavior: smooth !important;
+    overscroll-behavior-x: contain !important;
+    padding-left: 8vw !important;
+    padding-right: 8vw !important;
+  }
+
+  #planes .plan-card {
+    flex: 0 0 84vw !important;
+    width: 84vw !important;
+    min-width: 84vw !important;
+    max-width: 84vw !important;
+    scroll-snap-align: center !important;
+    scroll-snap-stop: always !important;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease !important;
+  }
+
+  #planes .plan-card.is-centered {
+    transform: scale(1.015) !important;
+    box-shadow: 0 22px 55px rgba(154, 52, 18, 0.18) !important;
+  }
+
+  #planes .plan-card:not(.is-centered) {
+    opacity: 0.94;
+  }
+
+  #planes .plans-hint {
+    animation: hintMove 1.8s ease-in-out infinite !important;
+  }
+}
