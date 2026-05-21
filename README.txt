@@ -394,3 +394,12 @@ CAMBIO V71:
 - Se actualizó el código promocional LCDTM.
 - LCDTM ahora aplica 100% de descuento.
 - Sigue funcionando aunque el usuario lo escriba en minúscula.
+
+CAMBIO V72:
+- Se modificó el mensaje visual del código LCDTM.
+- Ahora muestra: "Código válido: 100% de descuento. Ahora entrega la Cola".
+
+CAMBIO V73:
+- Se corrigió el campo Código promocional para permitir letras y números en móvil.
+- Se cambió inputmode="numeric" por inputmode="text".
+- Se agregó autocapitalize="characters" para facilitar códigos con letras como LCDTM.

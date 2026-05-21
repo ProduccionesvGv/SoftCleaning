@@ -118,7 +118,7 @@ if (codigoPromoInput && promoHelp) {
       promoHelp.textContent = "Código válido: 15% de descuento";
       promoHelp.classList.add("valid");
     } else if (codigoNormalizado === "LCDTM") {
-      promoHelp.textContent = "Código válido: 100% de descuento";
+      promoHelp.textContent = "Código válido: 100% de descuento. Ahora entrega la Cola";
       promoHelp.classList.add("valid");
     } else {
       promoHelp.textContent = "Código no válido";
