@@ -515,3 +515,8 @@ CAMBIO V92:
 - Se mantiene dentro del bloque de planes de pago.
 - Conserva el enlace al formulario de contacto.
 - Se agregó un leve efecto de pulso.
+
+CAMBIO V93:
+- Se agregó efecto fade in / fade out al icono promocional dentro de Planes.
+- Se mantuvo el efecto de rebote.
+- El icono aparece, rebota, se desvanece y vuelve a repetir el ciclo.

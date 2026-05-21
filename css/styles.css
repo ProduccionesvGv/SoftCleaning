@@ -3457,3 +3457,58 @@ main {
     width: 260px !important;
   }
 }
+
+
+/* Corrección V93: fade in / fade out + rebote para promo en Planes */
+.promo-plan-icon {
+  animation: promoFadeBounceLoop 7.5s ease-in-out infinite !important;
+  transform-origin: center center !important;
+  will-change: opacity, transform;
+}
+
+@keyframes promoFadeBounceLoop {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.92);
+  }
+
+  14% {
+    opacity: 1;
+    transform: translateY(0) scale(1.08);
+  }
+
+  24% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.04);
+  }
+
+  36% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  48% {
+    opacity: 0.82;
+    transform: translateY(-3px) scale(1.035);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  74% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  88% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.92);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.92);
+  }
+}
