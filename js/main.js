@@ -178,9 +178,38 @@ if (promoFloating) {
       if (promoCopyStatus) promoCopyStatus.textContent = "Código: 2693";
     }
   });
+}
 
-  // La oferta aparece al entrar, pero no queda molestando toda la navegación.
-  setTimeout(() => {
-    hidePromo();
-  }, 12000);
+
+// Activar promoción solo en el sector Planes
+const planesSection = document.getElementById("planes");
+
+if (promoFloating && planesSection) {
+  let promoClosedManually = false;
+
+  promoClose?.addEventListener("click", () => {
+    promoClosedManually = true;
+    promoFloating.classList.remove("promo-active");
+    promoFloating.classList.add("promo-paused");
+  });
+
+  const promoObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (promoClosedManually) return;
+
+        if (entry.isIntersecting) {
+          promoFloating.classList.remove("promo-paused");
+          promoFloating.classList.add("promo-active");
+        } else {
+          promoFloating.classList.remove("promo-active");
+        }
+      });
+    },
+    {
+      threshold: 0.35
+    }
+  );
+
+  promoObserver.observe(planesSection);
 }

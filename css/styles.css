@@ -2780,3 +2780,119 @@ main {
     width: 118px !important;
   }
 }
+
+
+/* Corrección V78: promo flotante con patrón infinito */
+.promo-floating {
+  left: auto !important;
+  right: 16px !important;
+  bottom: 92px !important;
+  width: 142px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateX(36px) scale(0.92) !important;
+  animation: promoLoopRight 9s ease-in-out 5s infinite !important;
+}
+
+.promo-floating.is-hidden {
+  display: none !important;
+}
+
+.promo-floating:hover {
+  animation-play-state: paused !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateX(0) scale(1.03) !important;
+}
+
+@keyframes promoLoopRight {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(36px) scale(0.92);
+    filter: drop-shadow(0 18px 32px rgba(0, 0, 0, 0.18));
+  }
+
+  8% {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0) scale(1.08);
+    filter: drop-shadow(0 20px 34px rgba(34, 197, 94, 0.38));
+  }
+
+  15% {
+    transform: translateX(0) scale(0.97);
+  }
+
+  23% {
+    transform: translateX(0) scale(1.06);
+  }
+
+  31% {
+    transform: translateX(0) scale(1);
+  }
+
+  39% {
+    opacity: 0.58;
+    transform: translateX(0) scale(1.03);
+  }
+
+  47% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  55% {
+    opacity: 0.65;
+    transform: translateX(0) scale(1.035);
+  }
+
+  64% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  72% {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0) scale(1);
+  }
+
+  82% {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(34px) scale(0.92);
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(34px) scale(0.92);
+  }
+}
+
+@media (max-width: 619px) {
+  .promo-floating {
+    left: auto !important;
+    right: 10px !important;
+    bottom: 86px !important;
+    width: 118px !important;
+  }
+}
+
+
+/* Corrección V79: la promo solo aparece en el sector Planes */
+.promo-floating {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateX(36px) scale(0.92) !important;
+  animation: none !important;
+}
+
+.promo-floating.promo-active {
+  animation: promoLoopRight 9s ease-in-out 0s infinite !important;
+}
+
+.promo-floating.promo-paused {
+  display: none !important;
+}

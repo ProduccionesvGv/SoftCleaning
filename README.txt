@@ -426,3 +426,16 @@ CAMBIO V77:
 - Se eliminó el icono flotante de WhatsApp.
 - El icono promocional 10% OFF ahora aparece del lado derecho.
 - La promoción entra con animación desde la derecha y desaparece automáticamente.
+
+CAMBIO V78:
+- El icono promocional ya no aparece apenas inicia la página.
+- Espera unos segundos, entra desde la derecha, rebota/titila durante unos 4 segundos y se oculta.
+- Luego espera unos segundos y vuelve a repetir el patrón en loop infinito.
+- Se mantiene el clic para abrir el cartel con el código 2693.
+- La X sigue cerrando la promo de forma manual.
+
+CAMBIO V79:
+- El icono promocional 10% OFF solo aparece cuando el usuario llega al sector Planes / Precios orientativos.
+- Fuera del sector Planes queda oculto.
+- Mantiene el patrón de entrada, rebote/titileo, ocultarse y repetir mientras la sección Planes esté visible.
+- Si se cierra con X, queda oculto manualmente.
