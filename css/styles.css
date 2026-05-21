@@ -2943,3 +2943,172 @@ main {
     width: 118px !important;
   }
 }
+
+
+/* Corrección V81: promoción 10% OFF controlada sin conflictos */
+.promo-floating {
+  position: fixed !important;
+  left: auto !important;
+  right: 16px !important;
+  bottom: 92px !important;
+  z-index: 9999 !important;
+  width: 142px !important;
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateX(42px) scale(0.92) !important;
+  filter: drop-shadow(0 18px 32px rgba(0, 0, 0, 0.28)) !important;
+  animation: none !important;
+}
+
+.promo-floating.force-show-promo {
+  display: block !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateX(0) scale(1) !important;
+}
+
+.promo-floating.force-show-promo .promo-trigger img {
+  animation: promoBounceBlinkV81 1.05s ease-in-out infinite !important;
+}
+
+.promo-floating.force-hide-promo {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+@keyframes promoBounceBlinkV81 {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 14px 26px rgba(34, 197, 94, 0.28));
+  }
+  35% {
+    transform: translateY(-7px) scale(1.08);
+    opacity: 0.68;
+    filter: drop-shadow(0 20px 36px rgba(34, 197, 94, 0.48));
+  }
+  65% {
+    transform: translateY(0) scale(0.98);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 619px) {
+  .promo-floating {
+    right: 10px !important;
+    bottom: 86px !important;
+    width: 118px !important;
+  }
+}
+
+
+/* Corrección V82: promo 10% OFF visible y estable en Planes */
+.promo-floating {
+  position: fixed !important;
+  left: auto !important;
+  right: 16px !important;
+  bottom: 92px !important;
+  z-index: 99999 !important;
+  width: 142px !important;
+  display: block !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateX(32px) scale(0.94) !important;
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease !important;
+  animation: none !important;
+  filter: drop-shadow(0 18px 32px rgba(0, 0, 0, 0.28)) !important;
+}
+
+.promo-floating.promo-show {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(0) scale(1) !important;
+}
+
+.promo-floating.promo-show .promo-trigger img {
+  animation: promoSimpleBounceBlink 1.2s ease-in-out infinite !important;
+}
+
+.promo-floating.promo-dismissed {
+  display: none !important;
+}
+
+@keyframes promoSimpleBounceBlink {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  35% {
+    transform: translateY(-6px) scale(1.06);
+    opacity: 0.72;
+  }
+  70% {
+    transform: translateY(0) scale(0.98);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 619px) {
+  .promo-floating {
+    right: 10px !important;
+    bottom: 86px !important;
+    width: 118px !important;
+  }
+}
+
+
+/* Corrección V83: promo simple estilo icono flotante */
+.promo-floating,
+.promo-modal {
+  display: none !important;
+}
+
+.promo-simple-float {
+  position: fixed !important;
+  right: 16px !important;
+  bottom: 88px !important;
+  z-index: 9999 !important;
+  display: block !important;
+  width: 118px !important;
+  height: auto !important;
+  text-decoration: none !important;
+  filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.28)) !important;
+}
+
+.promo-simple-float img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+@media (max-width: 619px) {
+  .promo-simple-float {
+    right: 10px !important;
+    bottom: 78px !important;
+    width: 96px !important;
+  }
+}
+
+
+/* Corrección V84: icono promo simple visible solo en sector Planes */
+.promo-simple-float {
+  display: block !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateX(24px) scale(0.96) !important;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease !important;
+}
+
+.promo-simple-float.is-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(0) scale(1) !important;
+}

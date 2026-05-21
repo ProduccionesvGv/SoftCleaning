@@ -445,3 +445,27 @@ CAMBIO V80:
 - Ahora solo se activa cuando el usuario está en el sector Planes.
 - Al entrar a Planes: espera 5 segundos, aparece 4 segundos con rebote/titileo, se oculta y repite.
 - Se corrigió el conflicto de CSS que dejaba el icono siempre invisible.
+
+CAMBIO V81:
+- Se corrigió definitivamente el icono promocional que no aparecía.
+- Se eliminaron conflictos anteriores de clases y animaciones.
+- El icono 10% OFF aparece solo al llegar a Planes.
+- Espera 2.5 segundos, aparece 4 segundos con rebote/titileo, se oculta y repite mientras Planes esté visible.
+
+CAMBIO V82:
+- Se rehizo la lógica del icono promocional para evitar conflictos.
+- Ahora aparece de forma directa cuando el usuario entra al sector Planes.
+- Funciona en escritorio y móvil.
+- Se quitó el patrón complejo de timers que podía bloquear el icono.
+- Mantiene rebote/titileo mientras está visible.
+
+CAMBIO V83:
+- Se eliminó toda la aplicación/formato anterior del icono promocional.
+- Se eliminó el modal de código y la lógica de aparición por Planes.
+- Se dejó la promoción como icono flotante simple, similar a un botón de WhatsApp.
+- El icono lleva al formulario de contacto.
+
+CAMBIO V84:
+- El icono promocional simple ahora solo se muestra cuando el usuario pasa por el sector Planes.
+- Fuera de Planes queda oculto.
+- Se mantuvo como icono simple, sin modal ni timers complejos.
