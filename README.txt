@@ -348,3 +348,10 @@ CAMBIO V63:
 - Las tarjetas ahora se centran automáticamente al dejar de deslizar.
 - Se agregó un leve efecto visual sobre el plan centrado.
 - Se mantiene el indicador de deslizamiento.
+
+CAMBIO V64:
+- Se eliminó el centrado automático forzado de los planes.
+- Los planes ya no hacen que la página vuelva sola al sector Precios.
+- Se dejó un deslizamiento normal y usable en móvil.
+- Se actualizó la descripción de Plan SoftFull:
+  "El plan más completo: limpieza, formateo, instalación de Windows, drivers y programas."

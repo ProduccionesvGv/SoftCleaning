@@ -2371,3 +2371,27 @@ main {
     animation: hintMove 1.8s ease-in-out infinite !important;
   }
 }
+
+
+/* Corrección V64: quitar centrado automático forzado en Planes */
+@media (max-width: 619px) {
+  #planes .plans-grid,
+  #planes .plans-three-vertical {
+    scroll-behavior: auto !important;
+    scroll-snap-type: x proximity !important;
+    overscroll-behavior-x: auto !important;
+  }
+
+  #planes .plan-card {
+    scroll-snap-align: start !important;
+    scroll-snap-stop: normal !important;
+    transform: none !important;
+    opacity: 1 !important;
+    transition: box-shadow 0.25s ease !important;
+  }
+
+  #planes .plan-card.is-centered {
+    transform: none !important;
+    box-shadow: inherit !important;
+  }
+}
