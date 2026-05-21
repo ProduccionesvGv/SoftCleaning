@@ -355,3 +355,24 @@ CAMBIO V64:
 - Se dejó un deslizamiento normal y usable en móvil.
 - Se actualizó la descripción de Plan SoftFull:
   "El plan más completo: limpieza, formateo, instalación de Windows, drivers y programas."
+
+CAMBIO V65:
+- Se actualizó el subtítulo principal del hero:
+  "Dejá tu computadora limpia, rápida y optimizada como cuando la compraste."
+
+CAMBIO V66:
+- Se cambió "Formateo + Software" por "Formateo + Instalación de Windows".
+- Se actualizó en la tarjeta de servicios, etiqueta del Plan SoftReset y menú de selección del formulario.
+
+CAMBIO V67:
+- En la sección Planes se cambió:
+  - "Limpieza + Mantenimiento" por "Limpieza"
+  - "Formateo + Instalación de Windows" por "Formateo"
+
+CAMBIO V68:
+- Se agregó el campo Código promocional debajo de Detalle.
+- Códigos activos:
+  - 2693: 10% de descuento
+  - 2688: 15% de descuento
+- El formulario muestra si el código es válido o no.
+- El mensaje de WhatsApp incluye el código promocional y el descuento aplicado.

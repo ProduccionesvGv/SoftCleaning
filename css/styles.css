@@ -2395,3 +2395,21 @@ main {
     box-shadow: inherit !important;
   }
 }
+
+
+/* Corrección V68: código promocional */
+.promo-help {
+  display: block;
+  margin-top: 2px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.promo-help.valid {
+  color: #16a34a;
+}
+
+.promo-help.invalid {
+  color: #dc2626;
+}

@@ -48,6 +48,22 @@ if (contactForm) {
     const servicio = document.getElementById("servicio")?.value || "";
     const zona = document.getElementById("zona")?.value || "";
     const detalle = document.getElementById("detalle")?.value.trim() || "No especificado";
+    const codigoPromo = document.getElementById("codigoPromo")?.value.trim() || "";
+
+    const descuentos = {
+      "2693": "10%",
+      "2688": "15%"
+    };
+
+    let promoTexto = "Sin código promocional";
+
+    if (codigoPromo) {
+      if (descuentos[codigoPromo]) {
+        promoTexto = `Código ${codigoPromo} - Descuento ${descuentos[codigoPromo]}`;
+      } else {
+        promoTexto = `Código ${codigoPromo} - No válido`;
+      }
+    }
 
     const mensaje = `
 *Nueva consulta - SoftCleaning*
@@ -65,6 +81,9 @@ ${zona}
 
 *Detalle del problema*
 ${detalle}
+
+*Código promocional*
+${promoTexto}
 `.trim();
 
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`, "_blank");
@@ -72,3 +91,32 @@ ${detalle}
 }
 
 
+
+
+// Validación visual del código promocional
+const codigoPromoInput = document.getElementById("codigoPromo");
+const promoHelp = document.getElementById("promoHelp");
+
+if (codigoPromoInput && promoHelp) {
+  codigoPromoInput.addEventListener("input", () => {
+    const codigo = codigoPromoInput.value.trim();
+
+    promoHelp.classList.remove("valid", "invalid");
+
+    if (!codigo) {
+      promoHelp.textContent = "Códigos válidos: 2693 o 2688";
+      return;
+    }
+
+    if (codigo === "2693") {
+      promoHelp.textContent = "Código válido: 10% de descuento";
+      promoHelp.classList.add("valid");
+    } else if (codigo === "2688") {
+      promoHelp.textContent = "Código válido: 15% de descuento";
+      promoHelp.classList.add("valid");
+    } else {
+      promoHelp.textContent = "Código no válido";
+      promoHelp.classList.add("invalid");
+    }
+  });
+}
