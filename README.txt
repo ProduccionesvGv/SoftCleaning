@@ -311,3 +311,23 @@ CAMBIO V56:
   - Actualización/programas/configuración/optimización.
 - En Plan SoftFull se reemplazó la optimización por:
   "Optimización avanzada de Windows para acelerar el rendimiento".
+
+CAMBIO V57:
+- Se quitó la altura forzada de los planes.
+- SoftClean y SoftReset terminan después de sus botones.
+- SoftFull puede quedar más alto por tener más contenido.
+- Los botones de SoftClean y SoftReset quedan alineados entre sí en escritorio.
+
+CAMBIO V58:
+- Se actualizó el texto del servicio Limpieza + Mantenimiento.
+- Ahora menciona limpieza externa/interna de componentes de hardware.
+- Se agregó cambio de pasta térmica CPU/GPU.
+
+CAMBIO V59:
+- Se actualizó el texto del servicio Formateo + Software.
+- Ahora menciona formateo completo de discos HDD/SSD/NVMe/M.2.
+- Se agregó instalación y activación de programas básicos.
+
+CAMBIO V60:
+- Se actualizó el texto del servicio Formateo + Software:
+  "Formateo completo de discos, instalación y activación de Windows y drivers, actualización del sistema, instalación y activación de programas básicos y configuración inicial del equipo."

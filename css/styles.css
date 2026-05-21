@@ -2104,3 +2104,53 @@ main {
   height: 150px !important;
   max-height: 150px !important;
 }
+
+
+/* Corrección V57: altura natural en planes */
+#planes .plans-grid,
+#planes .plans-three-vertical {
+  align-items: start !important;
+}
+
+#planes .plan-card {
+  height: auto !important;
+  align-self: start !important;
+}
+
+/* SoftClean y SoftReset: botones alineados entre sí sin forzar altura de SoftFull */
+@media (min-width: 960px) {
+  #planes .plan-card:nth-child(1),
+  #planes .plan-card:nth-child(2) {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  #planes .plan-card:nth-child(1) ul,
+  #planes .plan-card:nth-child(2) ul {
+    min-height: 340px !important;
+  }
+
+  #planes .plan-card:nth-child(1) .btn,
+  #planes .plan-card:nth-child(2) .btn {
+    margin-top: auto !important;
+  }
+
+  #planes .plan-card:nth-child(3) {
+    display: block !important;
+  }
+}
+
+/* En celular no se fuerza alineación: cada tarjeta termina donde corresponde */
+@media (max-width: 959px) {
+  #planes .plan-card {
+    display: block !important;
+  }
+
+  #planes .plan-card ul {
+    min-height: 0 !important;
+  }
+
+  #planes .plan-card .btn {
+    margin-top: 0 !important;
+  }
+}
