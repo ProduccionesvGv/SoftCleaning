@@ -2413,3 +2413,122 @@ main {
 .promo-help.invalid {
   color: #dc2626;
 }
+
+
+/* Corrección V74: título de Servicios con estilo comercial/técnico */
+#servicios .section-title {
+  position: relative !important;
+  max-width: 980px !important;
+  margin: 0 auto 38px !important;
+  padding: 28px 18px 32px !important;
+  text-align: center !important;
+  border-radius: 30px !important;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(34, 197, 94, 0.16), transparent 34%),
+    radial-gradient(circle at 85% 10%, rgba(56, 189, 248, 0.12), transparent 30%),
+    linear-gradient(135deg, #ffffff 0%, #f8fafc 60%, #eefdf3 100%) !important;
+  border: 1px solid rgba(34, 197, 94, 0.14) !important;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06) !important;
+  overflow: hidden;
+}
+
+#servicios .section-title::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 22px;
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, #22c55e, #38bdf8);
+  box-shadow: 0 12px 24px rgba(34, 197, 94, 0.22);
+}
+
+#servicios .section-title::after {
+  content: "✓";
+  position: absolute;
+  left: 38px;
+  top: 29px;
+  color: #062b16;
+  font-size: 25px;
+  font-weight: 950;
+}
+
+#servicios .section-title span {
+  display: inline-flex !important;
+  width: fit-content !important;
+  margin: 0 auto 14px !important;
+  padding: 9px 18px !important;
+  border-radius: 999px !important;
+  background: rgba(34, 197, 94, 0.12) !important;
+  border: 1px solid rgba(34, 197, 94, 0.22) !important;
+  color: #15803d !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+  letter-spacing: 1.1px !important;
+  text-transform: uppercase !important;
+}
+
+#servicios .section-title h2 {
+  max-width: 760px !important;
+  margin: 0 auto !important;
+  color: #0f172a !important;
+  font-size: clamp(34px, 5.6vw, 58px) !important;
+  line-height: 1.03 !important;
+  letter-spacing: -1.8px !important;
+  font-weight: 950 !important;
+}
+
+#servicios .service-title-note,
+#servicios .section-title p {
+  max-width: 720px !important;
+  margin: 16px auto 0 !important;
+  color: #475569 !important;
+  font-size: 17px !important;
+  line-height: 1.55 !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 619px) {
+  #servicios .section-title {
+    padding: 24px 16px 28px !important;
+    border-radius: 24px !important;
+    margin-bottom: 30px !important;
+  }
+
+  #servicios .section-title::before,
+  #servicios .section-title::after {
+    display: none !important;
+  }
+
+  #servicios .section-title span {
+    font-size: 12px !important;
+    padding: 8px 14px !important;
+    letter-spacing: 0.8px !important;
+  }
+
+  #servicios .section-title h2 {
+    font-size: clamp(31px, 9vw, 43px) !important;
+    letter-spacing: -1px !important;
+  }
+
+  #servicios .service-title-note,
+  #servicios .section-title p {
+    font-size: 16px !important;
+  }
+}
+
+
+/* Corrección V75: quitar icono del encabezado de Servicios */
+#servicios .section-title::before,
+#servicios .section-title::after {
+  display: none !important;
+  content: none !important;
+}
+
+#servicios .section-title {
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}

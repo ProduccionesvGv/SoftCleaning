@@ -403,3 +403,14 @@ CAMBIO V73:
 - Se corrigió el campo Código promocional para permitir letras y números en móvil.
 - Se cambió inputmode="numeric" por inputmode="text".
 - Se agregó autocapitalize="characters" para facilitar códigos con letras como LCDTM.
+
+CAMBIO V74:
+- Se cambió el título de Servicios para que no parezca título de blog.
+- "Servicios / Soluciones para PC y notebooks" pasó a:
+  "Especialidades técnicas / Limpieza y formateo profesional".
+- Se agregó una bajada comercial/técnica.
+- Se aplicó un estilo de tarjeta profesional al encabezado de Servicios.
+
+CAMBIO V75:
+- Se cambió el título a "Limpieza y Formateo Profesional".
+- Se eliminó el icono/mancha verde con tilde del encabezado de Servicios.
