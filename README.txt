@@ -376,3 +376,8 @@ CAMBIO V68:
   - 2688: 15% de descuento
 - El formulario muestra si el código es válido o no.
 - El mensaje de WhatsApp incluye el código promocional y el descuento aplicado.
+
+CAMBIO V69:
+- Se quitó el texto visible que exponía los códigos promocionales.
+- Ahora el campo muestra: "Ingresá tu código si tenés uno".
+- La validación sigue funcionando para los códigos configurados.

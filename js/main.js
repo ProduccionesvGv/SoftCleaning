@@ -104,7 +104,7 @@ if (codigoPromoInput && promoHelp) {
     promoHelp.classList.remove("valid", "invalid");
 
     if (!codigo) {
-      promoHelp.textContent = "Códigos válidos: 2693 o 2688";
+      promoHelp.textContent = "Ingresá tu código si tenés uno";
       return;
     }
 
