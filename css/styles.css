@@ -2154,3 +2154,182 @@ main {
     margin-top: 0 !important;
   }
 }
+
+
+/* Corrección V61: título de Planes más destacado */
+#planes .section-title {
+  position: relative !important;
+  max-width: 900px !important;
+  margin: 0 auto 42px !important;
+  padding: 30px 18px 34px !important;
+  text-align: center !important;
+}
+
+#planes .section-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 110px;
+  height: 5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f97316, #fb923c, #fdba74);
+  transform: translateX(-50%);
+}
+
+#planes .section-title span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: fit-content !important;
+  margin: 0 auto 16px !important;
+  padding: 9px 18px !important;
+  border-radius: 999px !important;
+  background: #f97316 !important;
+  color: #fff7ed !important;
+  border: 1px solid rgba(154, 52, 18, 0.14) !important;
+  box-shadow: 0 12px 26px rgba(249, 115, 22, 0.24) !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+}
+
+#planes .section-title h2 {
+  position: relative !important;
+  display: inline-block !important;
+  max-width: 780px !important;
+  margin: 0 auto !important;
+  color: #431407 !important;
+  font-size: clamp(38px, 6vw, 64px) !important;
+  line-height: 1.03 !important;
+  letter-spacing: -1.8px !important;
+  font-weight: 950 !important;
+}
+
+#planes .section-title h2::after {
+  content: "";
+  display: block;
+  width: 48%;
+  min-width: 150px;
+  height: 12px;
+  margin: -10px auto 0;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.20);
+  position: relative;
+  z-index: -1;
+}
+
+#planes .section-title p {
+  max-width: 650px !important;
+  margin: 18px auto 0 !important;
+  color: #9a3412 !important;
+  font-size: 18px !important;
+  line-height: 1.55 !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 619px) {
+  #planes .section-title {
+    margin-bottom: 30px !important;
+    padding: 24px 10px 28px !important;
+  }
+
+  #planes .section-title span {
+    font-size: 12px !important;
+    padding: 8px 14px !important;
+    letter-spacing: 0.7px !important;
+  }
+
+  #planes .section-title h2 {
+    font-size: clamp(34px, 11vw, 46px) !important;
+    letter-spacing: -1px !important;
+  }
+
+  #planes .section-title h2::after {
+    height: 9px;
+    min-width: 120px;
+    margin-top: -7px;
+  }
+
+  #planes .section-title p {
+    font-size: 16px !important;
+  }
+}
+
+
+/* Corrección V62: etiqueta Planes simple y Precios orientativos normal */
+#planes .section-title {
+  position: relative !important;
+  max-width: 860px !important;
+  margin: 0 auto 34px !important;
+  padding: 0 16px !important;
+  text-align: center !important;
+}
+
+#planes .section-title::before,
+#planes .section-title h2::after {
+  display: none !important;
+}
+
+#planes .section-title span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: fit-content !important;
+  margin: 0 auto 16px !important;
+  padding: 12px 28px !important;
+  border-radius: 999px !important;
+  background: #f97316 !important;
+  color: #ffffff !important;
+  border: 0 !important;
+  box-shadow: 0 12px 26px rgba(249, 115, 22, 0.22) !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+  letter-spacing: 1.6px !important;
+  text-transform: uppercase !important;
+}
+
+#planes .section-title h2 {
+  display: block !important;
+  max-width: 760px !important;
+  margin: 0 auto !important;
+  color: #431407 !important;
+  font-size: clamp(34px, 5vw, 50px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -1.2px !important;
+  font-weight: 900 !important;
+}
+
+#planes .section-title p {
+  max-width: 650px !important;
+  margin: 14px auto 0 !important;
+  color: #9a3412 !important;
+  font-size: 17px !important;
+  line-height: 1.55 !important;
+  font-weight: 500 !important;
+}
+
+@media (max-width: 619px) {
+  #planes .section-title {
+    margin-bottom: 28px !important;
+    padding: 0 10px !important;
+  }
+
+  #planes .section-title span {
+    font-size: 13px !important;
+    padding: 10px 24px !important;
+    margin-bottom: 14px !important;
+  }
+
+  #planes .section-title h2 {
+    font-size: clamp(32px, 9vw, 42px) !important;
+    letter-spacing: -0.8px !important;
+  }
+
+  #planes .section-title p {
+    font-size: 16px !important;
+  }
+}

@@ -331,3 +331,14 @@ CAMBIO V59:
 CAMBIO V60:
 - Se actualizó el texto del servicio Formateo + Software:
   "Formateo completo de discos, instalación y activación de Windows y drivers, actualización del sistema, instalación y activación de programas básicos y configuración inicial del equipo."
+
+CAMBIO V61:
+- Se mejoró el título del sector Planes para que no pase desapercibido.
+- Se agregó etiqueta naranja, línea superior, título más grande y subrayado suave.
+- Se mantuvo el estilo naranja del sector Planes.
+
+CAMBIO V62:
+- Se simplificó el estilo del título Planes.
+- La palabra Planes queda como una cápsula naranja arriba de Precios orientativos.
+- Se quitó el subrayado/decoración exagerada de Precios orientativos.
+- Precios orientativos volvió a un tamaño más normal.
