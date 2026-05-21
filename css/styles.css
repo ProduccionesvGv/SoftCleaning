@@ -3591,3 +3591,26 @@ main {
     width: 260px !important;
   }
 }
+
+
+/* Corrección V95: promo más grande en Contacto */
+.promo-contact-icon {
+  width: 340px !important;
+  max-width: 94% !important;
+  margin: 0 auto 22px !important;
+}
+
+@media (max-width: 619px) {
+  .promo-contact-icon {
+    width: 260px !important;
+    max-width: 96% !important;
+    margin-bottom: 18px !important;
+  }
+}
+
+@media (min-width: 920px) {
+  .promo-contact-icon {
+    width: 390px !important;
+    max-width: 92% !important;
+  }
+}

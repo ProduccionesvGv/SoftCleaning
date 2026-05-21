@@ -526,3 +526,7 @@ CAMBIO V94:
 - Ahora queda centrado arriba de "Pedí tu presupuesto por WhatsApp".
 - Se quitó de Planes/Hero.
 - Mantiene efecto fade in / fade out con rebote.
+
+CAMBIO V95:
+- Se agrandó el icono promocional ubicado sobre "Pedí tu presupuesto por WhatsApp".
+- Se ajustó el tamaño para móvil y escritorio.
