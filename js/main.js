@@ -44,8 +44,9 @@ if (contactForm) {
 
     const nombre = document.getElementById("nombre")?.value.trim() || "";
     const equipo = document.getElementById("equipo")?.value || "";
-    const zona = document.getElementById("zona")?.value || "";
+    const modelo = document.getElementById("modelo")?.value.trim() || "No especificado";
     const servicio = document.getElementById("servicio")?.value || "";
+    const zona = document.getElementById("zona")?.value || "";
     const detalle = document.getElementById("detalle")?.value.trim() || "No especificado";
 
     const mensaje = `
@@ -54,10 +55,13 @@ if (contactForm) {
 *Datos del cliente*
 Nombre: ${nombre}
 Equipo: ${equipo}
-Zona: ${zona}
+Modelo: ${modelo}
 
-*Servicio solicitado*
+*Servicio*
 ${servicio}
+
+*Zona*
+${zona}
 
 *Detalle del problema*
 ${detalle}

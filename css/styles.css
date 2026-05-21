@@ -2095,3 +2095,12 @@ main {
     margin-top: 14px;
   }
 }
+
+
+/* Corrección V49: formulario limpio y detalle estático */
+.contact-form textarea {
+  resize: none !important;
+  min-height: 150px !important;
+  height: 150px !important;
+  max-height: 150px !important;
+}

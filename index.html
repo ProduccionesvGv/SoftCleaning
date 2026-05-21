@@ -200,7 +200,6 @@
           <p>Completá el formulario y se abre WhatsApp con el mensaje listo para enviar.</p>
 
           <div class="contact-data">
-            <p><strong>WhatsApp:</strong> +54 9 11 5876-8929</p>
           </div>
         </div>
 
@@ -214,13 +213,29 @@
             Equipo
             <select id="equipo" required>
               <option value="">Seleccionar</option>
-              <option value="Notebook">Notebook</option>
+              <option value="Notebook Standar">Notebook Standar</option>
+              <option value="Notebook Gamer">Notebook Gamer</option>
               <option value="PC de escritorio">PC de escritorio</option>
               <option value="Otro">Otro</option>
             </select>
           </label>
 
-          
+          <label>
+            Modelo del equipo
+            <input type="text" id="modelo" placeholder="Ej: Lenovo IdeaPad, HP Pavilion, PC armada, no lo sé" />
+          </label>
+
+          <label>
+            Servicio
+            <select id="servicio" required>
+              <option value="">Seleccionar</option>
+              <option value="Plan SoftClean - Limpieza + mantenimiento">Plan SoftClean - Limpieza + mantenimiento</option>
+              <option value="Plan SoftReset - Formateo + software">Plan SoftReset - Formateo + software</option>
+              <option value="Plan SoftFull - Limpieza + formateo completo">Plan SoftFull - Limpieza + formateo completo</option>
+              <option value="Plan SoftGPU - Limpieza de placa de video gamer">Plan SoftGPU - Limpieza de placa de video gamer</option>
+            </select>
+          </label>
+
           <label>
             Zona
             <select id="zona" required>
@@ -281,20 +296,9 @@
             </select>
           </label>
 
-<label>
-            Servicio
-            <select id="servicio" required>
-              <option value="">Seleccionar</option>
-              <option value="Plan SoftClean - Limpieza + mantenimiento">Plan SoftClean - Limpieza + mantenimiento</option>
-              <option value="Plan SoftReset - Formateo + software">Plan SoftReset - Formateo + software</option>
-              <option value="Plan SoftFull - Limpieza + formateo completo">Plan SoftFull - Limpieza + formateo completo</option>
-              <option value="Plan SoftGPU - Limpieza de placa de video gamer">Plan SoftGPU - Limpieza de placa de video gamer</option>
-            </select>
-          </label>
-
           <label>
             Detalle
-            <textarea id="detalle" rows="4" placeholder="Contame qué problema tiene el equipo"></textarea>
+            <textarea id="detalle" rows="4" placeholder="Detallá el error, falla o comportamiento del equipo"></textarea>
           </label>
 
           <button type="submit" class="btn btn-primary">Enviar por WhatsApp</button>

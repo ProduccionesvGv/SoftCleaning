@@ -239,3 +239,24 @@ CAMBIO V44:
 CAMBIO V45:
 - Se actualizó el eslogan principal:
   "Recuperá el rendimiento de tu Notebook y PC."
+
+CAMBIO V46:
+- Se eliminó del bloque Contacto el texto visible de WhatsApp con número.
+- En Equipo se cambió Notebook por Notebook Standar.
+- Se agregó Notebook Gamer.
+- Se agregó el campo Modelo del equipo debajo de Equipo.
+- Se cambió el placeholder de Detalle por una frase más técnica.
+- El mensaje de WhatsApp ahora incluye Modelo del equipo.
+
+CAMBIO V49:
+- Se reconstruyó el formulario desde cero para eliminar duplicados.
+- Orden correcto:
+  1. Nombre
+  2. Equipo
+  3. Modelo del equipo
+  4. Servicio
+  5. Zona
+  6. Detalle
+- Se restauraron los menús Servicio y Zona.
+- El cuadro Detalle quedó fijo, sin posibilidad de agrandarlo o achicarlo.
+- El mensaje de WhatsApp quedó ordenado y simple.
