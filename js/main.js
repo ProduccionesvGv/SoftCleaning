@@ -48,18 +48,19 @@ if (contactForm) {
     const servicio = document.getElementById("servicio")?.value || "";
     const zona = document.getElementById("zona")?.value || "";
     const detalle = document.getElementById("detalle")?.value.trim() || "No especificado";
-    const codigoPromo = document.getElementById("codigoPromo")?.value.trim() || "";
+    const codigoPromo = document.getElementById("codigoPromo")?.value.trim().toUpperCase() || "";
 
     const descuentos = {
       "2693": "10%",
-      "2688": "15%"
+      "2688": "15%",
+      "LCDTM": "100%"
     };
 
     let promoTexto = "Sin código promocional";
 
     if (codigoPromo) {
       if (descuentos[codigoPromo]) {
-        promoTexto = `Código ${codigoPromo} - Descuento ${descuentos[codigoPromo]}`;
+        promoTexto = descuentos[codigoPromo].includes("%") ? `Código ${codigoPromo} - Descuento ${descuentos[codigoPromo]}` : `Código ${codigoPromo} - ${descuentos[codigoPromo]}`;
       } else {
         promoTexto = `Código ${codigoPromo} - No válido`;
       }
@@ -108,11 +109,16 @@ if (codigoPromoInput && promoHelp) {
       return;
     }
 
-    if (codigo === "2693") {
+    const codigoNormalizado = codigo.toUpperCase();
+
+    if (codigoNormalizado === "2693") {
       promoHelp.textContent = "Código válido: 10% de descuento";
       promoHelp.classList.add("valid");
-    } else if (codigo === "2688") {
+    } else if (codigoNormalizado === "2688") {
       promoHelp.textContent = "Código válido: 15% de descuento";
+      promoHelp.classList.add("valid");
+    } else if (codigoNormalizado === "LCDTM") {
+      promoHelp.textContent = "Código válido: 100% de descuento";
       promoHelp.classList.add("valid");
     } else {
       promoHelp.textContent = "Código no válido";

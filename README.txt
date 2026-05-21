@@ -381,3 +381,16 @@ CAMBIO V69:
 - Se quitó el texto visible que exponía los códigos promocionales.
 - Ahora el campo muestra: "Ingresá tu código si tenés uno".
 - La validación sigue funcionando para los códigos configurados.
+
+CAMBIO V70:
+- Se agregó el código promocional LCDTM.
+- LCDTM figura como promoción especial.
+- El código funciona aunque el usuario escriba lcdtm en minúscula.
+- Se mantienen:
+  - 2693: 10%
+  - 2688: 15%
+
+CAMBIO V71:
+- Se actualizó el código promocional LCDTM.
+- LCDTM ahora aplica 100% de descuento.
+- Sigue funcionando aunque el usuario lo escriba en minúscula.
