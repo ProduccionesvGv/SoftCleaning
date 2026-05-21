@@ -3112,3 +3112,348 @@ main {
   pointer-events: auto !important;
   transform: translateX(0) scale(1) !important;
 }
+
+
+/* Corrección V85: promoción dentro del sector Planes, sin JS */
+.promo-simple-float,
+.promo-floating,
+.promo-modal {
+  display: none !important;
+}
+
+#planes .container {
+  position: relative !important;
+}
+
+.promo-plan-icon {
+  position: absolute !important;
+  top: 22px !important;
+  right: 18px !important;
+  z-index: 6 !important;
+  display: block !important;
+  width: 128px !important;
+  text-decoration: none !important;
+  filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.22)) !important;
+  animation: promoPlanPulse 1.7s ease-in-out infinite !important;
+}
+
+.promo-plan-icon img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+@keyframes promoPlanPulse {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-5px) scale(1.04);
+    opacity: 0.86;
+  }
+}
+
+@media (max-width: 619px) {
+  .promo-plan-icon {
+    top: 14px !important;
+    right: 8px !important;
+    width: 92px !important;
+  }
+
+  #planes .section-title {
+    padding-right: 74px !important;
+  }
+}
+
+
+/* Corrección V87: promo transparente y código más legible */
+.promo-plan-icon {
+  width: 172px !important;
+}
+
+.promo-plan-icon img {
+  background: transparent !important;
+}
+
+@media (max-width: 619px) {
+  .promo-plan-icon {
+    width: 128px !important;
+  }
+}
+
+
+/* Corrección V88: promo 10% OFF en el hero con ciclo perpetuo */
+.promo-plan-icon,
+.promo-simple-float,
+.promo-floating,
+.promo-modal {
+  display: none !important;
+}
+
+.hero-panel {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.promo-hero-icon {
+  position: absolute !important;
+  right: 22px !important;
+  top: 28px !important;
+  z-index: 4 !important;
+  width: 190px !important;
+  display: block !important;
+  text-decoration: none !important;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(44px) scale(0.88) rotate(4deg);
+  filter: drop-shadow(0 20px 36px rgba(34, 197, 94, 0.28));
+  animation: promoHeroLoop 9s ease-in-out 1.5s infinite;
+}
+
+.promo-hero-icon img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.promo-hero-icon:hover {
+  animation-play-state: paused;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0) scale(1.05) rotate(0deg);
+}
+
+@keyframes promoHeroLoop {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(44px) scale(0.88) rotate(4deg);
+  }
+
+  13% {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(44px) scale(0.88) rotate(4deg);
+  }
+
+  23% {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0) scale(1.08) rotate(-2deg);
+  }
+
+  31% {
+    transform: translateX(0) scale(0.98) rotate(1deg);
+  }
+
+  40% {
+    transform: translateX(0) scale(1.04) rotate(0deg);
+    opacity: 0.76;
+  }
+
+  50% {
+    transform: translateX(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateX(0) scale(1.04) rotate(-1deg);
+    opacity: 0.78;
+  }
+
+  68% {
+    transform: translateX(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+
+  74% {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0) scale(1) rotate(0deg);
+  }
+
+  84% {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(44px) scale(0.88) rotate(4deg);
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(44px) scale(0.88) rotate(4deg);
+  }
+}
+
+/* En pantallas chicas, queda arriba a la derecha sin tapar el título */
+@media (max-width: 619px) {
+  .promo-hero-icon {
+    right: 12px !important;
+    top: 18px !important;
+    width: 126px !important;
+  }
+
+  .hero-copy {
+    padding-top: 92px !important;
+  }
+}
+
+/* En escritorio puede verse más grande, como elemento promocional del hero */
+@media (min-width: 920px) {
+  .promo-hero-icon {
+    right: 34px !important;
+    top: 34px !important;
+    width: 230px !important;
+  }
+}
+
+
+/* Corrección V89: el icono promo no debe modificar el espacio del hero */
+.hero-copy {
+  padding-top: 0 !important;
+}
+
+/* Mantener el icono absoluto, superpuesto, sin empujar contenido */
+.promo-hero-icon {
+  position: absolute !important;
+  right: 18px !important;
+  top: 18px !important;
+  z-index: 5 !important;
+  width: 150px !important;
+  pointer-events: auto !important;
+}
+
+/* En móvil se achica para no obligar a mover el título */
+@media (max-width: 619px) {
+  .hero-copy {
+    padding-top: 0 !important;
+  }
+
+  .promo-hero-icon {
+    right: 10px !important;
+    top: 10px !important;
+    width: 92px !important;
+  }
+}
+
+/* En escritorio queda arriba a la derecha sin afectar layout */
+@media (min-width: 920px) {
+  .promo-hero-icon {
+    right: 26px !important;
+    top: 22px !important;
+    width: 170px !important;
+  }
+}
+
+
+/* Corrección V90: icono promocional más grande sin empujar contenido */
+.promo-hero-icon {
+  width: 210px !important;
+  right: 14px !important;
+  top: 14px !important;
+}
+
+/* En móvil más grande, pero sin mover el texto del hero */
+@media (max-width: 619px) {
+  .promo-hero-icon {
+    width: 130px !important;
+    right: 8px !important;
+    top: 8px !important;
+  }
+
+  .hero-copy {
+    padding-top: 0 !important;
+  }
+}
+
+/* En escritorio más protagonista */
+@media (min-width: 920px) {
+  .promo-hero-icon {
+    width: 240px !important;
+    right: 22px !important;
+    top: 18px !important;
+  }
+}
+
+
+/* Corrección V91: promo con computadora reemplazada y código legible */
+.promo-hero-icon {
+  width: 260px !important;
+}
+
+@media (max-width: 619px) {
+  .promo-hero-icon {
+    width: 150px !important;
+  }
+}
+
+
+/* Corrección V92: mover promo 10% OFF al sector Planes */
+.promo-hero-icon,
+.promo-simple-float,
+.promo-floating,
+.promo-modal {
+  display: none !important;
+}
+
+#planes .container {
+  position: relative !important;
+}
+
+.promo-plan-icon {
+  position: absolute !important;
+  top: 18px !important;
+  right: 18px !important;
+  z-index: 8 !important;
+  display: block !important;
+  width: 230px !important;
+  text-decoration: none !important;
+  filter: drop-shadow(0 18px 32px rgba(154, 52, 18, 0.18)) !important;
+  animation: promoPlanSoftPulse 1.8s ease-in-out infinite !important;
+}
+
+.promo-plan-icon img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+@keyframes promoPlanSoftPulse {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-5px) scale(1.035);
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 619px) {
+  .promo-plan-icon {
+    top: 10px !important;
+    right: 6px !important;
+    width: 140px !important;
+  }
+
+  #planes .section-title {
+    padding-right: 82px !important;
+  }
+}
+
+@media (min-width: 920px) {
+  .promo-plan-icon {
+    top: 22px !important;
+    right: 26px !important;
+    width: 260px !important;
+  }
+}

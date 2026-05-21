@@ -133,28 +133,3 @@ if (codigoPromoInput && promoHelp) {
 
 
 
-// Mostrar icono promocional solo en Planes
-(() => {
-  const promoIcon = document.querySelector(".promo-simple-float");
-  const planesSection = document.getElementById("planes");
-
-  if (!promoIcon || !planesSection) return;
-
-  function updatePromoVisibility() {
-    const rect = planesSection.getBoundingClientRect();
-    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-
-    const isNearPlanes = rect.top < viewportHeight * 0.75 && rect.bottom > viewportHeight * 0.20;
-
-    if (isNearPlanes) {
-      promoIcon.classList.add("is-visible");
-    } else {
-      promoIcon.classList.remove("is-visible");
-    }
-  }
-
-  window.addEventListener("scroll", updatePromoVisibility, { passive: true });
-  window.addEventListener("resize", updatePromoVisibility);
-
-  updatePromoVisibility();
-})();

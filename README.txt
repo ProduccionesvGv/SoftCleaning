@@ -469,3 +469,49 @@ CAMBIO V84:
 - El icono promocional simple ahora solo se muestra cuando el usuario pasa por el sector Planes.
 - Fuera de Planes queda oculto.
 - Se mantuvo como icono simple, sin modal ni timers complejos.
+
+CAMBIO V85:
+- Se quitó el sistema anterior que intentaba mostrar/ocultar el icono por JavaScript.
+- El icono 10% OFF ahora está dentro del sector Planes.
+- Solo se ve cuando se llega visualmente a la sección Planes porque forma parte de esa sección.
+- Se mantiene como icono simple, con leve pulso, sin lógica que pueda hacerlo desaparecer.
+
+CAMBIO V86:
+- Se reemplazó el icono promocional por la última versión elegida.
+- Se mantiene dentro del sector Planes.
+- Archivo actualizado: assets/img/promo-10off.png
+
+CAMBIO V87:
+- Se reemplazó promo-10off.png por una versión con fondo transparente.
+- Se agrandó el texto CÓDIGO: 2693.
+- Se ajustó el tamaño del icono promocional para mejorar lectura.
+
+CAMBIO V88:
+- Se movió el icono promocional 10% OFF desde Planes al sector principal/hero.
+- Se ubicó arriba a la derecha, como en la referencia visual.
+- Se agregó animación perpetua: entra, rebota/titila, desaparece y vuelve a entrar.
+- Se mantiene como enlace al formulario de contacto.
+
+CAMBIO V89:
+- Se corrigió el espacio extra que generaba el icono promocional entre el logo superior y el hero.
+- Se eliminó el padding agregado al texto del hero en móvil.
+- El icono promocional queda superpuesto en el hero sin empujar contenido.
+- Se achicó el icono en móvil para que no rompa el espaciado.
+
+CAMBIO V90:
+- Se agrandó el icono promocional 10% OFF.
+- Se mantuvo superpuesto para que no agregue espacio extra ni empuje el contenido.
+- Se ajustó tamaño distinto para móvil y escritorio.
+
+CAMBIO V91:
+- Se reemplazó la computadora del icono promocional por la imagen enviada por el usuario.
+- Se mantuvo el estilo SoftCleaning.
+- Se agrandó "CÓDIGO: 2693".
+- Se mantuvo 10 en verde y OFF en blanco.
+- Archivo actualizado: assets/img/promo-10off.png
+
+CAMBIO V92:
+- Se movió el icono promocional 10% OFF desde el hero al sector Planes.
+- Se mantiene dentro del bloque de planes de pago.
+- Conserva el enlace al formulario de contacto.
+- Se agregó un leve efecto de pulso.
