@@ -126,3 +126,61 @@ if (codigoPromoInput && promoHelp) {
     }
   });
 }
+
+
+// Promoción flotante 10% OFF
+const promoFloating = document.getElementById("promoFloating");
+const promoTrigger = document.getElementById("promoTrigger");
+const promoClose = document.getElementById("promoClose");
+const promoModal = document.getElementById("promoModal");
+const promoModalClose = document.getElementById("promoModalClose");
+const promoCopy = document.getElementById("promoCopy");
+const promoCopyStatus = document.getElementById("promoCopyStatus");
+const promoCode = "2693";
+
+if (promoFloating) {
+  const hidePromo = () => {
+    promoFloating.classList.add("is-hidden");
+  };
+
+  const openPromo = () => {
+    if (promoModal) {
+      promoModal.classList.add("is-active");
+      promoModal.setAttribute("aria-hidden", "false");
+    }
+  };
+
+  const closePromoModal = () => {
+    if (promoModal) {
+      promoModal.classList.remove("is-active");
+      promoModal.setAttribute("aria-hidden", "true");
+    }
+  };
+
+  promoTrigger?.addEventListener("click", openPromo);
+
+  promoClose?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    hidePromo();
+  });
+
+  promoModalClose?.addEventListener("click", closePromoModal);
+
+  promoModal?.addEventListener("click", (event) => {
+    if (event.target === promoModal) closePromoModal();
+  });
+
+  promoCopy?.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(promoCode);
+      if (promoCopyStatus) promoCopyStatus.textContent = "Código copiado.";
+    } catch {
+      if (promoCopyStatus) promoCopyStatus.textContent = "Código: 2693";
+    }
+  });
+
+  // La oferta aparece al entrar, pero no queda molestando toda la navegación.
+  setTimeout(() => {
+    hidePromo();
+  }, 12000);
+}

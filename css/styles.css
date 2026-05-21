@@ -2532,3 +2532,251 @@ main {
   padding-left: 18px !important;
   padding-right: 18px !important;
 }
+
+
+/* Corrección V76: promoción flotante 10% OFF */
+.promo-floating {
+  position: fixed;
+  left: 16px;
+  bottom: 92px;
+  z-index: 90;
+  width: 142px;
+  filter: drop-shadow(0 18px 32px rgba(0, 0, 0, 0.28));
+  animation: promoIn 0.55s ease both, promoPulse 2.2s ease-in-out 0.8s infinite;
+}
+
+.promo-floating.is-hidden {
+  display: none !important;
+}
+
+.promo-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.promo-trigger img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.promo-close {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.86);
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.26);
+}
+
+.promo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: rgba(2, 6, 23, 0.62);
+  backdrop-filter: blur(6px);
+}
+
+.promo-modal.is-active {
+  display: flex;
+}
+
+.promo-modal-card {
+  position: relative;
+  width: min(360px, 94vw);
+  padding: 22px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(34, 197, 94, 0.17), transparent 38%),
+    linear-gradient(180deg, #ffffff, #f8fafc);
+  border: 1px solid rgba(34, 197, 94, 0.18);
+  box-shadow: 0 28px 80px rgba(2, 6, 23, 0.35);
+  text-align: center;
+  animation: promoModalIn 0.25s ease both;
+}
+
+.promo-modal-card img {
+  width: 220px;
+  max-width: 86%;
+  height: auto;
+  margin: 0 auto 8px;
+  display: block;
+  filter: drop-shadow(0 12px 22px rgba(34, 197, 94, 0.28));
+}
+
+.promo-modal-card h3 {
+  margin: 8px 0 8px;
+  color: #0f172a;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 950;
+  letter-spacing: -0.6px;
+}
+
+.promo-modal-card p {
+  margin: 0 0 12px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.promo-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+  margin: 0 auto 16px;
+  padding: 12px 18px;
+  border-radius: 16px;
+  background: #0f172a;
+  color: #86efac;
+  font-size: 28px;
+  font-weight: 950;
+  letter-spacing: 3px;
+}
+
+.promo-copy {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.promo-modal-card small {
+  display: block;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.promo-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@keyframes promoIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes promoPulse {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.035);
+  }
+}
+
+@keyframes promoModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 619px) {
+  .promo-floating {
+    left: 10px;
+    bottom: 86px;
+    width: 118px;
+  }
+
+  .promo-close {
+    width: 26px;
+    height: 26px;
+    font-size: 18px;
+  }
+
+  .promo-modal-card {
+    padding: 20px;
+  }
+
+  .promo-modal-card h3 {
+    font-size: 25px;
+  }
+}
+
+
+/* Corrección V77: quitar WhatsApp flotante y mover promoción al lado derecho */
+.whatsapp-float {
+  display: none !important;
+}
+
+/* Promo flotante del lado derecho */
+.promo-floating {
+  left: auto !important;
+  right: 16px !important;
+  bottom: 92px !important;
+  width: 142px !important;
+  animation:
+    promoSlideRightIn 0.65s ease both,
+    promoPulse 2.2s ease-in-out 0.9s infinite,
+    promoSlideRightOut 0.55s ease 11.45s forwards !important;
+}
+
+@keyframes promoSlideRightIn {
+  from {
+    opacity: 0;
+    transform: translateX(28px) translateY(10px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+@keyframes promoSlideRightOut {
+  from {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(34px) translateY(8px) scale(0.92);
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 619px) {
+  .promo-floating {
+    left: auto !important;
+    right: 10px !important;
+    bottom: 86px !important;
+    width: 118px !important;
+  }
+}

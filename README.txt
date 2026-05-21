@@ -414,3 +414,15 @@ CAMBIO V74:
 CAMBIO V75:
 - Se cambió el título a "Limpieza y Formateo Profesional".
 - Se eliminó el icono/mancha verde con tilde del encabezado de Servicios.
+
+CAMBIO V76:
+- Se agregó un icono flotante promocional 10% OFF.
+- Al hacer clic, revela el código 2693 en un cartel.
+- Incluye botón para copiar el código.
+- El icono desaparece automáticamente después de 12 segundos o puede cerrarse con X.
+- Se usó la imagen promocional enviada por el usuario.
+
+CAMBIO V77:
+- Se eliminó el icono flotante de WhatsApp.
+- El icono promocional 10% OFF ahora aparece del lado derecho.
+- La promoción entra con animación desde la derecha y desaparece automáticamente.

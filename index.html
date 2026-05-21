@@ -323,9 +323,6 @@
     </section>
   </main>
 <!-- Botón flotante -->
-  <a class="whatsapp-float" href="https://wa.me/5491158768929" target="_blank" aria-label="Contactar por WhatsApp">
-    WhatsApp
-  </a>
 
   <!-- Barra inferior móvil -->
   <nav class="mobile-bottom-bar">
@@ -341,5 +338,25 @@
   </footer>
 
   <script src="js/main.js"></script>
+
+  <div class="promo-floating" id="promoFloating" aria-label="Promoción 10% OFF">
+    <button class="promo-close" id="promoClose" type="button" aria-label="Cerrar promoción">×</button>
+    <button class="promo-trigger" id="promoTrigger" type="button" aria-label="Ver código promocional">
+      <img src="assets/img/promo-10off.png" alt="10% OFF" />
+    </button>
+  </div>
+
+  <div class="promo-modal" id="promoModal" aria-hidden="true">
+    <div class="promo-modal-card" role="dialog" aria-modal="true" aria-label="Código promocional">
+      <button class="promo-modal-close" id="promoModalClose" type="button" aria-label="Cerrar">×</button>
+      <img src="assets/img/promo-10off.png" alt="10% OFF" />
+      <h3>10% de descuento</h3>
+      <p>Usá este código en tu consulta:</p>
+      <div class="promo-code" id="promoCode">2693</div>
+      <button class="btn btn-primary promo-copy" id="promoCopy" type="button">Copiar código</button>
+      <small id="promoCopyStatus">Promoción por tiempo limitado.</small>
+    </div>
+  </div>
+
 </body>
 </html>
