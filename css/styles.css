@@ -2896,3 +2896,50 @@ main {
 .promo-floating.promo-paused {
   display: none !important;
 }
+
+
+/* Corrección V80: promo visible solo en Planes, sin quedar bloqueada */
+.promo-floating {
+  left: auto !important;
+  right: 16px !important;
+  bottom: 92px !important;
+  width: 142px !important;
+}
+
+.promo-floating.promo-visible {
+  display: block !important;
+}
+
+.promo-floating.promo-visible .promo-trigger img {
+  animation: promoBounceBlinkV80 1.1s ease-in-out infinite !important;
+}
+
+.promo-floating.promo-closed {
+  display: none !important;
+}
+
+@keyframes promoBounceBlinkV80 {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 14px 26px rgba(34, 197, 94, 0.22));
+    opacity: 1;
+  }
+  35% {
+    transform: translateY(-7px) scale(1.07);
+    filter: drop-shadow(0 20px 36px rgba(34, 197, 94, 0.42));
+    opacity: 0.72;
+  }
+  65% {
+    transform: translateY(0) scale(0.98);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 619px) {
+  .promo-floating {
+    left: auto !important;
+    right: 10px !important;
+    bottom: 86px !important;
+    width: 118px !important;
+  }
+}

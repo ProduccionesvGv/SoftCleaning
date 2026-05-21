@@ -181,35 +181,89 @@ if (promoFloating) {
 }
 
 
-// Activar promoción solo en el sector Planes
-const planesSection = document.getElementById("planes");
 
-if (promoFloating && planesSection) {
-  let promoClosedManually = false;
 
-  promoClose?.addEventListener("click", () => {
-    promoClosedManually = true;
-    promoFloating.classList.remove("promo-active");
-    promoFloating.classList.add("promo-paused");
+// Promo 10% OFF: aparece solo en la sección Planes con ciclo controlado
+(() => {
+  const promo = document.getElementById("promoFloating");
+  const planes = document.getElementById("planes");
+  const closeBtn = document.getElementById("promoClose");
+
+  if (!promo || !planes) return;
+
+  let isInPlanes = false;
+  let closedManually = false;
+  let showTimer = null;
+  let hideTimer = null;
+
+  function forceHide() {
+    promo.classList.remove("promo-visible");
+    promo.style.setProperty("opacity", "0", "important");
+    promo.style.setProperty("pointer-events", "none", "important");
+    promo.style.setProperty("transform", "translateX(36px) scale(0.92)", "important");
+  }
+
+  function forceShow() {
+    if (!isInPlanes || closedManually) return;
+
+    promo.classList.add("promo-visible");
+    promo.style.setProperty("display", "block", "important");
+    promo.style.setProperty("opacity", "1", "important");
+    promo.style.setProperty("pointer-events", "auto", "important");
+    promo.style.setProperty("transform", "translateX(0) scale(1)", "important");
+  }
+
+  function clearPromoTimers() {
+    clearTimeout(showTimer);
+    clearTimeout(hideTimer);
+    showTimer = null;
+    hideTimer = null;
+  }
+
+  function startPromoCycle() {
+    clearPromoTimers();
+    forceHide();
+
+    showTimer = setTimeout(() => {
+      forceShow();
+
+      hideTimer = setTimeout(() => {
+        forceHide();
+
+        if (isInPlanes && !closedManually) {
+          startPromoCycle();
+        }
+      }, 4000);
+    }, 5000);
+  }
+
+  function stopPromoCycle() {
+    clearPromoTimers();
+    forceHide();
+  }
+
+  closeBtn?.addEventListener("click", () => {
+    closedManually = true;
+    promo.classList.add("promo-closed");
+    stopPromoCycle();
   });
 
-  const promoObserver = new IntersectionObserver(
+  const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry) => {
-        if (promoClosedManually) return;
+      const entry = entries[0];
+      isInPlanes = Boolean(entry && entry.isIntersecting);
 
-        if (entry.isIntersecting) {
-          promoFloating.classList.remove("promo-paused");
-          promoFloating.classList.add("promo-active");
-        } else {
-          promoFloating.classList.remove("promo-active");
-        }
-      });
+      if (closedManually) return;
+
+      if (isInPlanes) {
+        startPromoCycle();
+      } else {
+        stopPromoCycle();
+      }
     },
-    {
-      threshold: 0.35
-    }
+    { threshold: 0.25 }
   );
 
-  promoObserver.observe(planesSection);
-}
+  observer.observe(planes);
+  forceHide();
+})();

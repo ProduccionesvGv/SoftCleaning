@@ -439,3 +439,9 @@ CAMBIO V79:
 - Fuera del sector Planes queda oculto.
 - Mantiene el patrón de entrada, rebote/titileo, ocultarse y repetir mientras la sección Planes esté visible.
 - Si se cierra con X, queda oculto manualmente.
+
+CAMBIO V80:
+- Se corrigió el icono promocional que no aparecía.
+- Ahora solo se activa cuando el usuario está en el sector Planes.
+- Al entrar a Planes: espera 5 segundos, aparece 4 segundos con rebote/titileo, se oculta y repite.
+- Se corrigió el conflicto de CSS que dejaba el icono siempre invisible.
