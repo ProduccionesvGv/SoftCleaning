@@ -520,3 +520,9 @@ CAMBIO V93:
 - Se agregó efecto fade in / fade out al icono promocional dentro de Planes.
 - Se mantuvo el efecto de rebote.
 - El icono aparece, rebota, se desvanece y vuelve a repetir el ciclo.
+
+CAMBIO V94:
+- Se movió el icono promocional 10% OFF al sector Contacto.
+- Ahora queda centrado arriba de "Pedí tu presupuesto por WhatsApp".
+- Se quitó de Planes/Hero.
+- Mantiene efecto fade in / fade out con rebote.

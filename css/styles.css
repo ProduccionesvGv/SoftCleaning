@@ -3512,3 +3512,82 @@ main {
     transform: translateY(10px) scale(0.92);
   }
 }
+
+
+/* Corrección V94: promo centrada arriba del título de Contacto */
+.promo-plan-icon,
+.promo-hero-icon,
+.promo-simple-float,
+.promo-floating,
+.promo-modal {
+  display: none !important;
+}
+
+.promo-contact-icon {
+  display: block !important;
+  width: 230px !important;
+  max-width: 82% !important;
+  margin: 0 auto 18px !important;
+  text-decoration: none !important;
+  filter: drop-shadow(0 18px 32px rgba(15, 23, 42, 0.18)) !important;
+  animation: promoContactFadeBounce 7.5s ease-in-out infinite !important;
+}
+
+.promo-contact-icon img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+@keyframes promoContactFadeBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.92);
+  }
+
+  14% {
+    opacity: 1;
+    transform: translateY(0) scale(1.08);
+  }
+
+  24% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.04);
+  }
+
+  36% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  78% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.92);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.92);
+  }
+}
+
+@media (max-width: 619px) {
+  .promo-contact-icon {
+    width: 170px !important;
+    margin-bottom: 14px !important;
+  }
+}
+
+@media (min-width: 920px) {
+  .promo-contact-icon {
+    width: 260px !important;
+  }
+}
