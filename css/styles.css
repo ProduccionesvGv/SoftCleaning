@@ -1799,124 +1799,299 @@ main {
 }
 
 
-/* Corrección V41: títulos de sección más trabajados */
+/* Corrección V42: títulos más limpios y sector Planes diferenciado en naranja */
+
+/* Títulos generales: más prolijos, sin formas exageradas */
 .section-title {
-  position: relative;
   max-width: 860px !important;
-  margin: 0 auto 34px !important;
-  padding: 0 14px 18px !important;
+  margin: 0 auto 32px !important;
+  padding: 0 16px !important;
   text-align: center !important;
 }
 
-.section-title::before {
+.section-title span {
+  display: inline-block !important;
+  margin-bottom: 10px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  color: #16a34a !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: none !important;
+}
+
+.section-title h2 {
+  color: #0f172a !important;
+  font-size: clamp(34px, 6vw, 54px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -1.4px !important;
+  font-weight: 900 !important;
+  margin: 0 !important;
+}
+
+.section-title p {
+  max-width: 650px !important;
+  margin: 14px auto 0 !important;
+  color: #64748b !important;
+  font-size: 17px !important;
+  line-height: 1.55 !important;
+}
+
+/* Sector Planes: estilo propio naranja */
+#planes {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 18%, rgba(251, 146, 60, 0.22), transparent 34%),
+    radial-gradient(circle at 85% 5%, rgba(253, 186, 116, 0.18), transparent 28%),
+    linear-gradient(135deg, #fff7ed 0%, #ffedd5 46%, #ffffff 100%) !important;
+  border-top: 1px solid rgba(234, 88, 12, 0.12);
+  border-bottom: 1px solid rgba(234, 88, 12, 0.12);
+}
+
+#planes::before {
+  content: "";
+  position: absolute;
+  right: -90px;
+  top: -90px;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.14);
+  pointer-events: none;
+}
+
+#planes::after {
+  content: "";
+  position: absolute;
+  left: -120px;
+  bottom: -120px;
+  width: 280px;
+  height: 280px;
+  border-radius: 999px;
+  background: rgba(251, 146, 60, 0.12);
+  pointer-events: none;
+}
+
+#planes .container {
+  position: relative;
+  z-index: 2;
+}
+
+#planes .section-title {
+  margin-bottom: 34px !important;
+}
+
+#planes .section-title span {
+  color: #ea580c !important;
+}
+
+#planes .section-title h2 {
+  color: #431407 !important;
+}
+
+#planes .section-title p {
+  color: #9a3412 !important;
+}
+
+/* Tarjetas de planes con look más comercial */
+#planes .plan-card {
+  background: rgba(255, 255, 255, 0.86) !important;
+  border: 1px solid rgba(249, 115, 22, 0.22) !important;
+  box-shadow: 0 18px 45px rgba(154, 52, 18, 0.12) !important;
+}
+
+#planes .plan-featured {
+  border: 2px solid #f97316 !important;
+  box-shadow: 0 22px 55px rgba(249, 115, 22, 0.22) !important;
+}
+
+#planes .plan-label {
+  background: #f97316 !important;
+  color: #fff7ed !important;
+}
+
+#planes .plan-label-dark {
+  background: #431407 !important;
+  color: #ffffff !important;
+}
+
+#planes .price {
+  color: #ea580c !important;
+}
+
+#planes .plan-card li::before {
+  color: #ea580c !important;
+}
+
+#planes .btn-primary {
+  background: #f97316 !important;
+  color: #fff7ed !important;
+  box-shadow: 0 14px 34px rgba(249, 115, 22, 0.28) !important;
+}
+
+#planes .btn-primary:hover {
+  background: #ea580c !important;
+}
+
+#planes .btn-secondary {
+  border-color: rgba(249, 115, 22, 0.22) !important;
+  color: #431407 !important;
+}
+
+#planes .prices-note {
+  background: rgba(255, 247, 237, 0.88) !important;
+  border: 1px solid rgba(249, 115, 22, 0.18) !important;
+  color: #9a3412 !important;
+}
+
+/* Indicador de deslizamiento en naranja */
+#planes .plans-hint {
+  background: rgba(154, 52, 18, 0.62) !important;
+  color: #fff7ed !important;
+}
+
+/* Evitar degradados viejos que tapaban notas o textos */
+#planes .container::after {
+  display: none !important;
+}
+
+@media (max-width: 619px) {
+  .section-title span {
+    font-size: 15px !important;
+  }
+
+  .section-title h2 {
+    font-size: clamp(30px, 9vw, 42px) !important;
+    letter-spacing: -0.9px !important;
+  }
+
+  #planes {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+}
+
+
+/* Corrección V43: títulos profesionales para Servicios y Preguntas frecuentes */
+#servicios .section-title,
+#faq .section-title {
+  position: relative;
+  max-width: 900px !important;
+  margin: 0 auto 38px !important;
+  padding: 28px 20px 30px !important;
+  text-align: center !important;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.82), rgba(248,250,252,0.42));
+}
+
+#servicios .section-title::before,
+#faq .section-title::before {
   content: "";
   position: absolute;
   left: 50%;
-  top: -18px;
-  width: 82px;
-  height: 4px;
+  top: 0;
+  width: 92px;
+  height: 5px;
   border-radius: 999px;
   background: linear-gradient(90deg, #22c55e, #38bdf8);
   transform: translateX(-50%);
 }
 
-.section-title span {
+#servicios .section-title span,
+#faq .section-title span {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
-  gap: 8px;
   width: fit-content;
-  margin: 0 auto 12px !important;
-  padding: 8px 16px !important;
+  margin: 0 auto 14px !important;
+  padding: 8px 15px !important;
   border-radius: 999px !important;
-  background: rgba(34, 197, 94, 0.12) !important;
-  border: 1px solid rgba(34, 197, 94, 0.22) !important;
+  background: rgba(34, 197, 94, 0.11) !important;
+  border: 1px solid rgba(34, 197, 94, 0.20) !important;
   color: #16a34a !important;
-  font-size: 15px !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
   font-weight: 900 !important;
   letter-spacing: 0.8px !important;
   text-transform: uppercase !important;
 }
 
-.section-title h2 {
+#servicios .section-title h2,
+#faq .section-title h2 {
   position: relative;
-  display: inline-block;
+  max-width: 780px;
   margin: 0 auto !important;
   color: #0f172a !important;
-  font-size: clamp(32px, 6.3vw, 58px) !important;
-  line-height: 1.04 !important;
-  letter-spacing: -1.8px !important;
+  font-size: clamp(34px, 5.4vw, 56px) !important;
+  line-height: 1.06 !important;
+  letter-spacing: -1.5px !important;
   font-weight: 950 !important;
 }
 
-.section-title h2::after {
+#servicios .section-title h2::after,
+#faq .section-title h2::after {
   content: "";
   display: block;
-  width: 42%;
-  min-width: 120px;
-  height: 10px;
-  margin: -8px auto 0;
+  width: 120px;
+  height: 4px;
+  margin: 18px auto 0;
   border-radius: 999px;
-  background: rgba(34, 197, 94, 0.18);
-  position: relative;
-  z-index: -1;
+  background: rgba(34, 197, 94, 0.34);
 }
 
-.section-title p {
-  max-width: 620px;
-  margin: 14px auto 0 !important;
+#servicios .section-title p,
+#faq .section-title p {
+  max-width: 620px !important;
+  margin: 16px auto 0 !important;
   color: #64748b !important;
   font-size: 17px !important;
+  line-height: 1.55 !important;
 }
 
-/* Fondo sutil para separar mejor cada bloque */
-#servicios,
-#planes,
-#faq {
-  position: relative;
+/* Diferencia sutil para FAQ */
+#faq .section-title::before {
+  background: linear-gradient(90deg, #22c55e, #0f172a);
 }
 
-#servicios::before,
-#planes::before,
-#faq::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 18px;
-  width: min(560px, 82vw);
-  height: 120px;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(34, 197, 94, 0.10), transparent 65%);
-  transform: translateX(-50%);
-  pointer-events: none;
+#faq .section-title span {
+  background: rgba(15, 23, 42, 0.06) !important;
+  border-color: rgba(15, 23, 42, 0.10) !important;
+  color: #0f172a !important;
 }
 
-#servicios .container,
-#planes .container,
-#faq .container {
-  position: relative;
-  z-index: 1;
+#faq .section-title h2::after {
+  background: rgba(15, 23, 42, 0.18);
 }
 
+/* Mobile: más compacto */
 @media (max-width: 619px) {
-  .section-title {
-    margin-bottom: 26px !important;
-    padding-bottom: 12px !important;
+  #servicios .section-title,
+  #faq .section-title {
+    margin-bottom: 28px !important;
+    padding: 22px 10px 24px !important;
+    border-radius: 22px;
   }
 
-  .section-title span {
+  #servicios .section-title span,
+  #faq .section-title span {
     font-size: 12px !important;
     padding: 7px 12px !important;
     letter-spacing: 0.5px !important;
   }
 
-  .section-title h2 {
+  #servicios .section-title h2,
+  #faq .section-title h2 {
     font-size: clamp(30px, 9vw, 42px) !important;
-    letter-spacing: -1.1px !important;
+    letter-spacing: -0.9px !important;
   }
 
-  .section-title h2::after {
-    height: 8px;
-    margin-top: -6px;
+  #servicios .section-title h2::after,
+  #faq .section-title h2::after {
+    width: 90px;
+    margin-top: 14px;
   }
 }

@@ -219,7 +219,13 @@ CAMBIO V40:
 - Ahora se ve más la notebook completa, las manos y el contexto de escritorio.
 - Se mantiene la pantalla de instalación de Windows 11.
 
-CAMBIO V41:
-- Se mejoraron visualmente los títulos de sección.
-- Se agregaron etiquetas tipo pill, líneas decorativas y subrayado verde suave.
-- Se aplicó a Servicios, Planes y Preguntas frecuentes.
+CAMBIO V42:
+- Se descartó el estilo anterior de títulos con formas decorativas exageradas.
+- Se dejaron títulos más limpios y profesionales.
+- Se rediseñó todo el sector Planes con identidad propia en color naranja.
+- Planes ahora se diferencia visualmente del resto de la página.
+
+CAMBIO V43:
+- Se dio formato profesional a los títulos de Servicios y Preguntas frecuentes.
+- Se agregaron contenedores sutiles, línea superior, etiqueta compacta y subrayado limpio.
+- Se mantuvo el sector Planes con su estilo naranja diferenciado.
