@@ -530,3 +530,8 @@ CAMBIO V94:
 CAMBIO V95:
 - Se agrandó el icono promocional ubicado sobre "Pedí tu presupuesto por WhatsApp".
 - Se ajustó el tamaño para móvil y escritorio.
+
+CAMBIO V96:
+- Se corrigió el centrado de los títulos del sector Planes.
+- "Planes" y "Precios orientativos" quedan centrados correctamente.
+- Se eliminó el efecto de desplazamiento visual hacia la izquierda causado por paddings anteriores.

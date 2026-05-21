@@ -3614,3 +3614,37 @@ main {
     max-width: 92% !important;
   }
 }
+
+
+/* Corrección V96: centrar correctamente título de Planes */
+#planes .section-title {
+  width: 100% !important;
+  max-width: 860px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+#planes .section-title span {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+#planes .section-title h2,
+#planes .section-title p {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+/* Evita que reglas anteriores de promo afecten el centrado del título */
+@media (max-width: 619px) {
+  #planes .section-title {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
