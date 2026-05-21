@@ -260,3 +260,54 @@ CAMBIO V49:
 - Se restauraron los menús Servicio y Zona.
 - El cuadro Detalle quedó fijo, sin posibilidad de agrandarlo o achicarlo.
 - El mensaje de WhatsApp quedó ordenado y simple.
+
+CAMBIO V50:
+- Se actualizaron los detalles del Plan SoftClean.
+- Se unificó Limpieza externa e interna.
+- Se cambió Revisión de ventiladores por Revisión/Limpieza de ventiladores.
+- Se agregó Cambio de Pasta Térmica Premium.
+- Se agregó Limpieza completa de Hardware.
+
+CAMBIO V51:
+- Se volvió a agregar Diagnóstico general al Plan SoftClean.
+- Se mantuvo Optimización básica del sistema.
+- Lista final:
+  - Limpieza externa/interna
+  - Revisión/Limpieza de ventiladores
+  - Cambio de Pasta Térmica Premium
+  - Control de temperatura
+  - Optimización básica del sistema
+  - Limpieza completa de Hardware
+  - Diagnóstico general
+
+CAMBIO V52:
+- Se reordenaron los detalles del Plan SoftClean.
+- "Limpieza completa de Hardware" quedó debajo de "Cambio de Pasta Térmica Premium".
+- "Control de temperatura" y "Optimización básica del sistema" quedaron al final.
+
+CAMBIO V53:
+- Se actualizaron los detalles del Plan SoftReset:
+  - Formateo Completo de Disco HDD/SSD/NVMe/M.2
+  - Instalación y Activación Windows XP/10/11
+  - Instalación de drivers de Motherboard
+  - Actualización del sistema
+  - Instalación de programas básicos
+  - Configuración inicial
+
+CAMBIO V54:
+- Se actualizó el Plan SoftFull para incluir todo el contenido del Plan SoftClean y Plan SoftReset.
+- Se reemplazó "Actualización y optimización final" por "Optimización de Windows para mejorar rendimiento".
+- Se ajustó la descripción del Plan SoftFull.
+
+CAMBIO V55:
+- Se agregó al Plan SoftFull: Respaldo preventivo de archivos importantes.
+- Se actualizó la descripción del Plan SoftFull para mencionar el respaldo de forma profesional.
+
+CAMBIO V56:
+- Se revisaron y ordenaron los 3 planes de forma más técnica.
+- Las tareas similares quedaron agrupadas:
+  - Limpieza/revisión/pasta/hardware.
+  - Formateo/instalación Windows/drivers.
+  - Actualización/programas/configuración/optimización.
+- En Plan SoftFull se reemplazó la optimización por:
+  "Optimización avanzada de Windows para acelerar el rendimiento".
