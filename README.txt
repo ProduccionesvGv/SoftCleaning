@@ -229,3 +229,13 @@ CAMBIO V43:
 - Se dio formato profesional a los títulos de Servicios y Preguntas frecuentes.
 - Se agregaron contenedores sutiles, línea superior, etiqueta compacta y subrayado limpio.
 - Se mantuvo el sector Planes con su estilo naranja diferenciado.
+
+CAMBIO V44:
+- Se reemplazó el título principal:
+  "Limpieza, formateo y mantenimiento técnico"
+  por:
+  "Recuperá el rendimiento de tu PC o notebook."
+
+CAMBIO V45:
+- Se actualizó el eslogan principal:
+  "Recuperá el rendimiento de tu Notebook y PC."
