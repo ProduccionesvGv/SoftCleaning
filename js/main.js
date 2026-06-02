@@ -235,6 +235,8 @@ if (formatFeatureButtons.length && formatDisplayTitle && formatDisplayText && fo
       if (formatDisplayImage && button.dataset.image) {
         formatDisplayImage.src = button.dataset.image;
         formatDisplayImage.alt = button.dataset.alt || button.dataset.title || "";
+        formatDisplayImage.style.setProperty("--format-mobile-position", button.dataset.mobilePosition || "center center");
+        formatDisplayImage.style.setProperty("--format-mobile-scale", button.dataset.mobileScale || "1.2");
       }
 
       const items = (button.dataset.items || "")

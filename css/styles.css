@@ -5090,3 +5090,36 @@ body.service-detail-page {
     padding-right: 24px !important;
   }
 }
+
+/* V113: Formateo - imágenes más grandes y mejor encuadradas en Android/mobile */
+@media (max-width: 619px) {
+  .formateo-page .format-display {
+    min-height: 620px !important;
+    overflow: hidden !important;
+  }
+
+  .formateo-page .format-display-media {
+    overflow: hidden !important;
+  }
+
+  .formateo-page .format-display-media img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 620px !important;
+    object-fit: cover !important;
+    object-position: var(--format-mobile-position, 62% center) !important;
+    transform: scale(var(--format-mobile-scale, 1.22)) !important;
+    transform-origin: var(--format-mobile-position, 62% center) !important;
+    transition: transform 0.32s ease, object-position 0.32s ease, opacity 0.18s ease !important;
+  }
+
+  .formateo-page .format-display-media::before {
+    background:
+      linear-gradient(90deg, rgba(15, 23, 42, 0.94) 0%, rgba(15, 23, 42, 0.76) 48%, rgba(15, 23, 42, 0.30) 100%),
+      linear-gradient(180deg, rgba(15, 23, 42, 0.25) 0%, rgba(15, 23, 42, 0.08) 45%, rgba(15, 23, 42, 0.30) 100%) !important;
+  }
+
+  .formateo-page .format-display-copy {
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.55) 70%, rgba(15, 23, 42, 0.18)) !important;
+  }
+}
