@@ -5037,3 +5037,56 @@ body.service-detail-page {
       linear-gradient(180deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.72) 58%, rgba(15, 23, 42, 0.34) 100%);
   }
 }
+
+/* V112: Formateo - hero superior como fondo de página, sin caja ni bordes */
+.formateo-page .format-showcase-section {
+  padding-top: 0 !important;
+}
+
+.formateo-page .format-showcase {
+  border-radius: 0 !important;
+}
+
+.formateo-page .format-display {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: #0f172a !important;
+}
+
+.formateo-page .format-display::before {
+  display: none !important;
+}
+
+.formateo-page .format-display-media {
+  border-radius: 0 !important;
+}
+
+.formateo-page .format-display-media img {
+  border-radius: 0 !important;
+}
+
+.formateo-page .format-display-copy {
+  padding-left: max(32px, calc((100vw - 1120px) / 2 + 32px)) !important;
+  padding-right: max(32px, calc((100vw - 1120px) / 2 + 32px)) !important;
+  width: min(640px, 100%) !important;
+}
+
+.formateo-page .format-feature-list {
+  margin-top: 18px !important;
+}
+
+@media (max-width: 619px) {
+  .formateo-page .format-display {
+    min-height: 620px !important;
+  }
+
+  .formateo-page .format-display-copy {
+    min-height: 620px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
