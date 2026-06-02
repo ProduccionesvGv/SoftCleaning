@@ -136,12 +136,16 @@ if (codigoPromoInput && promoHelp) {
 
 
 // Interacción de las tarjetas de servicios.
-// Desktop: hover normal.
-// Android/iOS: se activa sola cuando la tarjeta entra en pantalla al hacer scroll.
+// PC: se activa solo mientras el mouse está encima.
+// Android/iPhone: se activa solo mientras la tarjeta cruza la zona central de la pantalla.
 const arcServiceCards = document.querySelectorAll(".arc-service-card");
 
 if (arcServiceCards.length) {
-  const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
+  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  const clearServiceCards = () => {
+    arcServiceCards.forEach((card) => card.classList.remove("is-active"));
+  };
 
   const activateServiceCard = (activeCard) => {
     arcServiceCards.forEach((card) => {
@@ -149,7 +153,13 @@ if (arcServiceCards.length) {
     });
   };
 
-  if (isTouchDevice && "IntersectionObserver" in window) {
+  if (canHover) {
+    arcServiceCards.forEach((card) => {
+      card.addEventListener("pointerenter", () => activateServiceCard(card));
+      card.addEventListener("pointerleave", clearServiceCards);
+      card.addEventListener("blur", clearServiceCards);
+    });
+  } else if ("IntersectionObserver" in window) {
     const visibleCardRatios = new Map();
 
     const serviceCardObserver = new IntersectionObserver(
@@ -159,6 +169,7 @@ if (arcServiceCards.length) {
             visibleCardRatios.set(entry.target, entry.intersectionRatio);
           } else {
             visibleCardRatios.delete(entry.target);
+            entry.target.classList.remove("is-active");
           }
         });
 
@@ -167,33 +178,31 @@ if (arcServiceCards.length) {
 
         if (mostVisibleCard) {
           activateServiceCard(mostVisibleCard[0]);
+        } else {
+          clearServiceCards();
         }
       },
       {
-        threshold: [0.12, 0.25, 0.4, 0.55, 0.7],
-        rootMargin: "-12% 0px -26% 0px"
+        // Zona central: evita que una tarjeta quede activa solo por haber sido tocada o enfocada.
+        rootMargin: "-32% 0px -32% 0px",
+        threshold: [0, 0.08, 0.18, 0.32, 0.5, 0.7]
       }
     );
 
     arcServiceCards.forEach((card) => serviceCardObserver.observe(card));
-  }
 
-  arcServiceCards.forEach((card) => {
-    card.addEventListener("pointerenter", () => {
-      if (!isTouchDevice) activateServiceCard(card);
-    });
-
-    card.addEventListener("pointerleave", () => {
-      if (!isTouchDevice) card.classList.remove("is-active");
-    });
-
-    card.addEventListener("touchstart", () => {
-      activateServiceCard(card);
+    window.addEventListener("scroll", () => {
+      // Al scrollear, eliminamos el foco que Android puede dejar pegado después de tocar una tarjeta.
+      if (document.activeElement && document.activeElement.closest?.(".arc-service-card")) {
+        document.activeElement.blur();
+      }
     }, { passive: true });
-
-    card.addEventListener("click", (event) => {
-      if (event.target.closest("a")) return;
-      activateServiceCard(card);
+  } else {
+    arcServiceCards.forEach((card) => {
+      card.addEventListener("touchstart", () => {
+        activateServiceCard(card);
+        window.setTimeout(clearServiceCards, 900);
+      }, { passive: true });
     });
-  });
+  }
 }

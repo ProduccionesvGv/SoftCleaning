@@ -4158,3 +4158,39 @@ main {
     transform: translateY(-4px) !important;
   }
 }
+
+/* V101: corrección Android - el foco táctil no debe dejar una tarjeta pegada activa */
+@media (hover: none), (pointer: coarse) {
+  .arc-service-card:focus-within:not(.is-active),
+  .arc-service-card:focus-visible:not(.is-active) {
+    transform: none !important;
+    border-color: rgba(255,255,255,0.10) !important;
+    box-shadow: 0 22px 55px rgba(2, 6, 23, 0.30) !important;
+  }
+
+  .arc-service-card:focus-within:not(.is-active)::after,
+  .arc-service-card:focus-visible:not(.is-active)::after {
+    width: 62px !important;
+    opacity: 0.92 !important;
+    box-shadow: none !important;
+  }
+
+  .arc-service-card:focus-within:not(.is-active) .arc-service-bg,
+  .arc-service-card:focus-visible:not(.is-active) .arc-service-bg {
+    opacity: 0.18 !important;
+    transform: none !important;
+    filter: grayscale(1) contrast(1.1) brightness(0.78) sepia(0.15) hue-rotate(76deg) saturate(1.2) !important;
+  }
+
+  .arc-service-card:focus-within:not(.is-active) .arc-service-icon,
+  .arc-service-card:focus-visible:not(.is-active) .arc-service-icon {
+    filter: none !important;
+  }
+
+  .arc-service-card:focus-within:not(.is-active) .arc-service-link span,
+  .arc-service-card:focus-visible:not(.is-active) .arc-service-link span {
+    border-color: rgba(187, 247, 208, 0.32) !important;
+    color: inherit !important;
+    background: transparent !important;
+  }
+}

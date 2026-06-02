@@ -535,3 +535,6 @@ CAMBIO V96:
 - Se corrigió el centrado de los títulos del sector Planes.
 - "Planes" y "Precios orientativos" quedan centrados correctamente.
 - Se eliminó el efecto de desplazamiento visual hacia la izquierda causado por paddings anteriores.
+Actualización:
+- Se quitó "Optimización básica del sistema" del plan de limpieza porque el servicio de limpieza no incluye tareas de software.
+- Se ajustó el texto de Limpieza + Mantenimiento para dejar solo tareas de hardware, temperatura y diagnóstico.
