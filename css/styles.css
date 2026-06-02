@@ -5227,3 +5227,94 @@ body.service-detail-page {
     padding-top: 16px !important;
   }
 }
+
+/* V115: Formateo mobile - texto arriba, imagen debajo y sin espacio blanco */
+.formateo-page main,
+.formateo-page .service-detail-main,
+.formateo-page .format-showcase-section {
+  background: #0f172a !important;
+}
+
+.formateo-page .site-header {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 619px) {
+  .formateo-page .site-header,
+  .formateo-page .site-header .container,
+  .formateo-page .site-header .header-content {
+    margin-bottom: 0 !important;
+  }
+
+  .formateo-page .service-detail-main,
+  .formateo-page .format-showcase-section {
+    padding-top: 0 !important;
+  }
+
+  .formateo-page .format-display {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: hidden !important;
+    background: #0f172a !important;
+  }
+
+  .formateo-page .format-display-copy {
+    position: relative !important;
+    order: 1 !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 46px 24px 34px !important;
+    justify-content: flex-start !important;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.98) 0%, rgba(17, 34, 49, 0.98) 100%) !important;
+  }
+
+  .formateo-page .format-display-step {
+    margin-bottom: 22px !important;
+  }
+
+  .formateo-page .format-display h3 {
+    max-width: 100% !important;
+    font-size: clamp(35px, 10.6vw, 44px) !important;
+  }
+
+  .formateo-page .format-display p {
+    max-width: 100% !important;
+    font-size: 17px !important;
+  }
+
+  .formateo-page .format-display li {
+    font-size: 14px !important;
+  }
+
+  .formateo-page .format-display-media {
+    position: relative !important;
+    inset: auto !important;
+    order: 2 !important;
+    width: 100% !important;
+    height: 310px !important;
+    min-height: 310px !important;
+    overflow: hidden !important;
+    background: #0f172a !important;
+  }
+
+  .formateo-page .format-display-media::before {
+    display: none !important;
+  }
+
+  .formateo-page .format-display-media img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    object-fit: cover !important;
+    object-position: var(--format-mobile-position, center center) !important;
+    transform: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  .formateo-page .format-feature-list {
+    padding-top: 16px !important;
+  }
+}

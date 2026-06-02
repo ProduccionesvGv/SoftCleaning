@@ -245,6 +245,16 @@ if (formatFeatureButtons.length && formatDisplayTitle && formatDisplayText && fo
         .filter(Boolean);
 
       formatDisplayList.innerHTML = items.map((item) => `<li>${item}</li>`).join("");
+
+      const formatDisplay = document.querySelector(".format-display");
+      const siteHeader = document.querySelector(".site-header");
+      if (formatDisplay && window.matchMedia("(max-width: 900px)").matches) {
+        const headerOffset = siteHeader ? siteHeader.offsetHeight : 0;
+        const targetTop = formatDisplay.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.setTimeout(() => {
+          window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+        }, 60);
+      }
     });
   });
 }
