@@ -270,20 +270,17 @@ CAMBIO V50:
 
 CAMBIO V51:
 - Se volvió a agregar Diagnóstico general al Plan SoftClean.
-- Se mantuvo Optimización básica del sistema.
 - Lista final:
   - Limpieza externa/interna
   - Revisión/Limpieza de ventiladores
   - Cambio de Pasta Térmica Premium
   - Control de temperatura
-  - Optimización básica del sistema
   - Limpieza completa de Hardware
   - Diagnóstico general
 
 CAMBIO V52:
 - Se reordenaron los detalles del Plan SoftClean.
 - "Limpieza completa de Hardware" quedó debajo de "Cambio de Pasta Térmica Premium".
-- "Control de temperatura" y "Optimización básica del sistema" quedaron al final.
 
 CAMBIO V53:
 - Se actualizaron los detalles del Plan SoftReset:
@@ -538,3 +535,6 @@ CAMBIO V96:
 Actualización:
 - Se quitó "Optimización básica del sistema" del plan de limpieza porque el servicio de limpieza no incluye tareas de software.
 - Se ajustó el texto de Limpieza + Mantenimiento para dejar solo tareas de hardware, temperatura y diagnóstico.
+
+
+V102: Se agregaron dos páginas separadas para los servicios: limpieza-mantenimiento.html y formateo-instalacion-windows.html. Los botones Consultar servicio de las tarjetas abren la página correspondiente en una pestaña nueva.
