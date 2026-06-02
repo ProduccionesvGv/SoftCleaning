@@ -135,19 +135,65 @@ if (codigoPromoInput && promoHelp) {
 
 
 
-// Interacción de las tarjetas de servicios: en desktop responde al hover y en celular queda activa al tocarla.
+// Interacción de las tarjetas de servicios.
+// Desktop: hover normal.
+// Android/iOS: se activa sola cuando la tarjeta entra en pantalla al hacer scroll.
 const arcServiceCards = document.querySelectorAll(".arc-service-card");
 
 if (arcServiceCards.length) {
+  const isTouchDevice = window.matchMedia("(hover: none), (pointer: coarse)").matches;
+
+  const activateServiceCard = (activeCard) => {
+    arcServiceCards.forEach((card) => {
+      card.classList.toggle("is-active", card === activeCard);
+    });
+  };
+
+  if (isTouchDevice && "IntersectionObserver" in window) {
+    const visibleCardRatios = new Map();
+
+    const serviceCardObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visibleCardRatios.set(entry.target, entry.intersectionRatio);
+          } else {
+            visibleCardRatios.delete(entry.target);
+          }
+        });
+
+        const mostVisibleCard = [...visibleCardRatios.entries()]
+          .sort((a, b) => b[1] - a[1])[0];
+
+        if (mostVisibleCard) {
+          activateServiceCard(mostVisibleCard[0]);
+        }
+      },
+      {
+        threshold: [0.12, 0.25, 0.4, 0.55, 0.7],
+        rootMargin: "-12% 0px -26% 0px"
+      }
+    );
+
+    arcServiceCards.forEach((card) => serviceCardObserver.observe(card));
+  }
+
   arcServiceCards.forEach((card) => {
+    card.addEventListener("pointerenter", () => {
+      if (!isTouchDevice) activateServiceCard(card);
+    });
+
+    card.addEventListener("pointerleave", () => {
+      if (!isTouchDevice) card.classList.remove("is-active");
+    });
+
+    card.addEventListener("touchstart", () => {
+      activateServiceCard(card);
+    }, { passive: true });
+
     card.addEventListener("click", (event) => {
       if (event.target.closest("a")) return;
-
-      arcServiceCards.forEach((item) => {
-        if (item !== card) item.classList.remove("is-active");
-      });
-
-      card.classList.toggle("is-active");
+      activateServiceCard(card);
     });
   });
 }
