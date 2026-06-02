@@ -5123,3 +5123,107 @@ body.service-detail-page {
     background: linear-gradient(90deg, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.55) 70%, rgba(15, 23, 42, 0.18)) !important;
   }
 }
+
+/* V114: Formateo - Android sin espacio blanco superior y hero con imagen más visible */
+.formateo-page .service-detail-main {
+  padding-top: 0 !important;
+}
+
+.formateo-page .format-showcase-section {
+  padding-top: 0 !important;
+}
+
+.formateo-page .format-display,
+.formateo-page .format-display-media,
+.formateo-page .format-display-media img {
+  border-radius: 0 !important;
+}
+
+@media (max-width: 619px) {
+  .formateo-page .site-header {
+    margin-bottom: 0 !important;
+  }
+
+  .formateo-page .service-detail-main {
+    padding-top: 0 !important;
+  }
+
+  .formateo-page .format-showcase-section {
+    padding-top: 0 !important;
+  }
+
+  .formateo-page .format-display {
+    min-height: 560px !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .formateo-page .format-display-copy {
+    min-height: 560px !important;
+    width: min(390px, 76vw) !important;
+    padding: 62px 22px 42px !important;
+    justify-content: center !important;
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.93) 0%, rgba(15, 23, 42, 0.74) 68%, rgba(15, 23, 42, 0.18) 100%) !important;
+  }
+
+  .formateo-page .format-display-step {
+    width: 42px !important;
+    height: 42px !important;
+    margin-bottom: 20px !important;
+    font-size: 12px !important;
+  }
+
+  .formateo-page .format-display h3 {
+    max-width: 360px !important;
+    margin-bottom: 14px !important;
+    font-size: clamp(34px, 10vw, 42px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.8px !important;
+  }
+
+  .formateo-page .format-display p {
+    max-width: 340px !important;
+    margin-bottom: 18px !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    font-weight: 650 !important;
+  }
+
+  .formateo-page .format-display ul {
+    gap: 7px !important;
+  }
+
+  .formateo-page .format-display li {
+    padding-left: 22px !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+  }
+
+  .formateo-page .format-display-media {
+    min-height: 100% !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .formateo-page .format-display-media::before {
+    background:
+      linear-gradient(90deg, rgba(15, 23, 42, 0.90) 0%, rgba(15, 23, 42, 0.62) 46%, rgba(15, 23, 42, 0.14) 100%),
+      radial-gradient(circle at 78% 28%, rgba(134, 239, 172, 0.12), transparent 38%) !important;
+  }
+
+  .formateo-page .format-display-media img {
+    min-height: 560px !important;
+    height: 100% !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    object-fit: cover !important;
+    object-position: var(--format-mobile-position, 60% center) !important;
+    transform: scale(1.02) !important;
+    transform-origin: center center !important;
+  }
+
+  .formateo-page .format-feature-list {
+    margin-top: 0 !important;
+    padding-top: 16px !important;
+  }
+}
