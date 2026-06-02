@@ -4350,3 +4350,72 @@ body.service-detail-page {
     font-size: 14px;
   }
 }
+
+
+/* V104: Planes con color original + encabezados más trabajados */
+#planes .plan-card {
+  overflow: hidden !important;
+}
+
+#planes .plan-label,
+#planes .plan-label-dark {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: fit-content !important;
+  max-width: max-content !important;
+  margin: 0 0 14px !important;
+  padding: 8px 15px !important;
+  border-radius: 999px !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.7px !important;
+  box-shadow: 0 10px 22px rgba(249, 115, 22, 0.18) !important;
+}
+
+#planes .plan-label {
+  background: linear-gradient(135deg, #fb923c 0%, #f97316 100%) !important;
+  color: #ffffff !important;
+}
+
+#planes .plan-label-dark {
+  background: linear-gradient(135deg, #431407 0%, #7c2d12 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 22px rgba(67, 20, 7, 0.18) !important;
+}
+
+#planes .plan-card h3 {
+  position: relative !important;
+  width: fit-content !important;
+  margin: 0 0 14px !important;
+  padding-bottom: 9px !important;
+  color: #0f172a !important;
+  font-size: clamp(23px, 3vw, 30px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.7px !important;
+  font-weight: 950 !important;
+}
+
+#planes .plan-card h3::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 72px !important;
+  height: 4px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, #f97316, rgba(249, 115, 22, 0.16)) !important;
+}
+
+#planes .plan-card:nth-child(2) h3::after {
+  background: linear-gradient(90deg, #431407, rgba(67, 20, 7, 0.14)) !important;
+}
+
+#planes .plan-card:hover .plan-label,
+#planes .plan-card:hover .plan-label-dark,
+#planes .plan-card.is-centered .plan-label,
+#planes .plan-card.is-centered .plan-label-dark {
+  transform: translateY(-1px) !important;
+}
