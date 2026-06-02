@@ -63,26 +63,52 @@
     </section>
 
     <!-- Servicios -->
-    <section class="section" id="servicios">
+    <section class="section arc-services-section" id="servicios">
       <div class="container">
-        <div class="section-title reveal">
+        <div class="arc-section-title reveal">
           <span>Especialidades técnicas</span>
           <h2>Limpieza y Formateo Profesional</h2>
-          <p class="service-title-note">Mantenimiento técnico orientado a recuperar velocidad, estabilidad y vida útil del equipo.</p>
-          
+          <p>Mantenimiento técnico orientado a recuperar velocidad, estabilidad y vida útil del equipo.</p>
         </div>
 
-        <div class="service-grid">
-          <article class="service-card reveal">
-            <img src="assets/img/limpieza.png" alt="Limpieza y mantenimiento de notebook y PC" />
-            <h3>Limpieza + Mantenimiento</h3>
-            <p>Limpieza externa/interna de todos los componentes de hardware, revisión y limpieza de ventiladores, cambio de pasta térmica CPU/GPU, control de temperatura, optimización básica y diagnóstico general del equipo.</p>
+        <div class="arc-service-grid">
+          <article class="arc-service-card reveal" tabindex="0">
+            <img class="arc-service-bg" src="assets/img/limpieza.png" alt="" aria-hidden="true" />
+            <div class="arc-service-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 72" role="img" focusable="false">
+                <path d="M16 13h64v42H16z" />
+                <path d="M28 55h40" />
+                <path d="M36 63h24" />
+                <path d="M32 39l16-14 16 14" />
+                <path d="M39 39v11h18V39" />
+                <path d="M23 21h3M31 21h3M39 21h3" />
+              </svg>
+            </div>
+            <div class="arc-service-content">
+              <h3>Limpieza + Mantenimiento</h3>
+              <p>Limpieza externa/interna de todos los componentes de hardware, revisión y limpieza de ventiladores, cambio de pasta térmica CPU/GPU, control de temperatura, optimización básica y diagnóstico general del equipo.</p>
+            </div>
+            <a class="arc-service-link" href="#contacto" aria-label="Consultar Limpieza y Mantenimiento">Consultar servicio <span>→</span></a>
           </article>
 
-          <article class="service-card reveal">
-            <img src="assets/img/formateo.png" alt="Formateo y software para PC y notebook" />
-            <h3>Formateo + Instalación de Windows</h3>
-            <p>Formateo completo de discos, instalación y activación de Windows y drivers, actualización del sistema, instalación y activación de programas básicos y configuración inicial del equipo.</p>
+          <article class="arc-service-card reveal" tabindex="0">
+            <img class="arc-service-bg" src="assets/img/formateo.png" alt="" aria-hidden="true" />
+            <div class="arc-service-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 72" role="img" focusable="false">
+                <path d="M18 19h60v35H18z" />
+                <path d="M48 19v35" />
+                <path d="M18 36h60" />
+                <path d="M34 62h28" />
+                <path d="M41 54v8M55 54v8" />
+                <path d="M28 12h40" />
+                <path d="M33 12v7M48 12v7M63 12v7" />
+              </svg>
+            </div>
+            <div class="arc-service-content">
+              <h3>Formateo + Instalación de Windows</h3>
+              <p>Formateo completo de discos, instalación y activación de Windows y drivers, actualización del sistema, instalación y activación de programas básicos y configuración inicial del equipo.</p>
+            </div>
+            <a class="arc-service-link" href="#contacto" aria-label="Consultar Formateo e Instalación de Windows">Consultar servicio <span>→</span></a>
           </article>
         </div>
       </div>
@@ -206,11 +232,6 @@
     <!-- Contacto -->
     <section class="section" id="contacto">
       <div class="container contact-grid">
-        
-          <a class="promo-contact-icon" href="#contactForm" aria-label="Promoción 10% OFF código 2693">
-            <img src="assets/img/promo-10off.png" alt="10% OFF - Código 2693" />
-          </a>
-
 <div class="contact-info reveal">
           <span class="badge">Contacto</span>
           <h2>Pedí tu presupuesto por WhatsApp</h2>
@@ -230,7 +251,7 @@
             Equipo
             <select id="equipo" required>
               <option value="">Seleccionar</option>
-              <option value="Notebook Standar">Notebook Standar</option>
+              <option value="Notebook estándar">Notebook estándar</option>
               <option value="Notebook Gamer">Notebook Gamer</option>
               <option value="PC de escritorio">PC de escritorio</option>
               <option value="Otro">Otro</option>

@@ -133,3 +133,21 @@ if (codigoPromoInput && promoHelp) {
 
 
 
+
+
+// Interacción de las tarjetas de servicios: en desktop responde al hover y en celular queda activa al tocarla.
+const arcServiceCards = document.querySelectorAll(".arc-service-card");
+
+if (arcServiceCards.length) {
+  arcServiceCards.forEach((card) => {
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a")) return;
+
+      arcServiceCards.forEach((item) => {
+        if (item !== card) item.classList.remove("is-active");
+      });
+
+      card.classList.toggle("is-active");
+    });
+  });
+}

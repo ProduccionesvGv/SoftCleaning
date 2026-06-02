@@ -3648,3 +3648,513 @@ main {
     padding-right: 10px !important;
   }
 }
+
+/* V97: sección Servicios estilo tarjetas oscuras tipo Arcabit */
+#servicios.arc-services-section {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 70px 0 78px !important;
+  background:
+    radial-gradient(circle at 92% 2%, rgba(214, 16, 31, 0.44), transparent 28%),
+    radial-gradient(circle at 8% 0%, rgba(120, 0, 12, 0.32), transparent 30%),
+    linear-gradient(180deg, #130006 0%, #050607 48%, #3d4042 49%, #3d4042 100%) !important;
+}
+
+#servicios.arc-services-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+  opacity: 0.16;
+}
+
+#servicios.arc-services-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.arc-section-title {
+  max-width: 860px;
+  margin: 0 auto 34px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.arc-section-title span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto 12px;
+  padding: 8px 16px;
+  border: 1px solid rgba(231, 18, 35, 0.62);
+  color: #ff2638;
+  background: rgba(12, 12, 13, 0.72);
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.arc-section-title h2 {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: clamp(30px, 4.8vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -1.2px;
+  font-weight: 950;
+}
+
+.arc-section-title h2::after {
+  content: "";
+  display: block;
+  width: 112px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: #e31224;
+  border-radius: 999px;
+}
+
+.arc-section-title p {
+  max-width: 760px;
+  margin: 18px auto 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 17px;
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+.arc-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 44px;
+  align-items: stretch;
+}
+
+.arc-service-card {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 58px 42px 34px;
+  background:
+    linear-gradient(180deg, rgba(8, 10, 11, 0.98) 0%, rgba(18, 20, 21, 0.96) 34%, rgba(12, 13, 14, 0.98) 100%);
+  border: 0;
+  box-shadow: 0 28px 54px rgba(0, 0, 0, 0.28);
+  color: #ffffff;
+}
+
+.arc-service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.045), transparent 24%),
+    radial-gradient(circle at 86% 44%, rgba(255, 255, 255, 0.08), transparent 30%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.arc-service-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 7px;
+  background: #e31224;
+  z-index: 3;
+}
+
+.arc-service-card .arc-service-bg {
+  position: absolute !important;
+  right: -12% !important;
+  bottom: 58px !important;
+  width: 82% !important;
+  height: 54% !important;
+  max-width: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: right bottom !important;
+  opacity: 0.22 !important;
+  filter: grayscale(1) contrast(1.18) brightness(0.72) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+.arc-service-icon {
+  position: relative;
+  z-index: 2;
+  width: 92px;
+  height: 74px;
+  margin-bottom: 44px;
+  color: #e31224;
+}
+
+.arc-service-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.arc-service-icon path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 4;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+.arc-service-content {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+}
+
+.arc-service-content h3 {
+  margin: 0 0 32px;
+  color: #ffffff;
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.08;
+  letter-spacing: -0.9px;
+  font-weight: 950;
+}
+
+.arc-service-content p {
+  max-width: 570px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 18px;
+  line-height: 1.72;
+  font-weight: 500;
+}
+
+.arc-service-link {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 42px;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.arc-service-link span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.38);
+  font-size: 23px;
+  line-height: 1;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.arc-service-link:hover span {
+  transform: translateX(4px);
+  border-color: #e31224;
+  color: #e31224;
+}
+
+@media (max-width: 920px) {
+  #servicios.arc-services-section {
+    padding: 58px 0 62px !important;
+    background:
+      radial-gradient(circle at 94% 0%, rgba(214, 16, 31, 0.34), transparent 32%),
+      linear-gradient(180deg, #130006 0%, #060707 44%, #3d4042 44%, #3d4042 100%) !important;
+  }
+
+  .arc-service-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .arc-service-card {
+    min-height: 510px;
+    padding: 46px 32px 30px;
+  }
+
+  .arc-service-content p {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 619px) {
+  #servicios.arc-services-section {
+    padding: 48px 0 54px !important;
+  }
+
+  .arc-section-title {
+    margin-bottom: 26px;
+  }
+
+  .arc-section-title span {
+    font-size: 11px;
+    letter-spacing: 1.7px;
+    padding: 7px 12px;
+  }
+
+  .arc-section-title h2 {
+    font-size: clamp(26px, 8.4vw, 36px);
+    letter-spacing: -0.8px;
+  }
+
+  .arc-section-title h2::after {
+    width: 88px;
+    margin-top: 14px;
+  }
+
+  .arc-section-title p {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .arc-service-grid {
+    gap: 22px;
+  }
+
+  .arc-service-card {
+    min-height: 535px;
+    padding: 34px 26px 26px;
+  }
+
+  .arc-service-card .arc-service-bg {
+    right: -22% !important;
+    bottom: 66px !important;
+    width: 105% !important;
+    height: 48% !important;
+    opacity: 0.18 !important;
+  }
+
+  .arc-service-icon {
+    width: 76px;
+    height: 62px;
+    margin-bottom: 34px;
+  }
+
+  .arc-service-content h3 {
+    margin-bottom: 24px;
+    font-size: clamp(25px, 7.6vw, 32px);
+  }
+
+  .arc-service-content p {
+    font-size: 16px;
+    line-height: 1.58;
+  }
+
+  .arc-service-link {
+    gap: 12px;
+    padding-top: 34px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+
+  .arc-service-link span {
+    min-width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
+}
+
+/* V98: sección Servicios con paleta SoftCleaning */
+#servicios.arc-services-section {
+  background:
+    radial-gradient(circle at 15% 16%, rgba(34, 197, 94, 0.20), transparent 32%),
+    radial-gradient(circle at 88% 8%, rgba(56, 189, 248, 0.12), transparent 30%),
+    linear-gradient(135deg, #0f172a 0%, #111827 54%, #0f2a24 100%) !important;
+}
+
+#servicios.arc-services-section::before {
+  background:
+    linear-gradient(90deg, rgba(134, 239, 172, 0.045) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(134, 239, 172, 0.035) 1px, transparent 1px) !important;
+  opacity: 0.18 !important;
+}
+
+.arc-section-title span {
+  border-color: rgba(187, 247, 208, 0.24) !important;
+  color: #bbf7d0 !important;
+  background: rgba(34, 197, 94, 0.13) !important;
+}
+
+.arc-section-title h2::after {
+  background: #86efac !important;
+  box-shadow: 0 0 24px rgba(34, 197, 94, 0.32) !important;
+}
+
+.arc-section-title p {
+  color: #cbd5e1 !important;
+}
+
+.arc-service-card {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03)),
+    rgba(15, 23, 42, 0.82) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  box-shadow: 0 22px 55px rgba(2, 6, 23, 0.30) !important;
+}
+
+.arc-service-card::before {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.045), transparent 24%),
+    radial-gradient(circle at 86% 44%, rgba(134, 239, 172, 0.10), transparent 30%) !important;
+}
+
+.arc-service-card::after {
+  background: linear-gradient(90deg, #22c55e, #86efac) !important;
+}
+
+.arc-service-card .arc-service-bg {
+  opacity: 0.18 !important;
+  filter: grayscale(1) contrast(1.1) brightness(0.78) sepia(0.15) hue-rotate(76deg) saturate(1.2) !important;
+}
+
+.arc-service-icon {
+  color: #86efac !important;
+}
+
+.arc-service-content p {
+  color: #cbd5e1 !important;
+}
+
+.arc-service-link {
+  color: #ffffff !important;
+}
+
+.arc-service-link span {
+  border-color: rgba(187, 247, 208, 0.32) !important;
+}
+
+.arc-service-link:hover span {
+  border-color: #86efac !important;
+  color: #86efac !important;
+  background: rgba(34, 197, 94, 0.12) !important;
+}
+
+@media (max-width: 920px) {
+  #servicios.arc-services-section {
+    background:
+      radial-gradient(circle at 15% 14%, rgba(34, 197, 94, 0.18), transparent 36%),
+      radial-gradient(circle at 88% 10%, rgba(56, 189, 248, 0.10), transparent 32%),
+      linear-gradient(135deg, #0f172a 0%, #111827 58%, #0f2a24 100%) !important;
+  }
+}
+
+
+/* V99: barra inferior interactiva en tarjetas de servicios */
+.arc-service-card {
+  cursor: pointer !important;
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background 0.28s ease !important;
+  will-change: transform;
+}
+
+.arc-service-card::after {
+  right: auto !important;
+  width: 76px !important;
+  height: 7px !important;
+  opacity: 0.92 !important;
+  transform-origin: left center !important;
+  transition:
+    width 0.46s cubic-bezier(.22, .8, .22, 1),
+    box-shadow 0.28s ease,
+    opacity 0.28s ease !important;
+}
+
+.arc-service-card:hover,
+.arc-service-card:focus-within,
+.arc-service-card:focus-visible,
+.arc-service-card.is-active {
+  transform: translateY(-6px) !important;
+  border-color: rgba(134, 239, 172, 0.34) !important;
+  box-shadow:
+    0 28px 64px rgba(2, 6, 23, 0.42),
+    0 0 0 1px rgba(134, 239, 172, 0.08) inset !important;
+}
+
+.arc-service-card:hover::after,
+.arc-service-card:focus-within::after,
+.arc-service-card:focus-visible::after,
+.arc-service-card.is-active::after {
+  width: 100% !important;
+  opacity: 1 !important;
+  box-shadow: 0 0 24px rgba(34, 197, 94, 0.38) !important;
+}
+
+.arc-service-card .arc-service-bg {
+  transition:
+    opacity 0.34s ease,
+    transform 0.46s ease,
+    filter 0.34s ease !important;
+}
+
+.arc-service-card:hover .arc-service-bg,
+.arc-service-card:focus-within .arc-service-bg,
+.arc-service-card:focus-visible .arc-service-bg,
+.arc-service-card.is-active .arc-service-bg {
+  opacity: 0.26 !important;
+  transform: scale(1.045) translateX(-8px) !important;
+  filter: grayscale(1) contrast(1.18) brightness(0.88) sepia(0.18) hue-rotate(76deg) saturate(1.35) !important;
+}
+
+.arc-service-card:hover .arc-service-icon,
+.arc-service-card:focus-within .arc-service-icon,
+.arc-service-card:focus-visible .arc-service-icon,
+.arc-service-card.is-active .arc-service-icon {
+  filter: drop-shadow(0 0 16px rgba(134, 239, 172, 0.36));
+}
+
+.arc-service-card:focus-visible {
+  outline: 2px solid rgba(134, 239, 172, 0.72) !important;
+  outline-offset: 5px !important;
+}
+
+.arc-service-card:hover .arc-service-link span,
+.arc-service-card:focus-within .arc-service-link span,
+.arc-service-card:focus-visible .arc-service-link span,
+.arc-service-card.is-active .arc-service-link span {
+  border-color: #86efac !important;
+  color: #86efac !important;
+  background: rgba(34, 197, 94, 0.12) !important;
+}
+
+@media (max-width: 619px) {
+  .arc-service-card::after {
+    width: 62px !important;
+    height: 6px !important;
+  }
+
+  .arc-service-card:hover,
+  .arc-service-card:focus-within,
+  .arc-service-card:focus-visible,
+  .arc-service-card.is-active {
+    transform: translateY(-4px) !important;
+  }
+}
