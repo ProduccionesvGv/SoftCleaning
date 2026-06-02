@@ -7,7 +7,7 @@
   <title>Formateo + Instalación de Windows | SoftCleaning</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="service-detail-page">
+<body class="service-detail-page formateo-page">
 
   <header class="site-header" id="siteHeader">
     <div class="container header-content">
@@ -17,13 +17,75 @@
     </div>
   </header>
 
-  <main class="service-detail-main">
-    <section class="service-detail-hero">
+  <main class="service-detail-main formateo-detail-main">
+    <section class="format-showcase-section">
       <div class="container">
-        <div class="service-detail-panel reveal">
-          <span class="service-detail-kicker">Servicio técnico</span>
-          <h1>Formateo + Instalación de Windows</h1>
-          <a class="service-detail-back" href="index.html#servicios">← Volver a servicios</a>
+        <div class="format-showcase reveal" id="formatShowcase">
+          <article class="format-display" aria-live="polite">
+            <div class="format-display-copy">
+              <span class="format-display-step">01</span>
+              <h3 id="formatDisplayTitle">Instalación limpia de Windows</h3>
+              <p id="formatDisplayText">Formateo completo del disco e instalación de Windows desde cero, evitando restos de instalaciones anteriores.</p>
+              <ul id="formatDisplayList">
+                <li>Reinstalación limpia del sistema</li>
+                <li>Preparación del disco antes de instalar</li>
+                <li>Equipo listo para configuración inicial</li>
+              </ul>
+            </div>
+            <div class="format-display-media" aria-hidden="true">
+              <img id="formatDisplayImage" src="assets/img/instalacion-limpia-windows.jpeg" alt="Instalación limpia de Windows" />
+            </div>
+          </article>
+
+          <div class="format-feature-list" role="list">
+            <button class="format-feature-button active" type="button" role="listitem"
+              data-step="01"
+              data-title="Instalación limpia de Windows"
+              data-text="Formateo completo del disco e instalación de Windows desde cero, evitando restos de instalaciones anteriores."
+              data-items="Reinstalación limpia del sistema|Preparación del disco antes de instalar|Equipo listo para configuración inicial"
+              data-image="assets/img/instalacion-limpia-windows.jpeg"
+              data-alt="Instalación limpia de Windows">
+              <span>Instalación limpia de Windows</span>
+              <strong aria-hidden="true">−</strong>
+            </button>
+
+            <button class="format-feature-button" type="button" role="listitem"
+              data-step="02"
+              data-title="Drivers y actualizaciones"
+              data-text="Instalación de controladores principales para que el equipo reconozca correctamente sus componentes."
+              data-items="Drivers de video, sonido, red y chipset|Actualizaciones iniciales de Windows|Revisión básica de funcionamiento"
+              data-image="assets/img/drivers-actualizaciones.jpg"
+              data-alt="Drivers y actualizaciones de componentes">
+              <span>Drivers y actualizaciones</span>
+              <strong aria-hidden="true">+</strong>
+            </button>
+
+            <button class="format-feature-button" type="button" role="listitem"
+              data-step="03"
+              data-title="Programas básicos"
+              data-text="Instalación de programas esenciales para que puedas empezar a usar el equipo sin perder tiempo."
+              data-items="Navegador y herramientas de uso diario|Lector PDF y utilitarios básicos|Programas acordados antes del trabajo"
+              data-image="assets/img/programas-basicos.jpg"
+              data-alt="Programas básicos para Windows">
+              <span>Programas básicos</span>
+              <strong aria-hidden="true">+</strong>
+            </button>
+
+            <button class="format-feature-button" type="button" role="listitem"
+              data-step="04"
+              data-title="Configuración inicial del equipo"
+              data-text="Ajustes iniciales del sistema para dejar Windows ordenado, usable y preparado para trabajar."
+              data-items="Usuario, idioma y opciones principales|Configuración inicial de privacidad|Activación con licencia válida si corresponde"
+              data-image="assets/img/configuracion-inicial-equipo.png"
+              data-alt="Configuración inicial del equipo">
+              <span>Configuración inicial del equipo</span>
+              <strong aria-hidden="true">+</strong>
+            </button>
+          </div>
+
+          <div class="format-showcase-actions">
+            <a class="format-whatsapp-link" href="index.html#contacto">Consultar este servicio</a>
+          </div>
         </div>
       </div>
     </section>

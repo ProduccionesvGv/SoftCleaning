@@ -206,3 +206,43 @@ if (arcServiceCards.length) {
     });
   }
 }
+
+// Interacción del bloque de Formateo + Instalación de Windows
+const formatFeatureButtons = document.querySelectorAll(".format-feature-button");
+const formatDisplayStep = document.getElementById("formatDisplayStep") || document.querySelector(".format-display-step");
+const formatDisplayTitle = document.getElementById("formatDisplayTitle");
+const formatDisplayText = document.getElementById("formatDisplayText");
+const formatDisplayList = document.getElementById("formatDisplayList");
+const formatDisplayImage = document.getElementById("formatDisplayImage");
+
+if (formatFeatureButtons.length && formatDisplayTitle && formatDisplayText && formatDisplayList) {
+  formatFeatureButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      formatFeatureButtons.forEach((item) => {
+        item.classList.remove("active");
+        const icon = item.querySelector("strong");
+        if (icon) icon.textContent = "+";
+      });
+
+      button.classList.add("active");
+      const activeIcon = button.querySelector("strong");
+      if (activeIcon) activeIcon.textContent = "−";
+
+      if (formatDisplayStep) formatDisplayStep.textContent = button.dataset.step || "";
+      formatDisplayTitle.textContent = button.dataset.title || "";
+      formatDisplayText.textContent = button.dataset.text || "";
+
+      if (formatDisplayImage && button.dataset.image) {
+        formatDisplayImage.src = button.dataset.image;
+        formatDisplayImage.alt = button.dataset.alt || button.dataset.title || "";
+      }
+
+      const items = (button.dataset.items || "")
+        .split("|")
+        .map((item) => item.trim())
+        .filter(Boolean);
+
+      formatDisplayList.innerHTML = items.map((item) => `<li>${item}</li>`).join("");
+    });
+  });
+}
