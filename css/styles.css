@@ -4941,3 +4941,99 @@ body.service-detail-page {
     width: 100%;
   }
 }
+
+/* Ajuste: en la página de Formateo, la imagen principal ocupa todo el ancho y alto del bloque */
+.formateo-page .format-showcase-section {
+  padding-top: 18px;
+}
+
+.formateo-page .format-display {
+  display: block;
+  min-height: clamp(540px, 74vh, 760px);
+  width: 100%;
+  isolation: isolate;
+}
+
+.formateo-page .format-display-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.formateo-page .format-display-media::before {
+  background:
+    linear-gradient(90deg, rgba(15, 23, 42, 0.94) 0%, rgba(15, 23, 42, 0.82) 34%, rgba(15, 23, 42, 0.38) 62%, rgba(15, 23, 42, 0.12) 100%),
+    radial-gradient(circle at 82% 22%, rgba(134, 239, 172, 0.18), transparent 36%);
+}
+
+.formateo-page .format-display-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: none;
+}
+
+.formateo-page .format-display-copy {
+  position: relative;
+  z-index: 2;
+  width: min(540px, 100%);
+  min-height: clamp(540px, 74vh, 760px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.84), rgba(15, 23, 42, 0.48) 72%, rgba(15, 23, 42, 0));
+}
+
+@media (max-width: 900px) {
+  .formateo-page .format-display {
+    min-height: 620px;
+  }
+
+  .formateo-page .format-display-media {
+    min-height: 100%;
+    order: initial;
+  }
+
+  .formateo-page .format-display-media::before {
+    background:
+      linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.72) 54%, rgba(15, 23, 42, 0.25) 100%),
+      radial-gradient(circle at 76% 20%, rgba(134, 239, 172, 0.16), transparent 40%);
+  }
+
+  .formateo-page .format-display-media img {
+    min-height: 100%;
+    height: 100%;
+  }
+
+  .formateo-page .format-display-copy {
+    min-height: 620px;
+    width: min(520px, 100%);
+  }
+}
+
+@media (max-width: 619px) {
+  .formateo-page .format-showcase-section {
+    padding-top: 8px;
+  }
+
+  .formateo-page .format-display {
+    min-height: 640px;
+    border-radius: 22px;
+  }
+
+  .formateo-page .format-display-copy {
+    min-height: 640px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.78) 62%, rgba(15, 23, 42, 0.38) 100%);
+  }
+
+  .formateo-page .format-display-media::before {
+    background:
+      linear-gradient(180deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.72) 58%, rgba(15, 23, 42, 0.34) 100%);
+  }
+}
