@@ -4083,7 +4083,7 @@ main {
   opacity: 0.92 !important;
   transform-origin: left center !important;
   transition:
-    width 0.46s cubic-bezier(.22, .8, .22, 1),
+    width 0.78s cubic-bezier(.22, .8, .22, 1),
     box-shadow 0.28s ease,
     opacity 0.28s ease !important;
 }
@@ -5691,4 +5691,13 @@ body.service-detail-page {
     height: 38px !important;
     font-size: 25px !important;
   }
+}
+
+
+/* V122: barra de carga más lenta en tarjetas de servicios */
+.arc-service-card::after {
+  transition:
+    width 0.78s cubic-bezier(.22, .8, .22, 1),
+    box-shadow 0.34s ease,
+    opacity 0.34s ease !important;
 }
