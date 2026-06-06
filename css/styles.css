@@ -5964,3 +5964,29 @@ body.service-detail-page {
     line-height: 1.24 !important;
   }
 }
+
+/* V136: Formateo Android - la imagen rellena la altura completa del bloque */
+@media (max-width: 619px) {
+  .formateo-page .format-display {
+    min-height: 300px !important;
+    height: clamp(300px, 46vh, 350px) !important;
+  }
+
+  .formateo-page .format-display-media {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: #0f172a !important;
+  }
+
+  .formateo-page .format-display-media img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover !important;
+    object-position: var(--format-mobile-position, center center) !important;
+    transform: none !important;
+    transform-origin: center center !important;
+  }
+}
