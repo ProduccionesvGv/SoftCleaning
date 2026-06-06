@@ -6146,3 +6146,25 @@ body.service-detail-page {
     transform: scale(1.035) translateX(-5px) !important;
   }
 }
+
+/* Iconos finales de servicios: PNG recortados del boceto elegido */
+.arc-service-icon img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: contain !important;
+}
+
+.arc-service-icon {
+  width: 104px !important;
+  height: 104px !important;
+  margin-bottom: 34px !important;
+}
+
+@media (max-width: 640px) {
+  .arc-service-icon {
+    width: 92px !important;
+    height: 92px !important;
+    margin-bottom: 28px !important;
+  }
+}
