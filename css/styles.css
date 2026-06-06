@@ -5918,3 +5918,49 @@ body.service-detail-page {
     font-weight: 750 !important;
   }
 }
+
+/* V135: Formateo mobile - mostrar un poco más completa la imagen de fondo */
+@media (max-width: 619px) {
+  .formateo-page .format-display {
+    min-height: 292px !important;
+    height: clamp(292px, 45vh, 340px) !important;
+  }
+
+  .formateo-page .format-display-media {
+    background:
+      radial-gradient(circle at 78% 28%, rgba(148, 163, 184, 0.16), transparent 42%),
+      #0f172a !important;
+  }
+
+  .formateo-page .format-display-media img {
+    object-fit: contain !important;
+    object-position: var(--format-mobile-position, center center) !important;
+    transform: scale(1.055) !important;
+    transform-origin: center center !important;
+  }
+
+  .formateo-page .format-display-media::before {
+    background:
+      linear-gradient(90deg, rgba(15, 23, 42, 0.94) 0%, rgba(15, 23, 42, 0.74) 47%, rgba(15, 23, 42, 0.25) 100%),
+      linear-gradient(180deg, rgba(15, 23, 42, 0.20) 0%, rgba(15, 23, 42, 0.08) 45%, rgba(15, 23, 42, 0.42) 100%) !important;
+  }
+
+  .formateo-page .format-display-copy {
+    padding: 22px 22px 20px !important;
+  }
+
+  .formateo-page .format-display h3 {
+    font-size: clamp(24px, 7.25vw, 30px) !important;
+    line-height: 1.04 !important;
+  }
+
+  .formateo-page .format-display p {
+    font-size: clamp(11.5px, 3.15vw, 13.4px) !important;
+    line-height: 1.32 !important;
+  }
+
+  .formateo-page .format-display li {
+    font-size: clamp(10px, 2.82vw, 11.8px) !important;
+    line-height: 1.24 !important;
+  }
+}
