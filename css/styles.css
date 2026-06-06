@@ -6043,3 +6043,15 @@ body.service-detail-page {
     justify-content: center !important;
   }
 }
+
+/* V138: Formateo Android - estirar solo en vertical sin cambiar el encuadre horizontal */
+@media (max-width: 619px) {
+  .formateo-page .format-display-media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important;
+    object-position: var(--format-mobile-position, center center) !important;
+    transform: none !important;
+    transform-origin: center center !important;
+  }
+}
