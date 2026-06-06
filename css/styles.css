@@ -5811,7 +5811,7 @@ body.service-detail-page {
     min-height: 100% !important;
     object-fit: cover !important;
     object-position: var(--format-mobile-position, 58% center) !important;
-    transform: scale(var(--format-mobile-scale, 1)) !important;
+    transform: scale(var(--format-mobile-scale, 1.16)) !important;
     transform-origin: center center !important;
     filter: none !important;
     opacity: 1 !important;
