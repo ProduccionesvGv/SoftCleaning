@@ -6079,3 +6079,70 @@ body.service-detail-page {
     line-height: 1.35 !important;
   }
 }
+
+/* V123: evita que la tarjeta quede visualmente seleccionada después de tocar/clickear */
+.arc-service-card:focus-within:not(:hover),
+.arc-service-card:focus-visible:not(:hover) {
+  transform: none !important;
+  border-color: rgba(255, 255, 255, 0.10) !important;
+  box-shadow: 0 22px 55px rgba(2, 6, 23, 0.30) !important;
+}
+
+.arc-service-card:focus-within:not(:hover)::after,
+.arc-service-card:focus-visible:not(:hover)::after {
+  width: 76px !important;
+  opacity: 0.92 !important;
+  box-shadow: none !important;
+}
+
+.arc-service-card:focus-within:not(:hover) .arc-service-bg,
+.arc-service-card:focus-visible:not(:hover) .arc-service-bg {
+  opacity: 0.18 !important;
+  transform: none !important;
+  filter: grayscale(1) contrast(1.1) brightness(0.78) sepia(0.15) hue-rotate(76deg) saturate(1.2) !important;
+}
+
+.arc-service-card:focus-within:not(:hover) .arc-service-icon,
+.arc-service-card:focus-visible:not(:hover) .arc-service-icon {
+  filter: none !important;
+}
+
+.arc-service-card:focus-within:not(:hover) .arc-service-link span,
+.arc-service-card:focus-visible:not(:hover) .arc-service-link span {
+  border-color: rgba(187, 247, 208, 0.32) !important;
+  color: inherit !important;
+  background: transparent !important;
+}
+
+@media (max-width: 619px) {
+  .arc-service-card:focus-within:not(:hover)::after,
+  .arc-service-card:focus-visible:not(:hover)::after {
+    width: 62px !important;
+  }
+}
+
+/* V124: Servicios - al final del hover la imagen muestra color unos segundos */
+#servicios .arc-service-card .arc-service-bg {
+  transform-origin: center center !important;
+}
+
+#servicios .arc-service-card.is-color-peek .arc-service-bg,
+#servicios .arc-service-card:hover.is-color-peek .arc-service-bg,
+#servicios .arc-service-card:focus-within.is-color-peek .arc-service-bg,
+#servicios .arc-service-card:focus-visible.is-color-peek .arc-service-bg,
+#servicios .arc-service-card.is-active.is-color-peek .arc-service-bg {
+  opacity: 0.58 !important;
+  filter: none !important;
+  transform: scale(1.045) translateX(-8px) !important;
+}
+
+@media (max-width: 619px) {
+  #servicios .arc-service-card.is-color-peek .arc-service-bg,
+  #servicios .arc-service-card:hover.is-color-peek .arc-service-bg,
+  #servicios .arc-service-card:focus-within.is-color-peek .arc-service-bg,
+  #servicios .arc-service-card:focus-visible.is-color-peek .arc-service-bg,
+  #servicios .arc-service-card.is-active.is-color-peek .arc-service-bg {
+    opacity: 0.56 !important;
+    transform: scale(1.035) translateX(-5px) !important;
+  }
+}

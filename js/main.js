@@ -143,13 +143,84 @@ const arcServiceCards = document.querySelectorAll(".arc-service-card");
 if (arcServiceCards.length) {
   const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-  const clearServiceCards = () => {
-    arcServiceCards.forEach((card) => card.classList.remove("is-active"));
+  const colorPeekDelay = 820;
+  const colorPeekDuration = 1350;
+  const colorPeekTimers = new WeakMap();
+  const colorPeekResetTimers = new WeakMap();
+
+  const clearServiceCardColor = (card) => {
+    const startTimer = colorPeekTimers.get(card);
+    const resetTimer = colorPeekResetTimers.get(card);
+
+    if (startTimer) window.clearTimeout(startTimer);
+    if (resetTimer) window.clearTimeout(resetTimer);
+
+    colorPeekTimers.delete(card);
+    colorPeekResetTimers.delete(card);
+    card.classList.remove("is-color-peek");
   };
+
+  const isServiceCardStillActive = (card) => {
+    return card.classList.contains("is-active") || card.matches(":hover") || card.matches(":focus-within");
+  };
+
+  const scheduleServiceCardColor = (card) => {
+    clearServiceCardColor(card);
+
+    const startTimer = window.setTimeout(() => {
+      if (!isServiceCardStillActive(card)) return;
+
+      card.classList.add("is-color-peek");
+
+      const resetTimer = window.setTimeout(() => {
+        card.classList.remove("is-color-peek");
+        colorPeekResetTimers.delete(card);
+      }, colorPeekDuration);
+
+      colorPeekResetTimers.set(card, resetTimer);
+      colorPeekTimers.delete(card);
+    }, colorPeekDelay);
+
+    colorPeekTimers.set(card, startTimer);
+  };
+
+  const clearServiceCards = () => {
+    arcServiceCards.forEach((card) => {
+      card.classList.remove("is-active");
+      clearServiceCardColor(card);
+    });
+  };
+
+  const clearCardFocus = () => {
+    const active = document.activeElement;
+    if (active && active.closest?.(".arc-service-card")) {
+      active.blur();
+    }
+  };
+
+  arcServiceCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      window.setTimeout(() => {
+        clearServiceCards();
+        clearCardFocus();
+      }, 120);
+    });
+  });
 
   const activateServiceCard = (activeCard) => {
     arcServiceCards.forEach((card) => {
-      card.classList.toggle("is-active", card === activeCard);
+      const shouldBeActive = card === activeCard;
+      const wasActive = card.classList.contains("is-active");
+
+      card.classList.toggle("is-active", shouldBeActive);
+
+      if (shouldBeActive && !wasActive) {
+        scheduleServiceCardColor(card);
+      }
+
+      if (!shouldBeActive) {
+        clearServiceCardColor(card);
+      }
     });
   };
 
