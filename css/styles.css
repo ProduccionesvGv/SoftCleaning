@@ -5990,3 +5990,56 @@ body.service-detail-page {
     transform-origin: center center !important;
   }
 }
+
+
+/* V137: Formateo Android - relleno de altura sin romper el ancho
+   La imagen principal queda completa y el espacio sobrante se rellena con la misma imagen como fondo. */
+@media (max-width: 619px) {
+  .formateo-page .format-display {
+    min-height: 330px !important;
+    height: clamp(330px, 50vh, 390px) !important;
+    background: #0f172a !important;
+  }
+
+  .formateo-page .format-display-media {
+    background-image: var(--format-bg) !important;
+    background-size: cover !important;
+    background-position: var(--format-mobile-position, center center) !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .formateo-page .format-display-media::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    background: rgba(15, 23, 42, 0.38) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    transform: scale(1.04) !important;
+  }
+
+  .formateo-page .format-display-media img {
+    position: relative !important;
+    z-index: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    object-fit: contain !important;
+    object-position: var(--format-mobile-position, center center) !important;
+    transform: none !important;
+    transform-origin: center center !important;
+  }
+
+  .formateo-page .format-display-media::before {
+    z-index: 2 !important;
+    background:
+      linear-gradient(90deg, rgba(15, 23, 42, 0.96) 0%, rgba(15, 23, 42, 0.77) 45%, rgba(15, 23, 42, 0.28) 100%),
+      linear-gradient(180deg, rgba(15, 23, 42, 0.24) 0%, rgba(15, 23, 42, 0.08) 45%, rgba(15, 23, 42, 0.38) 100%) !important;
+  }
+
+  .formateo-page .format-display-copy {
+    padding: 26px 22px 24px !important;
+    justify-content: center !important;
+  }
+}

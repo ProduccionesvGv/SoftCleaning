@@ -237,6 +237,12 @@ if (formatFeatureButtons.length && formatDisplayTitle && formatDisplayText && fo
         formatDisplayImage.alt = button.dataset.alt || button.dataset.title || "";
         formatDisplayImage.style.setProperty("--format-mobile-position", button.dataset.mobilePosition || "center center");
         formatDisplayImage.style.setProperty("--format-mobile-scale", button.dataset.mobileScale || "1.2");
+
+        const formatMedia = formatDisplayImage.closest(".format-display-media");
+        if (formatMedia) {
+          formatMedia.style.setProperty("--format-bg", `url('${button.dataset.image}')`);
+          formatMedia.style.setProperty("--format-mobile-position", button.dataset.mobilePosition || "center center");
+        }
       }
 
       const items = (button.dataset.items || "")
