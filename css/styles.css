@@ -5745,3 +5745,128 @@ body.service-detail-page {
     font-size: clamp(30px, 9.3vw, 39px) !important;
   }
 }
+
+/* V130: Formateo Android - la imagen vuelve como fondo detrás del texto */
+@media (max-width: 619px) {
+  .formateo-page .service-detail-main,
+  .formateo-page .format-showcase-section {
+    padding-top: 0 !important;
+    background: #0f172a !important;
+  }
+
+  .formateo-page .format-showcase-section > .container {
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .formateo-page .format-showcase {
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .formateo-page .format-display {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    min-height: 620px !important;
+    height: min(760px, 82vh) !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #0f172a !important;
+    box-shadow: none !important;
+  }
+
+  .formateo-page .format-display-media {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    order: initial !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    aspect-ratio: auto !important;
+    overflow: hidden !important;
+    background: #0f172a !important;
+  }
+
+  .formateo-page .format-display-media::before {
+    display: block !important;
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background:
+      linear-gradient(90deg, rgba(15, 23, 42, 0.94) 0%, rgba(15, 23, 42, 0.78) 45%, rgba(15, 23, 42, 0.22) 100%),
+      linear-gradient(180deg, rgba(15, 23, 42, 0.42) 0%, rgba(15, 23, 42, 0.10) 42%, rgba(15, 23, 42, 0.80) 100%) !important;
+  }
+
+  .formateo-page .format-display-media img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover !important;
+    object-position: var(--format-mobile-position, 58% center) !important;
+    transform: scale(var(--format-mobile-scale, 1.08)) !important;
+    transform-origin: center center !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  .formateo-page .format-display-copy {
+    position: relative !important;
+    z-index: 2 !important;
+    order: initial !important;
+    width: 100% !important;
+    max-width: 560px !important;
+    min-height: 100% !important;
+    padding: 76px 22px 52px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    background: transparent !important;
+  }
+
+  .formateo-page .format-display h3 {
+    max-width: 100% !important;
+    margin: 0 0 18px !important;
+    font-size: clamp(38px, 10.8vw, 50px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.9px !important;
+  }
+
+  .formateo-page .format-display p {
+    max-width: 95% !important;
+    margin-bottom: 20px !important;
+    font-size: clamp(16px, 4.1vw, 18px) !important;
+    line-height: 1.55 !important;
+    font-weight: 700 !important;
+  }
+
+  .formateo-page .format-display ul {
+    gap: 10px !important;
+  }
+
+  .formateo-page .format-display li {
+    padding-left: 26px !important;
+    font-size: clamp(13px, 3.55vw, 15px) !important;
+    line-height: 1.4 !important;
+    font-weight: 750 !important;
+  }
+
+  .formateo-page .format-display::before {
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 132px !important;
+    height: 5px !important;
+    z-index: 3 !important;
+  }
+
+  .formateo-page .format-controls-zone {
+    margin-top: 0 !important;
+  }
+}
