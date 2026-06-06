@@ -144,19 +144,14 @@ if (arcServiceCards.length) {
   const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
   const colorPeekDelay = 820;
-  const colorPeekDuration = 1350;
   const colorPeekTimers = new WeakMap();
-  const colorPeekResetTimers = new WeakMap();
 
   const clearServiceCardColor = (card) => {
     const startTimer = colorPeekTimers.get(card);
-    const resetTimer = colorPeekResetTimers.get(card);
 
     if (startTimer) window.clearTimeout(startTimer);
-    if (resetTimer) window.clearTimeout(resetTimer);
 
     colorPeekTimers.delete(card);
-    colorPeekResetTimers.delete(card);
     card.classList.remove("is-color-peek");
   };
 
@@ -170,14 +165,8 @@ if (arcServiceCards.length) {
     const startTimer = window.setTimeout(() => {
       if (!isServiceCardStillActive(card)) return;
 
+      // Después de aparecer el color, queda activo hasta que el cuadro deje de estar activo/visible.
       card.classList.add("is-color-peek");
-
-      const resetTimer = window.setTimeout(() => {
-        card.classList.remove("is-color-peek");
-        colorPeekResetTimers.delete(card);
-      }, colorPeekDuration);
-
-      colorPeekResetTimers.set(card, resetTimer);
       colorPeekTimers.delete(card);
     }, colorPeekDelay);
 
@@ -200,10 +189,8 @@ if (arcServiceCards.length) {
 
   arcServiceCards.forEach((card) => {
     card.addEventListener("click", () => {
-      window.setTimeout(() => {
-        clearServiceCards();
-        clearCardFocus();
-      }, 120);
+      // Quita el foco táctil, pero no apaga el efecto mientras el cuadro siga activo/visible.
+      window.setTimeout(clearCardFocus, 120);
     });
   });
 
@@ -241,6 +228,7 @@ if (arcServiceCards.length) {
           } else {
             visibleCardRatios.delete(entry.target);
             entry.target.classList.remove("is-active");
+            clearServiceCardColor(entry.target);
           }
         });
 

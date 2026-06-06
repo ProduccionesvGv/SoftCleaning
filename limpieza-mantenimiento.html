@@ -7,7 +7,7 @@
   <title>Limpieza + Mantenimiento | SoftCleaning</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="service-detail-page">
+<body class="service-detail-page formateo-page limpieza-page">
 
   <header class="site-header" id="siteHeader">
     <div class="container header-content">
@@ -17,13 +17,84 @@
     </div>
   </header>
 
-  <main class="service-detail-main">
-    <section class="service-detail-hero">
+  <main class="service-detail-main limpieza-detail-main">
+    <section class="format-showcase-section">
       <div class="container">
-        <div class="service-detail-panel reveal">
-          <span class="service-detail-kicker">Servicio técnico</span>
-          <h1>Limpieza + Mantenimiento</h1>
-          <a class="service-detail-back" href="index.html#servicios">← Volver a servicios</a>
+        <div class="format-showcase reveal" id="limpiezaShowcase">
+          <article class="format-display" aria-live="polite">
+            <div class="format-display-copy">
+              <h3 id="formatDisplayTitle">Limpieza de ventiladores</h3>
+              <p id="formatDisplayText">Limpieza del sistema de ventilación para mejorar el flujo de aire, reducir temperatura y evitar ruido excesivo.</p>
+              <ul id="formatDisplayList">
+                <li>Limpieza de turbina, ventilador y rejillas</li>
+                <li>Retiro de polvo interno acumulado</li>
+                <li>Revisión del flujo de aire del equipo</li>
+              </ul>
+            </div>
+            <div class="format-display-media" aria-hidden="true" style="--format-bg: url('assets/img/limpieza-ventiladores.webp');">
+              <img id="formatDisplayImage" src="assets/img/limpieza-ventiladores.webp" alt="Limpieza de ventiladores de notebook" style="--format-mobile-position: 50% center; --format-mobile-scale: 1.08;" />
+            </div>
+          </article>
+
+          <section class="format-controls-zone" aria-label="Opciones del servicio de limpieza y mantenimiento">
+            <div class="format-feature-list" role="list">
+              <button class="format-feature-button active" type="button" role="listitem"
+                data-step="01"
+                data-title="Limpieza de ventiladores"
+                data-text="Limpieza del sistema de ventilación para mejorar el flujo de aire, reducir temperatura y evitar ruido excesivo."
+                data-items="Limpieza de turbina, ventilador y rejillas|Retiro de polvo interno acumulado|Revisión del flujo de aire del equipo"
+                data-image="assets/img/limpieza-ventiladores.webp"
+                data-alt="Limpieza de ventiladores de notebook"
+                data-mobile-position="50% center"
+                data-mobile-scale="1.08">
+                <span>Limpieza de ventiladores</span>
+                <strong aria-hidden="true">−</strong>
+              </button>
+
+              <button class="format-feature-button" type="button" role="listitem"
+                data-step="02"
+                data-title="Pasta térmica Arctic MX y pads térmicos"
+                data-text="Recambio de pasta térmica y revisión de pads térmicos para mejorar la transferencia de calor en CPU, GPU y zonas de disipación."
+                data-items="Retiro de pasta térmica anterior|Aplicación de pasta térmica de calidad tipo Arctic MX|Revisión de pads térmicos y reemplazo si corresponde|Control de contacto correcto con el disipador"
+                data-image="assets/img/pasta-termica-arctic-mx.webp"
+                data-alt="Cambio de pasta térmica en procesador"
+                data-mobile-position="50% center"
+                data-mobile-scale="1.06">
+                <span>Pasta térmica Arctic MX y pads térmicos</span>
+                <strong aria-hidden="true">+</strong>
+              </button>
+
+              <button class="format-feature-button" type="button" role="listitem"
+                data-step="03"
+                data-title="Limpieza de hardware interno"
+                data-text="Limpieza cuidadosa de los componentes internos para retirar suciedad acumulada y mejorar el estado general del equipo."
+                data-items="Limpieza de mother, memorias y conectores|Revisión de disco, ranuras y zonas internas accesibles|Retiro de polvo en componentes principales|Limpieza externa general del equipo"
+                data-image="assets/img/limpieza-hardware-interno.webp"
+                data-alt="Limpieza de hardware interno de computadora"
+                data-mobile-position="52% center"
+                data-mobile-scale="1.05">
+                <span>Limpieza de hardware interno</span>
+                <strong aria-hidden="true">+</strong>
+              </button>
+
+              <button class="format-feature-button" type="button" role="listitem"
+                data-step="04"
+                data-title="Control de temperatura y diagnóstico"
+                data-text="Revisión final para comprobar que el equipo quede funcionando de forma estable después del mantenimiento físico."
+                data-items="Control de temperatura antes y después del servicio|Revisión básica de encendido y funcionamiento|Verificación de ruido y comportamiento del ventilador|Diagnóstico general del estado del equipo"
+                data-image="assets/img/limpieza.png"
+                data-alt="Control de temperatura y diagnóstico del equipo"
+                data-mobile-position="55% center"
+                data-mobile-scale="1.10">
+                <span>Control de temperatura y diagnóstico</span>
+                <strong aria-hidden="true">+</strong>
+              </button>
+            </div>
+
+            <div class="format-showcase-actions">
+              <a class="format-whatsapp-link" href="index.html#contacto">Consultar este servicio</a>
+            </div>
+          </section>
         </div>
       </div>
     </section>
