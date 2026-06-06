@@ -6055,3 +6055,27 @@ body.service-detail-page {
     transform-origin: center center !important;
   }
 }
+
+/* V139: Formateo Android - textos ligeramente más grandes para mejor lectura */
+@media (max-width: 619px) {
+  .formateo-page .format-display-copy {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .formateo-page .format-display h3 {
+    font-size: clamp(27px, 8vw, 34px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  .formateo-page .format-display p {
+    font-size: clamp(12.8px, 3.55vw, 15px) !important;
+    line-height: 1.38 !important;
+  }
+
+  .formateo-page .format-display li {
+    font-size: clamp(11.5px, 3.15vw, 13.4px) !important;
+    line-height: 1.35 !important;
+  }
+}
