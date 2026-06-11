@@ -7117,3 +7117,91 @@ body.service-detail-page {
     height: 405px !important;
   }
 }
+
+/* V144: Android - retiro/ubicación y mapa al borde real */
+@media (max-width: 640px) {
+  #ubicacion.location-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #ubicacion.location-section > .container,
+  #ubicacion .container {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #ubicacion .location-delivery-card {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+  }
+
+  #ubicacion .location-info {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #ubicacion .delivery-mini {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  #ubicacion .location-copy {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  #ubicacion .map-frame {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  #ubicacion .map-frame iframe {
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* Corrección: indicador "Deslizá" fuera de las tarjetas en Android */
+@media (max-width: 619px) {
+  #planes .plans-hint {
+    position: static !important;
+    display: inline-flex !important;
+    width: auto !important;
+    max-width: max-content !important;
+    margin: 10px auto 18px !important;
+    padding: 8px 14px !important;
+    transform: none !important;
+    background: rgba(154, 52, 18, 0.72) !important;
+    color: #fff7ed !important;
+    box-shadow: 0 8px 22px rgba(154, 52, 18, 0.18) !important;
+    pointer-events: none !important;
+    animation: hintMove 1.4s ease-in-out infinite !important;
+  }
+
+  #planes .plans-hint span {
+    font-size: 16px !important;
+  }
+}
