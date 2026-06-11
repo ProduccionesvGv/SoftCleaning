@@ -6822,3 +6822,298 @@ body.service-detail-page {
     font-size: 24px !important;
   }
 }
+
+/* V143: Android - diseño más horizontal y de punta a punta en toda la página */
+@media (max-width: 640px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  body {
+    background: #f5f7fb !important;
+  }
+
+  .container {
+    width: calc(100% - 12px) !important;
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .site-header .container,
+  .header-content {
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .brand-logo img,
+  .brand img {
+    max-width: min(84vw, 390px) !important;
+  }
+
+  .section {
+    padding-top: 36px !important;
+    padding-bottom: 38px !important;
+  }
+
+  /* Hero principal más ancho y menos bloque/tarjeta */
+  .hero-clean,
+  .hero {
+    padding-top: 0 !important;
+    padding-bottom: 28px !important;
+  }
+
+  .hero-clean .container,
+  .hero .container {
+    width: 100% !important;
+  }
+
+  .hero-panel {
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 0 24px 24px !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    padding: 26px 14px 22px !important;
+    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.18) !important;
+  }
+
+  .hero-copy {
+    max-width: 100% !important;
+  }
+
+  .hero-copy .badge {
+    font-size: 12px !important;
+    padding: 9px 13px !important;
+  }
+
+  .hero-copy h1 {
+    max-width: 100% !important;
+    font-size: clamp(38px, 12.4vw, 58px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.055em !important;
+  }
+
+  .hero-copy h1 span {
+    font-size: 0.78em !important;
+  }
+
+  .hero-summary {
+    width: 100% !important;
+    gap: 10px !important;
+    margin-top: 24px !important;
+  }
+
+  .hero-summary div {
+    padding: 14px 12px !important;
+    border-radius: 16px !important;
+  }
+
+  /* Servicios: ocupar mejor el ancho */
+  #servicios.arc-services-section {
+    padding-top: 38px !important;
+    padding-bottom: 42px !important;
+  }
+
+  #servicios.arc-services-section .container {
+    width: calc(100% - 10px) !important;
+  }
+
+  .arc-section-title {
+    margin-bottom: 18px !important;
+  }
+
+  .arc-service-grid {
+    width: 100% !important;
+    gap: 16px !important;
+  }
+
+  .arc-service-card {
+    width: 100% !important;
+    min-height: 455px !important;
+    padding: 28px 18px 20px !important;
+    border-radius: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+
+  .arc-service-icon {
+    width: 70px !important;
+    height: 58px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .arc-service-content h3 {
+    font-size: clamp(26px, 8.4vw, 34px) !important;
+    line-height: 1.05 !important;
+    margin-bottom: 16px !important;
+  }
+
+  .arc-service-content p {
+    max-width: 92% !important;
+    font-size: 15.5px !important;
+    line-height: 1.48 !important;
+  }
+
+  .arc-service-link {
+    padding-top: 26px !important;
+  }
+
+  .arc-service-card .arc-service-bg {
+    right: -10% !important;
+    bottom: 70px !important;
+    width: 95% !important;
+    height: 44% !important;
+  }
+
+  /* Planes: tarjetas más anchas y menos margen lateral */
+  #planes {
+    padding-top: 34px !important;
+    padding-bottom: 36px !important;
+  }
+
+  #planes .container {
+    width: 100% !important;
+  }
+
+  #planes .plans-grid,
+  #planes .plans-three-vertical {
+    padding-left: 4vw !important;
+    padding-right: 4vw !important;
+    scroll-padding-left: 4vw !important;
+    scroll-padding-right: 4vw !important;
+    gap: 14px !important;
+  }
+
+  #planes .plan-card {
+    flex-basis: 92vw !important;
+    width: 92vw !important;
+    min-width: 92vw !important;
+    max-width: 92vw !important;
+    border-radius: 22px !important;
+  }
+
+  .prices-note,
+  #planes .plans-hint {
+    width: calc(100% - 22px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Contacto también más de punta a punta */
+  #contacto .container,
+  .contact-grid {
+    width: calc(100% - 12px) !important;
+    max-width: none !important;
+  }
+
+  .contact-info,
+  .contact-form {
+    border-radius: 22px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  /* Ubicación: mantener el ajuste horizontal aprobado */
+  .location-section .container {
+    width: calc(100% - 10px) !important;
+  }
+
+  .location-delivery-card {
+    border-radius: 22px !important;
+  }
+
+  /* Páginas internas: todo ancho real en Android */
+  .formateo-page .service-detail-main,
+  .formateo-page .format-showcase-section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .formateo-page .format-showcase-section > .container,
+  .formateo-page .format-showcase,
+  .formateo-page .format-display,
+  .formateo-page .format-controls-zone {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .formateo-page .format-display {
+    height: clamp(385px, 92vw, 430px) !important;
+    max-height: 430px !important;
+    min-height: 385px !important;
+    border-radius: 0 !important;
+  }
+
+  .formateo-page .format-display-copy {
+    width: min(430px, 92vw) !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .formateo-page .format-display h3 {
+    font-size: clamp(28px, 8.4vw, 37px) !important;
+    max-width: 410px !important;
+  }
+
+  .formateo-page .format-display p {
+    font-size: clamp(13.2px, 3.55vw, 15.2px) !important;
+    max-width: 410px !important;
+  }
+
+  .formateo-page .format-display li {
+    font-size: clamp(12px, 3.2vw, 13.8px) !important;
+  }
+
+  .formateo-page .format-controls-zone {
+    padding: 18px 8px 34px !important;
+  }
+
+  .formateo-page .format-controls-zone .format-feature-list {
+    width: 100% !important;
+    max-width: none !important;
+    gap: 10px !important;
+  }
+
+  .formateo-page .format-controls-zone .format-feature-button {
+    min-height: 66px !important;
+    padding: 15px 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .formateo-page .format-controls-zone .format-feature-button span,
+  .formateo-page .format-feature-button span {
+    font-size: clamp(17px, 5.1vw, 22px) !important;
+    line-height: 1.08 !important;
+  }
+
+  .formateo-page .format-showcase-actions {
+    width: 100% !important;
+    margin-top: 18px !important;
+  }
+
+  .formateo-page .format-whatsapp-link {
+    width: min(92vw, 420px) !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-copy h1 {
+    font-size: clamp(34px, 12vw, 46px) !important;
+  }
+
+  .arc-service-card {
+    min-height: 475px !important;
+  }
+
+  .formateo-page .format-display {
+    height: 405px !important;
+  }
+}
