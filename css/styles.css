@@ -6967,3 +6967,232 @@ body.service-detail-page {
     font-size: 12px !important;
   }
 }
+
+/* V144: Corrección Android global: recuperar diseño horizontal y de borde a borde.
+   - Repara Retiro + Ubicación en index.
+   - Mantiene internas más horizontales.
+   - No afecta escritorio. */
+@media (max-width: 619px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .container {
+    width: calc(100% - 16px) !important;
+    max-width: none !important;
+  }
+
+  .section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Servicios de la home: menos vertical/cuadrado, más ancho útil */
+  #servicios.arc-services-section {
+    padding: 38px 0 42px !important;
+  }
+
+  #servicios.arc-services-section > .container {
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  #servicios .arc-section-title {
+    margin-bottom: 18px !important;
+  }
+
+  #servicios .arc-service-grid {
+    gap: 14px !important;
+  }
+
+  #servicios .arc-service-card {
+    width: 100% !important;
+    min-height: 380px !important;
+    padding: 30px 22px 22px !important;
+    border-radius: 0 !important;
+  }
+
+  #servicios .arc-service-icon {
+    width: 74px !important;
+    height: 64px !important;
+    margin-bottom: 26px !important;
+  }
+
+  #servicios .arc-service-content h3 {
+    font-size: clamp(25px, 7vw, 32px) !important;
+    line-height: 1.04 !important;
+    margin-bottom: 16px !important;
+    max-width: 92% !important;
+  }
+
+  #servicios .arc-service-content p {
+    font-size: clamp(14px, 3.7vw, 16px) !important;
+    line-height: 1.42 !important;
+    max-width: 92% !important;
+  }
+
+  #servicios .arc-service-link {
+    padding-top: 24px !important;
+    font-size: 12.5px !important;
+    letter-spacing: 1.55px !important;
+  }
+
+  #servicios .arc-service-card .arc-service-bg {
+    right: -18% !important;
+    bottom: 54px !important;
+    width: 96% !important;
+    height: 47% !important;
+    object-fit: contain !important;
+    opacity: .18 !important;
+  }
+
+  /* Retiro + Ubicación: borde a borde y horizontal */
+  #ubicacion.location-section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow: hidden !important;
+  }
+
+  #ubicacion.location-section > .container {
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #ubicacion .location-delivery-card,
+  #ubicacion .location-card {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    box-shadow: none !important;
+    display: block !important;
+    background:
+      radial-gradient(circle at 0% 0%, rgba(124, 242, 160, 0.13), transparent 36%),
+      linear-gradient(135deg, #f8fafc 0%, #f1f5f9 60%, #eaf7f0 100%) !important;
+  }
+
+  #ubicacion .location-info {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    padding: 0 0 18px !important;
+  }
+
+  #ubicacion .delivery-mini {
+    width: 100vw !important;
+    max-width: none !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    min-height: 190px !important;
+    padding: 26px 18px !important;
+    display: grid !important;
+    grid-template-columns: 70px minmax(0, 1fr) !important;
+    align-items: center !important;
+    column-gap: 18px !important;
+    background:
+      radial-gradient(circle at 4% 0%, rgba(124, 242, 160, 0.18), transparent 34%),
+      linear-gradient(135deg, #0f172a 0%, #152234 54%, #0f2b22 100%) !important;
+  }
+
+  #ubicacion .delivery-mini .delivery-icon {
+    width: 66px !important;
+    height: 66px !important;
+    margin: 0 !important;
+  }
+
+  #ubicacion .delivery-mini .delivery-copy {
+    min-width: 0 !important;
+  }
+
+  #ubicacion .delivery-mini .delivery-copy .badge {
+    margin-bottom: 10px !important;
+    font-size: 12px !important;
+    white-space: normal !important;
+  }
+
+  #ubicacion .delivery-mini .delivery-copy h2 {
+    font-size: clamp(25px, 7vw, 35px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.045em !important;
+    max-width: 100% !important;
+    color: #ffffff !important;
+  }
+
+  #ubicacion .location-copy {
+    padding: 0 14px !important;
+    gap: 14px !important;
+  }
+
+  #ubicacion .location-copy h2 {
+    font-size: clamp(32px, 8.4vw, 44px) !important;
+    line-height: 1.04 !important;
+    max-width: 100% !important;
+  }
+
+  #ubicacion .location-copy p {
+    font-size: 17px !important;
+    line-height: 1.45 !important;
+    max-width: 100% !important;
+  }
+
+  #ubicacion .location-copy .btn {
+    width: 100% !important;
+    border-radius: 14px !important;
+  }
+
+  #ubicacion .map-frame {
+    width: 100vw !important;
+    max-width: none !important;
+    height: 320px !important;
+    margin: 8px 0 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  #ubicacion .map-frame iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+  }
+
+  /* Internas: conservar horizontalidad sin afectar index */
+  body.formateo-page .format-display {
+    height: clamp(300px, 53vw, 352px) !important;
+    min-height: 300px !important;
+    max-height: 352px !important;
+  }
+
+  body.formateo-page .format-display-copy {
+    width: min(500px, 94vw) !important;
+    padding: 10px 14px !important;
+  }
+
+  body.formateo-page .format-display h3 {
+    font-size: clamp(23px, 5.9vw, 29px) !important;
+    line-height: 1 !important;
+    margin-bottom: 7px !important;
+  }
+
+  body.formateo-page .format-display p {
+    font-size: clamp(11.2px, 2.85vw, 13px) !important;
+    line-height: 1.16 !important;
+    margin-bottom: 7px !important;
+  }
+
+  body.formateo-page .format-display li {
+    font-size: clamp(10.2px, 2.6vw, 11.8px) !important;
+    line-height: 1.12 !important;
+  }
+}
