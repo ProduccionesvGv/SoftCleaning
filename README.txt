@@ -109,7 +109,7 @@ CAMBIO V16:
 CAMBIO V17:
 - Se actualizó el número de WhatsApp.
 - Número visible: +54 9 11 5876-8929
-- Link WhatsApp / wa.me: 5491158768929
+- Link WhatsApp / wa.me: 5491176756285
 
 CAMBIO V18:
 - Se eliminó el texto: "Podés cambiar las imágenes dentro de la carpeta assets/img."

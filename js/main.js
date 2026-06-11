@@ -1,7 +1,7 @@
 // Cambiá este número por tu WhatsApp.
 // Formato recomendado para Argentina: 549 + código de área + número, sin espacios.
 // Ejemplo ficticio: 5491123456789
-const WHATSAPP_NUMBER = "5491158768929";
+const WHATSAPP_NUMBER = "5491176756285";
 
 // Animación al hacer scroll
 const revealElements = document.querySelectorAll(".reveal");
