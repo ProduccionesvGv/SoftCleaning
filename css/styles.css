@@ -6718,3 +6718,95 @@ body.service-detail-page {
     padding-top: 26px !important;
   }
 }
+
+/* V142: Ajuste final Android internas: hero más horizontal como referencia.
+   Reduce altura del bloque, sube el contenido y evita aspecto vertical/cuadrado. */
+@media (max-width: 619px) {
+  .formateo-page .site-header {
+    min-height: 118px !important;
+  }
+
+  .formateo-page .site-header .container,
+  .formateo-page .site-header .header-content {
+    min-height: 118px !important;
+  }
+
+  .formateo-page .brand-logo img {
+    max-width: min(78vw, 430px) !important;
+  }
+
+  .formateo-page .format-display {
+    height: clamp(370px, 64vw, 410px) !important;
+    min-height: 370px !important;
+    max-height: 410px !important;
+  }
+
+  .formateo-page .format-display-copy {
+    width: min(480px, 92vw) !important;
+    min-height: 100% !important;
+    padding: 18px 16px 18px !important;
+    justify-content: center !important;
+  }
+
+  .formateo-page .format-display h3 {
+    max-width: 470px !important;
+    margin-bottom: 10px !important;
+    font-size: clamp(25px, 6.4vw, 32px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.03em !important;
+  }
+
+  .formateo-page .format-display p {
+    max-width: 470px !important;
+    margin-bottom: 10px !important;
+    font-size: clamp(12px, 3.05vw, 14px) !important;
+    line-height: 1.22 !important;
+  }
+
+  .formateo-page .format-display ul {
+    gap: 5px !important;
+  }
+
+  .formateo-page .format-display li {
+    max-width: 470px !important;
+    padding-left: 22px !important;
+    font-size: clamp(10.8px, 2.85vw, 12.6px) !important;
+    line-height: 1.18 !important;
+  }
+
+  .formateo-page .format-display-media img {
+    object-fit: cover !important;
+    object-position: var(--format-mobile-position, 60% center) !important;
+  }
+
+  .formateo-page .format-controls-zone {
+    padding-top: 14px !important;
+  }
+
+  .formateo-page .format-feature-list {
+    gap: 10px !important;
+  }
+
+  .formateo-page .format-feature-button {
+    min-height: 66px !important;
+    padding: 14px 20px !important;
+    border-radius: 14px !important;
+  }
+
+  .formateo-page .format-feature-button span {
+    font-size: clamp(17px, 4.4vw, 21px) !important;
+    line-height: 1.08 !important;
+  }
+}
+
+/* Desktop/tablet: un poco más horizontal también, sin romper escritorio. */
+@media (min-width: 620px) {
+  .formateo-page .format-display {
+    height: clamp(500px, 55vh, 640px) !important;
+    min-height: 500px !important;
+  }
+
+  .formateo-page .format-display-copy {
+    justify-content: center !important;
+  }
+}
