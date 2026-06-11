@@ -7205,3 +7205,149 @@ body.service-detail-page {
     font-size: 16px !important;
   }
 }
+
+/* V145: Corrección puntual - indicador Deslizá y páginas internas más horizontales en Android */
+@media (max-width: 619px) {
+  /* El aviso queda arriba del carrusel, no perdido abajo ni encima del contenido */
+  #planes .plans-hint {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    max-width: max-content !important;
+    margin: 0 0 12px 14px !important;
+    padding: 8px 14px !important;
+    transform: none !important;
+    z-index: 2 !important;
+    background: rgba(154, 52, 18, 0.74) !important;
+    color: #fff7ed !important;
+    border-radius: 999px !important;
+    box-shadow: 0 8px 22px rgba(154, 52, 18, 0.18) !important;
+    pointer-events: none !important;
+    animation: hintMove 1.4s ease-in-out infinite !important;
+  }
+
+  #planes .plans-hint span {
+    font-size: 15px !important;
+    line-height: 1 !important;
+  }
+
+  /* Separación correcta entre aviso y tarjetas */
+  #planes .plans-grid,
+  #planes .plans-three-vertical {
+    padding-top: 0 !important;
+  }
+
+  /* Páginas internas: formato más horizontal, menos alto/cuadrado */
+  .formateo-page .site-header {
+    margin-bottom: 0 !important;
+  }
+
+  .formateo-page .format-display {
+    height: clamp(305px, 68vw, 365px) !important;
+    min-height: 305px !important;
+    max-height: 365px !important;
+  }
+
+  .formateo-page .format-display-copy {
+    width: min(480px, 96vw) !important;
+    max-width: 96vw !important;
+    padding: 18px 14px 18px !important;
+    justify-content: center !important;
+  }
+
+  .formateo-page .format-display h3 {
+    max-width: 92vw !important;
+    margin-bottom: 9px !important;
+    font-size: clamp(23px, 7.0vw, 31px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.035em !important;
+  }
+
+  .formateo-page .format-display p {
+    max-width: 92vw !important;
+    margin-bottom: 10px !important;
+    font-size: clamp(11.8px, 3.35vw, 13.8px) !important;
+    line-height: 1.24 !important;
+  }
+
+  .formateo-page .format-display ul {
+    gap: 5px !important;
+  }
+
+  .formateo-page .format-display li {
+    padding-left: 21px !important;
+    font-size: clamp(10.8px, 3.0vw, 12.8px) !important;
+    line-height: 1.22 !important;
+  }
+
+  .formateo-page .format-display-media::before {
+    background:
+      linear-gradient(90deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.70) 46%, rgba(15, 23, 42, 0.20) 100%),
+      linear-gradient(180deg, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.04) 48%, rgba(15, 23, 42, 0.20) 100%) !important;
+  }
+
+  .formateo-page .format-controls-zone {
+    padding-top: 14px !important;
+  }
+
+  .formateo-page .format-controls-zone .format-feature-button {
+    min-height: 56px !important;
+    padding: 12px 14px !important;
+  }
+
+  .formateo-page .format-controls-zone .format-feature-button span,
+  .formateo-page .format-feature-button span {
+    font-size: clamp(15px, 4.4vw, 19px) !important;
+    line-height: 1.08 !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .formateo-page .format-display {
+    height: 325px !important;
+    min-height: 325px !important;
+  }
+}
+
+/* V146: indicador Deslizá entre la primera y segunda tarjeta del carrusel en Android */
+@media (max-width: 619px) {
+  #planes .container {
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  #planes .plans-hint {
+    position: absolute !important;
+    top: 84px !important;
+    right: 8px !important;
+    left: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    max-width: max-content !important;
+    margin: 0 !important;
+    padding: 8px 13px !important;
+    transform: none !important;
+    z-index: 8 !important;
+    border-radius: 999px !important;
+    background: rgba(154, 52, 18, 0.78) !important;
+    color: #fff7ed !important;
+    box-shadow: 0 10px 26px rgba(154, 52, 18, 0.2) !important;
+    pointer-events: none !important;
+    animation: hintMove 1.4s ease-in-out infinite !important;
+  }
+
+  #planes .plans-hint span {
+    font-size: 15px !important;
+    line-height: 1 !important;
+    letter-spacing: -1px !important;
+  }
+
+  #planes .plans-grid,
+  #planes .plans-three-vertical {
+    padding-top: 0 !important;
+  }
+}
