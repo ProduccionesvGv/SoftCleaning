@@ -4,8 +4,8 @@
   --dark-soft: #1e293b;
   --text: #1f2937;
   --muted: #64748b;
-  --primary: #22c55e;
-  --primary-dark: #16a34a;
+  --primary: #2196F3;
+  --primary-dark: #1976D2;
   --card: #ffffff;
   --line: #e2e8f0;
   --shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
@@ -83,7 +83,7 @@ textarea {
   display: grid;
   place-items: center;
   font-weight: 900;
-  background: linear-gradient(135deg, var(--primary), #38bdf8);
+  background: linear-gradient(135deg, var(--primary), #4CAF50);
   color: #061018;
 }
 
@@ -138,14 +138,14 @@ textarea {
 
 .nav-menu a:hover,
 .nav-cta {
-  background: rgba(34, 197, 94, 0.14);
+  background: rgba(33, 150, 243, 0.14);
 }
 
 /* Hero */
 .hero {
   padding: 38px 0 34px;
   background:
-    radial-gradient(circle at top right, rgba(34,197,94,0.24), transparent 34%),
+    radial-gradient(circle at top right, rgba(33,150,243,0.24), transparent 34%),
     linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
   color: #fff;
   overflow: hidden;
@@ -160,9 +160,9 @@ textarea {
   width: fit-content;
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(34, 197, 94, 0.15);
-  color: #86efac;
-  border: 1px solid rgba(134, 239, 172, 0.25);
+  background: rgba(33, 150, 243, 0.15);
+  color: #81C784;
+  border: 1px solid rgba(129, 199, 132, 0.25);
   font-size: 13px;
   font-weight: 700;
   margin-bottom: 16px;
@@ -202,7 +202,7 @@ textarea {
 .btn-primary {
   background: var(--primary);
   color: #052e16;
-  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.28);
+  box-shadow: 0 12px 30px rgba(33, 150, 243, 0.28);
 }
 
 .btn-primary:hover {
@@ -250,7 +250,7 @@ textarea {
 }
 
 .section-dark .section-title span {
-  color: #86efac;
+  color: #81C784;
 }
 
 .section-title h2 {
@@ -325,8 +325,8 @@ textarea {
   width: 42px;
   height: 42px;
   border-radius: 14px;
-  background: rgba(34, 197, 94, 0.15);
-  color: #86efac;
+  background: rgba(33, 150, 243, 0.15);
+  color: #81C784;
   font-weight: 900;
   margin-bottom: 12px;
 }
@@ -491,7 +491,7 @@ textarea {
 .contact-form select:focus,
 .contact-form textarea:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(34,197,94,0.14);
+  box-shadow: 0 0 0 4px rgba(33,150,243,0.14);
 }
 
 /* WhatsApp y barra móvil */
@@ -505,7 +505,7 @@ textarea {
   font-weight: 900;
   padding: 14px 18px;
   border-radius: 999px;
-  box-shadow: 0 14px 30px rgba(34,197,94,0.35);
+  box-shadow: 0 14px 30px rgba(33,150,243,0.35);
 }
 
 .mobile-bottom-bar {
@@ -532,7 +532,7 @@ textarea {
 }
 
 .mobile-bottom-bar a:hover {
-  background: rgba(34,197,94,0.14);
+  background: rgba(33,150,243,0.14);
 }
 
 footer {
@@ -613,7 +613,7 @@ footer {
   .hero {
     padding: 70px 0;
     background:
-      radial-gradient(circle at top right, rgba(34,197,94,0.26), transparent 31%),
+      radial-gradient(circle at top right, rgba(33,150,243,0.26), transparent 31%),
       linear-gradient(135deg, #0f172a 0%, #111827 55%, #1e293b 100%);
   }
 
@@ -833,7 +833,7 @@ body {
 
 .plans-three-vertical .plan-featured {
   border: 2px solid var(--primary);
-  box-shadow: 0 18px 45px rgba(34, 197, 94, 0.16);
+  box-shadow: 0 18px 45px rgba(33, 150, 243, 0.16);
 }
 
 @media (min-width: 960px) {
@@ -849,8 +849,8 @@ body {
 .hero-clean {
   padding: 28px 0 42px;
   background:
-    radial-gradient(circle at 15% 20%, rgba(34, 197, 94, 0.22), transparent 32%),
-    radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.13), transparent 30%),
+    radial-gradient(circle at 15% 20%, rgba(33, 150, 243, 0.22), transparent 32%),
+    radial-gradient(circle at 85% 15%, rgba(76, 175, 80, 0.13), transparent 30%),
     linear-gradient(135deg, #0f172a 0%, #111827 56%, #0f2a24 100%);
   color: #ffffff;
 }
@@ -881,7 +881,7 @@ body {
 .hero-copy .badge {
   margin-bottom: 16px;
   color: #bbf7d0;
-  background: rgba(34, 197, 94, 0.13);
+  background: rgba(33, 150, 243, 0.13);
   border-color: rgba(187, 247, 208, 0.22);
 }
 
@@ -899,7 +899,7 @@ body {
 
 .hero-copy h1 span {
   display: block;
-  color: #86efac;
+  color: #81C784;
   font-size: clamp(28px, 7vw, 52px);
   margin-bottom: 4px;
 }
@@ -1700,7 +1700,7 @@ main {
 }
 
 #servicios .section-title span {
-  color: #16a34a !important;
+  color: #1976D2 !important;
 }
 
 #servicios .section-title p {
@@ -1715,8 +1715,8 @@ main {
 .hero-clean,
 .hero {
   background:
-    radial-gradient(circle at 15% 20%, rgba(34, 197, 94, 0.22), transparent 32%),
-    radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.13), transparent 30%),
+    radial-gradient(circle at 15% 20%, rgba(33, 150, 243, 0.22), transparent 32%),
+    radial-gradient(circle at 85% 15%, rgba(76, 175, 80, 0.13), transparent 30%),
     linear-gradient(135deg, #0f172a 0%, #111827 56%, #0f2a24 100%) !important;
 }
 
@@ -1815,7 +1815,7 @@ main {
   padding: 0 !important;
   background: transparent !important;
   border: 0 !important;
-  color: #16a34a !important;
+  color: #1976D2 !important;
   font-size: 18px !important;
   font-weight: 900 !important;
   letter-spacing: 0.5px !important;
@@ -1997,7 +1997,7 @@ main {
   width: 92px;
   height: 5px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #22c55e, #38bdf8);
+  background: linear-gradient(90deg, #2196F3, #4CAF50);
   transform: translateX(-50%);
 }
 
@@ -2010,9 +2010,9 @@ main {
   margin: 0 auto 14px !important;
   padding: 8px 15px !important;
   border-radius: 999px !important;
-  background: rgba(34, 197, 94, 0.11) !important;
-  border: 1px solid rgba(34, 197, 94, 0.20) !important;
-  color: #16a34a !important;
+  background: rgba(33, 150, 243, 0.11) !important;
+  border: 1px solid rgba(33, 150, 243, 0.20) !important;
+  color: #1976D2 !important;
   font-size: 14px !important;
   line-height: 1 !important;
   font-weight: 900 !important;
@@ -2040,7 +2040,7 @@ main {
   height: 4px;
   margin: 18px auto 0;
   border-radius: 999px;
-  background: rgba(34, 197, 94, 0.34);
+  background: rgba(33, 150, 243, 0.34);
 }
 
 #servicios .section-title p,
@@ -2054,7 +2054,7 @@ main {
 
 /* Diferencia sutil para FAQ */
 #faq .section-title::before {
-  background: linear-gradient(90deg, #22c55e, #0f172a);
+  background: linear-gradient(90deg, #2196F3, #0f172a);
 }
 
 #faq .section-title span {
@@ -2407,7 +2407,7 @@ main {
 }
 
 .promo-help.valid {
-  color: #16a34a;
+  color: #1976D2;
 }
 
 .promo-help.invalid {
@@ -2424,10 +2424,10 @@ main {
   text-align: center !important;
   border-radius: 30px !important;
   background:
-    radial-gradient(circle at 15% 20%, rgba(34, 197, 94, 0.16), transparent 34%),
-    radial-gradient(circle at 85% 10%, rgba(56, 189, 248, 0.12), transparent 30%),
+    radial-gradient(circle at 15% 20%, rgba(33, 150, 243, 0.16), transparent 34%),
+    radial-gradient(circle at 85% 10%, rgba(76, 175, 80, 0.12), transparent 30%),
     linear-gradient(135deg, #ffffff 0%, #f8fafc 60%, #eefdf3 100%) !important;
-  border: 1px solid rgba(34, 197, 94, 0.14) !important;
+  border: 1px solid rgba(33, 150, 243, 0.14) !important;
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06) !important;
   overflow: hidden;
 }
@@ -2441,8 +2441,8 @@ main {
   height: 46px;
   border-radius: 16px;
   background:
-    linear-gradient(135deg, #22c55e, #38bdf8);
-  box-shadow: 0 12px 24px rgba(34, 197, 94, 0.22);
+    linear-gradient(135deg, #2196F3, #4CAF50);
+  box-shadow: 0 12px 24px rgba(33, 150, 243, 0.22);
 }
 
 #servicios .section-title::after {
@@ -2461,8 +2461,8 @@ main {
   margin: 0 auto 14px !important;
   padding: 9px 18px !important;
   border-radius: 999px !important;
-  background: rgba(34, 197, 94, 0.12) !important;
-  border: 1px solid rgba(34, 197, 94, 0.22) !important;
+  background: rgba(33, 150, 243, 0.12) !important;
+  border: 1px solid rgba(33, 150, 243, 0.22) !important;
   color: #15803d !important;
   font-size: 13px !important;
   line-height: 1 !important;
@@ -2604,9 +2604,9 @@ main {
   padding: 22px;
   border-radius: 28px;
   background:
-    radial-gradient(circle at 20% 0%, rgba(34, 197, 94, 0.17), transparent 38%),
+    radial-gradient(circle at 20% 0%, rgba(33, 150, 243, 0.17), transparent 38%),
     linear-gradient(180deg, #ffffff, #f8fafc);
-  border: 1px solid rgba(34, 197, 94, 0.18);
+  border: 1px solid rgba(33, 150, 243, 0.18);
   box-shadow: 0 28px 80px rgba(2, 6, 23, 0.35);
   text-align: center;
   animation: promoModalIn 0.25s ease both;
@@ -2618,7 +2618,7 @@ main {
   height: auto;
   margin: 0 auto 8px;
   display: block;
-  filter: drop-shadow(0 12px 22px rgba(34, 197, 94, 0.28));
+  filter: drop-shadow(0 12px 22px rgba(33, 150, 243, 0.28));
 }
 
 .promo-modal-card h3 {
@@ -2645,7 +2645,7 @@ main {
   padding: 12px 18px;
   border-radius: 16px;
   background: #0f172a;
-  color: #86efac;
+  color: #81C784;
   font-size: 28px;
   font-weight: 950;
   letter-spacing: 3px;
@@ -2817,7 +2817,7 @@ main {
     opacity: 1;
     pointer-events: auto;
     transform: translateX(0) scale(1.08);
-    filter: drop-shadow(0 20px 34px rgba(34, 197, 94, 0.38));
+    filter: drop-shadow(0 20px 34px rgba(33, 150, 243, 0.38));
   }
 
   15% {
@@ -2921,12 +2921,12 @@ main {
 @keyframes promoBounceBlinkV80 {
   0%, 100% {
     transform: translateY(0) scale(1);
-    filter: drop-shadow(0 14px 26px rgba(34, 197, 94, 0.22));
+    filter: drop-shadow(0 14px 26px rgba(33, 150, 243, 0.22));
     opacity: 1;
   }
   35% {
     transform: translateY(-7px) scale(1.07);
-    filter: drop-shadow(0 20px 36px rgba(34, 197, 94, 0.42));
+    filter: drop-shadow(0 20px 36px rgba(33, 150, 243, 0.42));
     opacity: 0.72;
   }
   65% {
@@ -2982,12 +2982,12 @@ main {
   0%, 100% {
     transform: translateY(0) scale(1);
     opacity: 1;
-    filter: drop-shadow(0 14px 26px rgba(34, 197, 94, 0.28));
+    filter: drop-shadow(0 14px 26px rgba(33, 150, 243, 0.28));
   }
   35% {
     transform: translateY(-7px) scale(1.08);
     opacity: 0.68;
-    filter: drop-shadow(0 20px 36px rgba(34, 197, 94, 0.48));
+    filter: drop-shadow(0 20px 36px rgba(33, 150, 243, 0.48));
   }
   65% {
     transform: translateY(0) scale(0.98);
@@ -3209,7 +3209,7 @@ main {
   opacity: 0;
   pointer-events: none;
   transform: translateX(44px) scale(0.88) rotate(4deg);
-  filter: drop-shadow(0 20px 36px rgba(34, 197, 94, 0.28));
+  filter: drop-shadow(0 20px 36px rgba(33, 150, 243, 0.28));
   animation: promoHeroLoop 9s ease-in-out 1.5s infinite;
 }
 
@@ -3983,27 +3983,27 @@ main {
 /* V98: sección Servicios con paleta SoftCleaning */
 #servicios.arc-services-section {
   background:
-    radial-gradient(circle at 15% 16%, rgba(34, 197, 94, 0.20), transparent 32%),
-    radial-gradient(circle at 88% 8%, rgba(56, 189, 248, 0.12), transparent 30%),
+    radial-gradient(circle at 15% 16%, rgba(33, 150, 243, 0.20), transparent 32%),
+    radial-gradient(circle at 88% 8%, rgba(76, 175, 80, 0.12), transparent 30%),
     linear-gradient(135deg, #0f172a 0%, #111827 54%, #0f2a24 100%) !important;
 }
 
 #servicios.arc-services-section::before {
   background:
-    linear-gradient(90deg, rgba(134, 239, 172, 0.045) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(134, 239, 172, 0.035) 1px, transparent 1px) !important;
+    linear-gradient(90deg, rgba(129, 199, 132, 0.045) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(129, 199, 132, 0.035) 1px, transparent 1px) !important;
   opacity: 0.18 !important;
 }
 
 .arc-section-title span {
   border-color: rgba(187, 247, 208, 0.24) !important;
   color: #bbf7d0 !important;
-  background: rgba(34, 197, 94, 0.13) !important;
+  background: rgba(33, 150, 243, 0.13) !important;
 }
 
 .arc-section-title h2::after {
-  background: #86efac !important;
-  box-shadow: 0 0 24px rgba(34, 197, 94, 0.32) !important;
+  background: #81C784 !important;
+  box-shadow: 0 0 24px rgba(33, 150, 243, 0.32) !important;
 }
 
 .arc-section-title p {
@@ -4021,11 +4021,11 @@ main {
 .arc-service-card::before {
   background:
     linear-gradient(180deg, rgba(255,255,255,0.045), transparent 24%),
-    radial-gradient(circle at 86% 44%, rgba(134, 239, 172, 0.10), transparent 30%) !important;
+    radial-gradient(circle at 86% 44%, rgba(129, 199, 132, 0.10), transparent 30%) !important;
 }
 
 .arc-service-card::after {
-  background: linear-gradient(90deg, #22c55e, #86efac) !important;
+  background: linear-gradient(90deg, #2196F3, #81C784) !important;
 }
 
 .arc-service-card .arc-service-bg {
@@ -4034,7 +4034,7 @@ main {
 }
 
 .arc-service-icon {
-  color: #86efac !important;
+  color: #81C784 !important;
 }
 
 .arc-service-content p {
@@ -4050,16 +4050,16 @@ main {
 }
 
 .arc-service-link:hover span {
-  border-color: #86efac !important;
-  color: #86efac !important;
-  background: rgba(34, 197, 94, 0.12) !important;
+  border-color: #81C784 !important;
+  color: #81C784 !important;
+  background: rgba(33, 150, 243, 0.12) !important;
 }
 
 @media (max-width: 920px) {
   #servicios.arc-services-section {
     background:
-      radial-gradient(circle at 15% 14%, rgba(34, 197, 94, 0.18), transparent 36%),
-      radial-gradient(circle at 88% 10%, rgba(56, 189, 248, 0.10), transparent 32%),
+      radial-gradient(circle at 15% 14%, rgba(33, 150, 243, 0.18), transparent 36%),
+      radial-gradient(circle at 88% 10%, rgba(76, 175, 80, 0.10), transparent 32%),
       linear-gradient(135deg, #0f172a 0%, #111827 58%, #0f2a24 100%) !important;
   }
 }
@@ -4093,10 +4093,10 @@ main {
 .arc-service-card:focus-visible,
 .arc-service-card.is-active {
   transform: translateY(-6px) !important;
-  border-color: rgba(134, 239, 172, 0.34) !important;
+  border-color: rgba(129, 199, 132, 0.34) !important;
   box-shadow:
     0 28px 64px rgba(2, 6, 23, 0.42),
-    0 0 0 1px rgba(134, 239, 172, 0.08) inset !important;
+    0 0 0 1px rgba(129, 199, 132, 0.08) inset !important;
 }
 
 .arc-service-card:hover::after,
@@ -4105,7 +4105,7 @@ main {
 .arc-service-card.is-active::after {
   width: 100% !important;
   opacity: 1 !important;
-  box-shadow: 0 0 24px rgba(34, 197, 94, 0.38) !important;
+  box-shadow: 0 0 24px rgba(33, 150, 243, 0.38) !important;
 }
 
 .arc-service-card .arc-service-bg {
@@ -4128,11 +4128,11 @@ main {
 .arc-service-card:focus-within .arc-service-icon,
 .arc-service-card:focus-visible .arc-service-icon,
 .arc-service-card.is-active .arc-service-icon {
-  filter: drop-shadow(0 0 16px rgba(134, 239, 172, 0.36));
+  filter: drop-shadow(0 0 16px rgba(129, 199, 132, 0.36));
 }
 
 .arc-service-card:focus-visible {
-  outline: 2px solid rgba(134, 239, 172, 0.72) !important;
+  outline: 2px solid rgba(129, 199, 132, 0.72) !important;
   outline-offset: 5px !important;
 }
 
@@ -4140,9 +4140,9 @@ main {
 .arc-service-card:focus-within .arc-service-link span,
 .arc-service-card:focus-visible .arc-service-link span,
 .arc-service-card.is-active .arc-service-link span {
-  border-color: #86efac !important;
-  color: #86efac !important;
-  background: rgba(34, 197, 94, 0.12) !important;
+  border-color: #81C784 !important;
+  color: #81C784 !important;
+  background: rgba(33, 150, 243, 0.12) !important;
 }
 
 @media (max-width: 619px) {
@@ -4202,15 +4202,15 @@ body.service-detail-page {
   padding-bottom: 0 !important;
   color: #ffffff !important;
   background:
-    radial-gradient(circle at 15% 16%, rgba(34, 197, 94, 0.22), transparent 32%),
-    radial-gradient(circle at 88% 8%, rgba(56, 189, 248, 0.13), transparent 30%),
+    radial-gradient(circle at 15% 16%, rgba(33, 150, 243, 0.22), transparent 32%),
+    radial-gradient(circle at 88% 8%, rgba(76, 175, 80, 0.13), transparent 30%),
     linear-gradient(135deg, #0f172a 0%, #111827 54%, #0f2a24 100%) !important;
 }
 
 .service-detail-page .site-header {
   position: sticky !important;
   background: rgba(15, 23, 42, 0.88) !important;
-  border-bottom: 1px solid rgba(134, 239, 172, 0.12) !important;
+  border-bottom: 1px solid rgba(129, 199, 132, 0.12) !important;
 }
 
 .service-detail-main {
@@ -4246,8 +4246,8 @@ body.service-detail-page {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(134, 239, 172, 0.045) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(134, 239, 172, 0.035) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(129, 199, 132, 0.045) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(129, 199, 132, 0.035) 1px, transparent 1px);
   background-size: 72px 72px;
   opacity: 0.20;
 }
@@ -4259,8 +4259,8 @@ body.service-detail-page {
   bottom: 0;
   width: 150px;
   height: 7px;
-  background: linear-gradient(90deg, #22c55e, #86efac);
-  box-shadow: 0 0 24px rgba(34, 197, 94, 0.34);
+  background: linear-gradient(90deg, #2196F3, #81C784);
+  box-shadow: 0 0 24px rgba(33, 150, 243, 0.34);
 }
 
 .service-detail-kicker,
@@ -4278,7 +4278,7 @@ body.service-detail-page {
   border: 1px solid rgba(187, 247, 208, 0.24);
   border-radius: 999px;
   color: #bbf7d0;
-  background: rgba(34, 197, 94, 0.13);
+  background: rgba(33, 150, 243, 0.13);
   font-size: 12px;
   line-height: 1;
   font-weight: 900;
@@ -4305,21 +4305,21 @@ body.service-detail-page {
   border: 1px solid rgba(187, 247, 208, 0.28);
   border-radius: 999px;
   color: #ffffff;
-  background: rgba(34, 197, 94, 0.10);
+  background: rgba(33, 150, 243, 0.10);
   font-weight: 850;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .service-detail-back:hover {
   transform: translateY(-2px);
-  border-color: rgba(134, 239, 172, 0.65);
-  background: rgba(34, 197, 94, 0.18);
+  border-color: rgba(129, 199, 132, 0.65);
+  background: rgba(33, 150, 243, 0.18);
 }
 
 .service-detail-footer {
   background: transparent !important;
   color: #cbd5e1 !important;
-  border-top: 1px solid rgba(134, 239, 172, 0.10) !important;
+  border-top: 1px solid rgba(129, 199, 132, 0.10) !important;
 }
 
 @media (max-width: 619px) {
@@ -4639,7 +4639,7 @@ body.service-detail-page {
   border: 1px solid rgba(187, 247, 208, 0.24);
   border-radius: 999px;
   color: #bbf7d0;
-  background: rgba(34, 197, 94, 0.13);
+  background: rgba(33, 150, 243, 0.13);
   font-size: 12px;
   line-height: 1;
   font-weight: 900;
@@ -4667,10 +4667,10 @@ body.service-detail-page {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(380px, 1.08fr);
   align-items: stretch;
-  border: 1px solid rgba(134, 239, 172, 0.18);
+  border: 1px solid rgba(129, 199, 132, 0.18);
   border-radius: 28px;
   background:
-    radial-gradient(circle at 88% 12%, rgba(134, 239, 172, 0.28), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgba(129, 199, 132, 0.28), transparent 30%),
     linear-gradient(135deg, rgba(255,255,255,0.075), rgba(255,255,255,0.035)),
     rgba(15, 23, 42, 0.92);
   box-shadow: 0 26px 70px rgba(2, 6, 23, 0.34);
@@ -4683,8 +4683,8 @@ body.service-detail-page {
   bottom: 0;
   width: 160px;
   height: 7px;
-  background: linear-gradient(90deg, #22c55e, #86efac);
-  box-shadow: 0 0 22px rgba(34, 197, 94, 0.28);
+  background: linear-gradient(90deg, #2196F3, #81C784);
+  box-shadow: 0 0 22px rgba(33, 150, 243, 0.28);
   z-index: 3;
 }
 
@@ -4702,9 +4702,9 @@ body.service-detail-page {
   justify-content: center;
   margin-bottom: 26px;
   border-radius: 999px;
-  border: 1px solid rgba(134, 239, 172, 0.34);
-  color: #86efac;
-  background: rgba(34, 197, 94, 0.11);
+  border: 1px solid rgba(129, 199, 132, 0.34);
+  color: #81C784;
+  background: rgba(33, 150, 243, 0.11);
   font-size: 15px;
   line-height: 1;
   font-weight: 950;
@@ -4723,7 +4723,7 @@ body.service-detail-page {
 
 .format-display h3 .accent-word,
 .format-display-copy h3 strong {
-  color: #86efac;
+  color: #81C784;
 }
 
 .format-display p {
@@ -4757,7 +4757,7 @@ body.service-detail-page {
   position: absolute;
   left: 0;
   top: 0;
-  color: #86efac;
+  color: #81C784;
   font-weight: 950;
 }
 
@@ -4773,7 +4773,7 @@ body.service-detail-page {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.28) 36%, rgba(15, 23, 42, 0.02)),
-    radial-gradient(circle at 68% 40%, rgba(134, 239, 172, 0.12), transparent 38%);
+    radial-gradient(circle at 68% 40%, rgba(129, 199, 132, 0.12), transparent 38%);
   z-index: 1;
 }
 
@@ -4802,11 +4802,11 @@ body.service-detail-page {
   justify-content: space-between;
   gap: 18px;
   padding: 20px clamp(22px, 4vw, 38px);
-  border: 1px solid rgba(134, 239, 172, 0.14);
+  border: 1px solid rgba(129, 199, 132, 0.14);
   border-radius: 18px;
   color: #ffffff;
   background:
-    linear-gradient(135deg, rgba(187, 247, 208, 0.08), rgba(56, 189, 248, 0.035)),
+    linear-gradient(135deg, rgba(187, 247, 208, 0.08), rgba(76, 175, 80, 0.035)),
     rgba(15, 23, 42, 0.78);
   box-shadow: 0 16px 38px rgba(2, 6, 23, 0.18);
   text-align: left;
@@ -4830,19 +4830,19 @@ body.service-detail-page {
   justify-content: center;
   border-radius: 999px;
   color: #0f172a;
-  background: #86efac;
+  background: #81C784;
   font-size: 28px;
   line-height: 1;
   font-weight: 900;
-  box-shadow: 0 0 20px rgba(134, 239, 172, 0.22);
+  box-shadow: 0 0 20px rgba(129, 199, 132, 0.22);
 }
 
 .format-feature-button:hover,
 .format-feature-button.active {
   transform: translateY(-2px);
-  border-color: rgba(134, 239, 172, 0.42);
+  border-color: rgba(129, 199, 132, 0.42);
   background:
-    linear-gradient(135deg, rgba(34, 197, 94, 0.20), rgba(56, 189, 248, 0.06)),
+    linear-gradient(135deg, rgba(33, 150, 243, 0.20), rgba(76, 175, 80, 0.06)),
     rgba(15, 23, 42, 0.9);
 }
 
@@ -4858,11 +4858,11 @@ body.service-detail-page {
   justify-content: center;
   min-height: 52px;
   padding: 15px 24px;
-  border: 1px solid rgba(134, 239, 172, 0.40);
+  border: 1px solid rgba(129, 199, 132, 0.40);
   border-radius: 999px;
   color: #0f172a;
-  background: linear-gradient(135deg, #86efac, #22c55e);
-  box-shadow: 0 18px 34px rgba(34, 197, 94, 0.22);
+  background: linear-gradient(135deg, #81C784, #2196F3);
+  box-shadow: 0 18px 34px rgba(33, 150, 243, 0.22);
   font-size: 15px;
   font-weight: 950;
   letter-spacing: 0.8px;
@@ -4887,7 +4887,7 @@ body.service-detail-page {
   .format-display-media::before {
     background:
       linear-gradient(0deg, rgba(15, 23, 42, 0.52), rgba(15, 23, 42, 0.08) 55%, rgba(15, 23, 42, 0.04)),
-      radial-gradient(circle at 70% 30%, rgba(134, 239, 172, 0.10), transparent 40%);
+      radial-gradient(circle at 70% 30%, rgba(129, 199, 132, 0.10), transparent 40%);
   }
 
   .format-display-media img {
@@ -4966,7 +4966,7 @@ body.service-detail-page {
 .formateo-page .format-display-media::before {
   background:
     linear-gradient(90deg, rgba(15, 23, 42, 0.94) 0%, rgba(15, 23, 42, 0.82) 34%, rgba(15, 23, 42, 0.38) 62%, rgba(15, 23, 42, 0.12) 100%),
-    radial-gradient(circle at 82% 22%, rgba(134, 239, 172, 0.18), transparent 36%);
+    radial-gradient(circle at 82% 22%, rgba(129, 199, 132, 0.18), transparent 36%);
 }
 
 .formateo-page .format-display-media img {
@@ -5002,7 +5002,7 @@ body.service-detail-page {
   .formateo-page .format-display-media::before {
     background:
       linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.72) 54%, rgba(15, 23, 42, 0.25) 100%),
-      radial-gradient(circle at 76% 20%, rgba(134, 239, 172, 0.16), transparent 40%);
+      radial-gradient(circle at 76% 20%, rgba(129, 199, 132, 0.16), transparent 40%);
   }
 
   .formateo-page .format-display-media img {
@@ -5208,7 +5208,7 @@ body.service-detail-page {
   .formateo-page .format-display-media::before {
     background:
       linear-gradient(90deg, rgba(15, 23, 42, 0.90) 0%, rgba(15, 23, 42, 0.62) 46%, rgba(15, 23, 42, 0.14) 100%),
-      radial-gradient(circle at 78% 28%, rgba(134, 239, 172, 0.12), transparent 38%) !important;
+      radial-gradient(circle at 78% 28%, rgba(129, 199, 132, 0.12), transparent 38%) !important;
   }
 
   .formateo-page .format-display-media img {
@@ -5356,7 +5356,7 @@ body.service-detail-page {
 /* V118: Servicios - fondo claro para separar del hero */
 #servicios.arc-services-section {
   background:
-    radial-gradient(circle at 12% 14%, rgba(34, 197, 94, 0.13), transparent 34%),
+    radial-gradient(circle at 12% 14%, rgba(33, 150, 243, 0.13), transparent 34%),
     radial-gradient(circle at 90% 6%, rgba(14, 165, 233, 0.08), transparent 30%),
     linear-gradient(180deg, #f8fafc 0%, #eef4f1 100%) !important;
   border-top: 1px solid rgba(15, 23, 42, 0.06) !important;
@@ -5376,8 +5376,8 @@ body.service-detail-page {
 
 #servicios .arc-section-title span {
   color: #047857 !important;
-  background: rgba(34, 197, 94, 0.11) !important;
-  border-color: rgba(34, 197, 94, 0.26) !important;
+  background: rgba(33, 150, 243, 0.11) !important;
+  border-color: rgba(33, 150, 243, 0.26) !important;
 }
 
 #servicios .arc-section-title h2 {
@@ -5386,8 +5386,8 @@ body.service-detail-page {
 }
 
 #servicios .arc-section-title h2::after {
-  background: #22c55e !important;
-  box-shadow: 0 0 24px rgba(34, 197, 94, 0.22) !important;
+  background: #2196F3 !important;
+  box-shadow: 0 0 24px rgba(33, 150, 243, 0.22) !important;
 }
 
 #servicios .arc-service-card {
@@ -5399,7 +5399,7 @@ body.service-detail-page {
 @media (max-width: 920px) {
   #servicios.arc-services-section {
     background:
-      radial-gradient(circle at 12% 12%, rgba(34, 197, 94, 0.12), transparent 36%),
+      radial-gradient(circle at 12% 12%, rgba(33, 150, 243, 0.12), transparent 36%),
       radial-gradient(circle at 90% 8%, rgba(14, 165, 233, 0.07), transparent 32%),
       linear-gradient(180deg, #f8fafc 0%, #eef4f1 100%) !important;
   }
@@ -5433,17 +5433,17 @@ body.service-detail-page {
 /* V120: Servicios - volver a fondo oscuro anterior manteniendo imágenes a color */
 #servicios.arc-services-section {
   background:
-    radial-gradient(circle at 15% 16%, rgba(34, 197, 94, 0.20), transparent 32%),
-    radial-gradient(circle at 88% 8%, rgba(56, 189, 248, 0.12), transparent 30%),
+    radial-gradient(circle at 15% 16%, rgba(33, 150, 243, 0.20), transparent 32%),
+    radial-gradient(circle at 88% 8%, rgba(76, 175, 80, 0.12), transparent 30%),
     linear-gradient(135deg, #0f172a 0%, #111827 54%, #0f2a24 100%) !important;
-  border-top: 1px solid rgba(134, 239, 172, 0.06) !important;
-  border-bottom: 1px solid rgba(134, 239, 172, 0.06) !important;
+  border-top: 1px solid rgba(129, 199, 132, 0.06) !important;
+  border-bottom: 1px solid rgba(129, 199, 132, 0.06) !important;
 }
 
 #servicios.arc-services-section::before {
   background:
-    linear-gradient(90deg, rgba(134, 239, 172, 0.045) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(134, 239, 172, 0.035) 1px, transparent 1px) !important;
+    linear-gradient(90deg, rgba(129, 199, 132, 0.045) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(129, 199, 132, 0.035) 1px, transparent 1px) !important;
   opacity: 0.18 !important;
 }
 
@@ -5456,12 +5456,12 @@ body.service-detail-page {
 #servicios .arc-section-title span {
   border-color: rgba(187, 247, 208, 0.24) !important;
   color: #bbf7d0 !important;
-  background: rgba(34, 197, 94, 0.13) !important;
+  background: rgba(33, 150, 243, 0.13) !important;
 }
 
 #servicios .arc-section-title h2::after {
-  background: #86efac !important;
-  box-shadow: 0 0 24px rgba(34, 197, 94, 0.32) !important;
+  background: #81C784 !important;
+  box-shadow: 0 0 24px rgba(33, 150, 243, 0.32) !important;
 }
 
 #servicios .arc-section-title p {
@@ -5479,8 +5479,8 @@ body.service-detail-page {
 @media (max-width: 920px) {
   #servicios.arc-services-section {
     background:
-      radial-gradient(circle at 15% 14%, rgba(34, 197, 94, 0.18), transparent 36%),
-      radial-gradient(circle at 88% 10%, rgba(56, 189, 248, 0.10), transparent 32%),
+      radial-gradient(circle at 15% 14%, rgba(33, 150, 243, 0.18), transparent 36%),
+      radial-gradient(circle at 88% 10%, rgba(76, 175, 80, 0.10), transparent 32%),
       linear-gradient(135deg, #0f172a 0%, #111827 58%, #0f2a24 100%) !important;
   }
 }
@@ -5537,7 +5537,7 @@ body.service-detail-page {
   font-weight: 900 !important;
   border: 1px solid rgba(187, 247, 208, 0.24) !important;
   color: #bbf7d0 !important;
-  background: rgba(34, 197, 94, 0.13) !important;
+  background: rgba(33, 150, 243, 0.13) !important;
   box-shadow: 0 12px 30px rgba(2, 6, 23, 0.16) !important;
 }
 
@@ -6173,7 +6173,7 @@ body.service-detail-page {
 /* Ubicación / Mapa */
 .location-section {
   background:
-    radial-gradient(circle at 12% 0%, rgba(34, 197, 94, 0.14), transparent 34%),
+    radial-gradient(circle at 12% 0%, rgba(33, 150, 243, 0.14), transparent 34%),
     linear-gradient(180deg, #f8fafc 0%, #eef5f2 100%);
 }
 
@@ -6200,7 +6200,7 @@ body.service-detail-page {
   position: absolute;
   inset: auto 0 0 0;
   height: 6px;
-  background: linear-gradient(90deg, #22c55e, #86efac);
+  background: linear-gradient(90deg, #2196F3, #81C784);
 }
 
 .delivery-icon {
@@ -6440,13 +6440,13 @@ body.service-detail-page {
 .location-copy .badge {
   color: #0f7a3a !important;
   background: rgba(124, 242, 160, 0.18) !important;
-  border-color: rgba(34, 197, 94, 0.28) !important;
+  border-color: rgba(33, 150, 243, 0.28) !important;
 }
 
 .location-copy .btn.btn-primary {
-  background: linear-gradient(135deg, #22c55e, #86efac) !important;
+  background: linear-gradient(135deg, #2196F3, #81C784) !important;
   color: #062016 !important;
-  box-shadow: 0 16px 35px rgba(34, 197, 94, 0.22) !important;
+  box-shadow: 0 16px 35px rgba(33, 150, 243, 0.22) !important;
 }
 
 @media (max-width: 820px) {
@@ -7491,19 +7491,19 @@ body.service-detail-page {
   margin-top: 24px;
   padding: 12px 18px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #22c55e, #72e89c);
+  background: linear-gradient(135deg, #2196F3, #72e89c);
   color: #08131f;
   font-size: .92rem;
   font-weight: 900;
   letter-spacing: .02em;
   text-decoration: none;
-  box-shadow: 0 14px 34px rgba(34,197,94,.22);
+  box-shadow: 0 14px 34px rgba(33,150,243,.22);
   transition: transform .22s ease, box-shadow .22s ease;
 }
 
 .hero-primary-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 40px rgba(34,197,94,.30);
+  box-shadow: 0 18px 40px rgba(33,150,243,.30);
 }
 
 .hero-primary-cta span {
@@ -7596,5 +7596,984 @@ body.service-detail-page {
     min-height: 68px;
     padding: 11px 12px;
     border-radius: 14px;
+  }
+}
+
+
+/* SoftReset brand palette */
+:root {
+  --primary: #2196F3;
+  --primary-dark: #1976D2;
+  --secondary: #4CAF50;
+  --secondary-soft: #81C784;
+  --dark: #212121;
+  --dark-soft: #263238;
+  --text: #263238;
+}
+.site-header {
+  background: rgba(33, 33, 33, 0.95);
+  border-bottom-color: rgba(33, 150, 243, 0.24);
+}
+.brand-logo img {
+  width: auto !important;
+  max-width: min(390px, 82vw) !important;
+  height: clamp(58px, 8vw, 88px) !important;
+  object-fit: contain !important;
+}
+.hero, .arc-services-section {
+  background-image:
+    radial-gradient(circle at 12% 12%, rgba(76, 175, 80, 0.16), transparent 32%),
+    radial-gradient(circle at 88% 8%, rgba(33, 150, 243, 0.24), transparent 34%),
+    linear-gradient(180deg, #1f2933 0%, #212121 100%);
+}
+.badge, .hero-service-label, .arc-section-title span {
+  color: #BBDEFB !important;
+  border-color: rgba(33,150,243,.35) !important;
+  background: rgba(33,150,243,.14) !important;
+}
+.btn-primary, .hero-primary-cta {
+  background: linear-gradient(135deg, #2196F3, #4CAF50) !important;
+  color: #fff !important;
+  box-shadow: 0 14px 30px rgba(33,150,243,.25) !important;
+}
+.hero-summary-icon, .service-quick-benefits li::before { color: #4CAF50 !important; }
+.arc-service-card--primary { border-color: rgba(33,150,243,.48) !important; }
+.arc-service-card--primary::after, .arc-service-card::after { background: linear-gradient(90deg,#2196F3,#4CAF50) !important; }
+.service-priority-badge { background: #2196F3 !important; color:#fff !important; }
+.nav-menu a:hover, .nav-cta { background: rgba(33,150,243,.14) !important; }
+
+/* =========================================================
+   SoftReset — variante clara general
+   Se conservan sin cambios visuales las secciones:
+   Planes, Ubicación y Contacto.
+   ========================================================= */
+
+:root {
+  --page-light: #edf1f4;
+  --page-light-soft: #f7f9fb;
+  --surface-light: #ffffff;
+  --surface-muted: #e3e9ee;
+  --ink-dark: #17212b;
+  --ink-muted: #536474;
+}
+
+/* Fondo general claro */
+body {
+  background: var(--page-light) !important;
+  color: var(--ink-dark);
+}
+
+/* Encabezado claro para que el nuevo logo SoftReset respire */
+.site-header {
+  background: rgba(248, 250, 252, .96) !important;
+  border-bottom: 1px solid rgba(33, 150, 243, .18) !important;
+  box-shadow: 0 8px 28px rgba(31, 45, 61, .08);
+}
+
+/* HERO PRINCIPAL */
+.hero,
+.hero-clean {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(76, 175, 80, .11), transparent 31%),
+    radial-gradient(circle at 90% 4%, rgba(33, 150, 243, .12), transparent 34%),
+    linear-gradient(180deg, #f8fafb 0%, #e9eef2 100%) !important;
+}
+
+.hero-panel,
+.hero-panel--formateo {
+  background: linear-gradient(145deg, rgba(255,255,255,.98), rgba(238,243,247,.98)) !important;
+  border: 1px solid rgba(37, 63, 82, .14) !important;
+  box-shadow: 0 24px 60px rgba(31, 45, 61, .12) !important;
+}
+
+.hero-copy,
+.hero-copy h1,
+.hero-panel--formateo .hero-copy h1 {
+  color: var(--ink-dark) !important;
+}
+
+.hero-copy p,
+.hero-panel--formateo .hero-copy p {
+  color: var(--ink-muted) !important;
+}
+
+.hero-summary--compact > div,
+.hero-summary div {
+  background: rgba(255,255,255,.84) !important;
+  border: 1px solid rgba(37, 63, 82, .12) !important;
+  box-shadow: 0 10px 28px rgba(31,45,61,.07);
+}
+
+.hero-summary strong {
+  color: var(--ink-dark) !important;
+}
+
+.hero-summary small {
+  color: var(--ink-muted) !important;
+}
+
+.hero-summary-icon {
+  background: rgba(76,175,80,.12) !important;
+  color: #2f9e49 !important;
+}
+
+/* SERVICIOS PRINCIPALES */
+.arc-services-section {
+  background:
+    radial-gradient(circle at 5% 15%, rgba(76,175,80,.08), transparent 28%),
+    linear-gradient(180deg, #e9eef2 0%, #f7f9fb 100%) !important;
+}
+
+.arc-section-title span {
+  color: #1976D2 !important;
+  background: rgba(33,150,243,.08) !important;
+  border-color: rgba(33,150,243,.22) !important;
+}
+
+.arc-service-card {
+  background: linear-gradient(145deg, #ffffff 0%, #e8edf1 100%) !important;
+  border-color: rgba(37,63,82,.18) !important;
+  box-shadow: 0 22px 52px rgba(31,45,61,.12) !important;
+}
+
+.arc-service-card::before {
+  background: linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.90) 43%, rgba(238,243,247,.28) 72%, rgba(238,243,247,.08) 100%) !important;
+}
+
+.arc-service-bg {
+  opacity: .46 !important;
+}
+
+.arc-service-card:hover .arc-service-bg,
+.arc-service-card.is-active .arc-service-bg,
+.arc-service-card:focus-within .arc-service-bg {
+  opacity: .72 !important;
+}
+
+.arc-service-content h3,
+.arc-service-content p,
+.arc-service-link {
+  color: var(--ink-dark) !important;
+}
+
+.arc-service-content p {
+  color: var(--ink-muted) !important;
+}
+
+.service-quick-benefits li {
+  color: #263746 !important;
+  background: rgba(255,255,255,.72) !important;
+  border-color: rgba(37,63,82,.11) !important;
+}
+
+.arc-service-link span {
+  border-color: rgba(33,150,243,.35) !important;
+  color: #1976D2 !important;
+  background: rgba(33,150,243,.08) !important;
+}
+
+/* PÁGINAS INTERNAS: fondo exterior claro, contenido técnico intacto */
+body.service-detail-page {
+  background: linear-gradient(180deg, #f6f8fa 0%, #e4e9ed 100%) !important;
+}
+
+.service-detail-main,
+.format-showcase-section {
+  background: transparent !important;
+}
+
+.format-showcase {
+  box-shadow: 0 20px 55px rgba(31,45,61,.12);
+}
+
+.service-detail-footer {
+  background: #f7f9fb !important;
+  color: #526372 !important;
+  border-top: 1px solid rgba(37,63,82,.12) !important;
+}
+
+/* Mantener estas tres zonas con su estilo actual */
+#planes,
+#ubicacion,
+#contacto {
+  isolation: isolate;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    background: #f8fafc !important;
+  }
+
+  .hero,
+  .hero-clean,
+  .arc-services-section {
+    background-color: var(--page-light) !important;
+  }
+
+  .hero-panel--formateo {
+    border-radius: 22px !important;
+  }
+
+  .arc-service-card {
+    border-color: rgba(37,63,82,.15) !important;
+  }
+}
+
+/* =========================================================
+   Ajuste solicitado: logo más grande + servicios con contraste
+   ========================================================= */
+
+/* Logo principal con mayor presencia */
+.site-header .brand-logo {
+  min-height: 118px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 0 !important;
+}
+
+.site-header .brand-logo img {
+  width: auto !important;
+  height: clamp(92px, 10vw, 132px) !important;
+  max-width: min(620px, 92vw) !important;
+  object-fit: contain !important;
+  transform: none !important;
+}
+
+/* Fondo de Especialidades más limpio y contenedores oscuros */
+#servicios.arc-services-section {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(76,175,80,.08), transparent 26%),
+    radial-gradient(circle at 88% 8%, rgba(33,150,243,.09), transparent 30%),
+    linear-gradient(180deg, #f8fafc 0%, #eef3f6 100%) !important;
+}
+
+#servicios .arc-service-card {
+  background: linear-gradient(145deg, #1c2a3a 0%, #243448 62%, #1a2737 100%) !important;
+  border: 1px solid rgba(33,150,243,.24) !important;
+  box-shadow: 0 22px 50px rgba(25,39,54,.22) !important;
+}
+
+#servicios .arc-service-card::before {
+  background: linear-gradient(90deg,
+    rgba(20,31,46,.98) 0%,
+    rgba(23,35,51,.94) 42%,
+    rgba(23,35,51,.62) 67%,
+    rgba(23,35,51,.25) 100%) !important;
+}
+
+#servicios .arc-service-card .arc-service-bg {
+  opacity: .30 !important;
+  filter: grayscale(100%) contrast(1.05) brightness(.8) !important;
+}
+
+#servicios .arc-service-card:hover .arc-service-bg,
+#servicios .arc-service-card.is-active .arc-service-bg,
+#servicios .arc-service-card:focus-within .arc-service-bg {
+  opacity: .58 !important;
+}
+
+#servicios .arc-service-content h3,
+#servicios .arc-service-link {
+  color: #ffffff !important;
+}
+
+#servicios .arc-service-content p {
+  color: #cbd7e2 !important;
+}
+
+#servicios .service-quick-benefits li {
+  color: #e8f0f6 !important;
+  background: rgba(8,16,27,.42) !important;
+  border-color: rgba(255,255,255,.10) !important;
+}
+
+#servicios .arc-service-link span {
+  border-color: rgba(129,199,132,.55) !important;
+  color: #9ce5a0 !important;
+  background: rgba(76,175,80,.11) !important;
+}
+
+#servicios .arc-service-icon img {
+  filter: drop-shadow(0 8px 18px rgba(76,175,80,.22)) !important;
+}
+
+@media (max-width: 760px) {
+  .site-header .brand-logo {
+    min-height: 138px !important;
+    padding: 6px 0 8px !important;
+  }
+
+  .site-header .brand-logo img {
+    height: 118px !important;
+    max-width: 94vw !important;
+  }
+
+  #servicios.arc-services-section {
+    background: linear-gradient(180deg, #f7fafc 0%, #edf2f5 100%) !important;
+  }
+
+  #servicios .arc-service-card {
+    background: linear-gradient(150deg, #1c2a3a 0%, #26384d 100%) !important;
+    border-color: rgba(33,150,243,.22) !important;
+  }
+}
+
+/* =========================================================
+   Especialidades técnicas — fondo claro neutro definitivo
+   Mantiene intactos los dos cuadros oscuros y no afecta
+   Planes, Ubicación ni Contacto.
+   ========================================================= */
+#servicios.arc-services-section {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(76,175,80,.045), transparent 24%),
+    radial-gradient(circle at 92% 4%, rgba(33,150,243,.05), transparent 27%),
+    linear-gradient(180deg, #f8fafc 0%, #f2f5f7 55%, #edf1f4 100%) !important;
+}
+
+#servicios .arc-section-title span {
+  color: #1769aa !important;
+  background: #e7f0f7 !important;
+  border: 1px solid #c9ddea !important;
+  box-shadow: 0 8px 20px rgba(31, 78, 121, .08) !important;
+}
+
+#servicios .arc-service-card {
+  box-shadow: 0 18px 42px rgba(24, 39, 55, .16) !important;
+}
+
+@media (max-width: 760px) {
+  #servicios.arc-services-section {
+    background:
+      linear-gradient(180deg, #fafbfd 0%, #f3f6f8 52%, #edf1f4 100%) !important;
+  }
+
+  #servicios .arc-section-title span {
+    color: #1769aa !important;
+    background: #e8f1f7 !important;
+    border-color: #c9ddea !important;
+  }
+}
+
+/* =========================================================
+   Corrección: etiqueta del hero + escala de imagen Limpieza
+   ========================================================= */
+
+/* Etiqueta superior del hero con contraste real sobre fondo claro */
+.hero-panel--formateo .hero-service-label {
+  color: #0f5f9f !important;
+  background: rgba(33, 150, 243, .12) !important;
+  border-color: rgba(33, 150, 243, .42) !important;
+  box-shadow: 0 8px 22px rgba(25, 118, 210, .10) !important;
+  text-shadow: none !important;
+}
+
+/* La foto de Limpieza ocupa una superficie equivalente a Formateo */
+#servicios .arc-service-card--secondary .arc-service-bg {
+  right: -8% !important;
+  bottom: 48px !important;
+  width: 94% !important;
+  height: 62% !important;
+  object-fit: cover !important;
+  object-position: center right !important;
+  transform-origin: center right !important;
+}
+
+/* Mismo efecto de ampliación y presencia al pasar/seleccionar */
+#servicios .arc-service-card--secondary:hover .arc-service-bg,
+#servicios .arc-service-card--secondary:focus-within .arc-service-bg,
+#servicios .arc-service-card--secondary:focus-visible .arc-service-bg,
+#servicios .arc-service-card--secondary.is-active .arc-service-bg {
+  opacity: .58 !important;
+  transform: scale(1.105) translateX(-10px) !important;
+}
+
+@media (max-width: 760px) {
+  .hero-panel--formateo .hero-service-label {
+    color: #0c5b98 !important;
+    background: #e2f1fc !important;
+    border-color: #79bdf1 !important;
+  }
+
+  #servicios .arc-service-card--secondary .arc-service-bg {
+    right: -10% !important;
+    bottom: 52px !important;
+    width: 108% !important;
+    height: 58% !important;
+    object-fit: cover !important;
+    object-position: center right !important;
+  }
+
+  #servicios .arc-service-card--secondary:hover .arc-service-bg,
+  #servicios .arc-service-card--secondary:focus-within .arc-service-bg,
+  #servicios .arc-service-card--secondary:focus-visible .arc-service-bg,
+  #servicios .arc-service-card--secondary.is-active .arc-service-bg {
+    transform: scale(1.085) translateX(-8px) !important;
+  }
+}
+
+/* =========================================================
+   Logo SoftReset nuevo — notebook + engranaje Windows
+   ========================================================= */
+.site-header {
+  background: #f8fafc !important;
+  border-bottom: 1px solid rgba(33, 150, 243, .16) !important;
+  padding: 10px 0 !important;
+  overflow: visible !important;
+}
+
+.site-header .header-content {
+  min-height: 176px !important;
+  height: 176px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: visible !important;
+}
+
+.site-header .brand-logo {
+  position: static !important;
+  transform: none !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.site-header .brand-logo img {
+  width: auto !important;
+  height: 164px !important;
+  max-width: min(440px, 92vw) !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  transform: none !important;
+  filter: drop-shadow(0 10px 22px rgba(23, 33, 43, .10));
+}
+
+.hero,
+.hero-clean {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    padding: 6px 0 8px !important;
+  }
+
+  .site-header .header-content {
+    min-height: 152px !important;
+    height: 152px !important;
+  }
+
+  .site-header .brand-logo img {
+    height: 142px !important;
+    max-width: 94vw !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header .header-content {
+    min-height: 140px !important;
+    height: 140px !important;
+  }
+
+  .site-header .brand-logo img {
+    height: 132px !important;
+    max-width: 96vw !important;
+  }
+}
+
+
+/* =========================================================
+   Logo horizontal SoftReset — página principal
+   ========================================================= */
+.site-header .brand-logo--horizontal {
+  width: 100% !important;
+  min-height: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 18px !important;
+}
+
+.site-header .brand-logo--horizontal img {
+  width: min(720px, 92vw) !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 150px !important;
+  object-fit: contain !important;
+  transform: none !important;
+  filter: drop-shadow(0 8px 18px rgba(23, 33, 43, .10)) !important;
+}
+
+@media (max-width: 760px) {
+  .site-header--horizontal-logo .header-content {
+    min-height: 128px !important;
+    height: 128px !important;
+  }
+
+  .site-header .brand-logo--horizontal {
+    padding: 0 10px !important;
+  }
+
+  .site-header .brand-logo--horizontal img {
+    width: min(94vw, 560px) !important;
+    height: auto !important;
+    max-height: 112px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header--horizontal-logo .header-content {
+    min-height: 116px !important;
+    height: 116px !important;
+  }
+
+  .site-header .brand-logo--horizontal img {
+    width: 96vw !important;
+    max-height: 102px !important;
+  }
+}
+
+/* =========================================================
+   V170 — Páginas internas reorganizadas
+   Orden: título > imagen > descripción/items > selectores.
+   También aplica el logo horizontal definitivo.
+   ========================================================= */
+body.service-detail-page.formateo-page {
+  background: linear-gradient(180deg, #f7f9fb 0%, #edf2f5 100%) !important;
+  color: #132238 !important;
+}
+
+body.service-detail-page.formateo-page .site-header {
+  position: relative !important;
+  min-height: 112px !important;
+  margin: 0 !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(37, 63, 82, .12) !important;
+  box-shadow: 0 8px 24px rgba(31, 45, 61, .06) !important;
+}
+
+body.service-detail-page.formateo-page .site-header .container,
+body.service-detail-page.formateo-page .site-header .header-content {
+  min-height: 112px !important;
+  width: 100% !important;
+  max-width: 1220px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+body.service-detail-page.formateo-page .brand-logo {
+  min-height: 112px !important;
+  padding: 12px 0 !important;
+}
+
+body.service-detail-page.formateo-page .brand-logo img {
+  width: min(560px, 76vw) !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 92px !important;
+  object-fit: contain !important;
+  transform: none !important;
+}
+
+body.service-detail-page.formateo-page .service-detail-main,
+body.service-detail-page.formateo-page .format-showcase-section {
+  display: block !important;
+  min-height: 0 !important;
+  padding: 34px 0 52px !important;
+  background: transparent !important;
+}
+
+body.service-detail-page.formateo-page .format-showcase-section > .container {
+  width: min(1180px, calc(100% - 40px)) !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+body.service-detail-page.formateo-page .format-showcase {
+  width: 100% !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+body.service-detail-page.formateo-page .format-display {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(37, 63, 82, .13) !important;
+  border-radius: 26px !important;
+  background: #ffffff !important;
+  box-shadow: 0 22px 55px rgba(31, 45, 61, .13) !important;
+  isolation: isolate !important;
+}
+
+body.service-detail-page.formateo-page .format-display::before,
+body.service-detail-page.formateo-page .format-display::after {
+  display: none !important;
+}
+
+body.service-detail-page.formateo-page .format-display-title {
+  position: relative !important;
+  z-index: 3 !important;
+  display: block !important;
+  width: 100% !important;
+  padding: 34px 42px 30px !important;
+  background:
+    radial-gradient(circle at 94% 0%, rgba(76, 175, 80, .16), transparent 30%),
+    linear-gradient(135deg, #17283b 0%, #203a55 60%, #16392d 100%) !important;
+}
+
+body.service-detail-page.formateo-page .format-display-title::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 42px !important;
+  bottom: 18px !important;
+  width: 92px !important;
+  height: 4px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, #2196f3, #4caf50) !important;
+}
+
+body.service-detail-page.formateo-page .format-display h3 {
+  max-width: 920px !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: clamp(34px, 4.3vw, 60px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.04em !important;
+  font-weight: 950 !important;
+}
+
+body.service-detail-page.formateo-page .format-display-media {
+  position: relative !important;
+  inset: auto !important;
+  order: initial !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 16 / 6.4 !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  background: #152235 !important;
+}
+
+body.service-detail-page.formateo-page .format-display-media::before,
+body.service-detail-page.formateo-page .format-display-media::after {
+  display: none !important;
+}
+
+body.service-detail-page.formateo-page .format-display-media img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  object-fit: cover !important;
+  object-position: var(--format-mobile-position, center center) !important;
+  transform: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  border-radius: 0 !important;
+}
+
+body.service-detail-page.formateo-page .format-display-copy {
+  position: relative !important;
+  z-index: 2 !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  padding: 32px 42px 38px !important;
+  background: #ffffff !important;
+}
+
+body.service-detail-page.formateo-page .format-display p {
+  max-width: 930px !important;
+  margin: 0 0 24px !important;
+  color: #526577 !important;
+  font-size: clamp(17px, 1.55vw, 21px) !important;
+  line-height: 1.55 !important;
+  font-weight: 600 !important;
+}
+
+body.service-detail-page.formateo-page .format-display ul {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+body.service-detail-page.formateo-page .format-display li {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  min-height: 66px !important;
+  margin: 0 !important;
+  padding: 14px 16px 14px 46px !important;
+  border: 1px solid rgba(37, 63, 82, .11) !important;
+  border-radius: 15px !important;
+  color: #1d3044 !important;
+  background: linear-gradient(145deg, #f8fafc 0%, #eef3f6 100%) !important;
+  box-shadow: 0 8px 20px rgba(31, 45, 61, .06) !important;
+  font-size: clamp(14px, 1.1vw, 17px) !important;
+  line-height: 1.3 !important;
+  font-weight: 800 !important;
+}
+
+body.service-detail-page.formateo-page .format-display li::before {
+  content: "✓" !important;
+  position: absolute !important;
+  left: 17px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: #32b864 !important;
+  font-size: 20px !important;
+  font-weight: 950 !important;
+}
+
+body.service-detail-page.formateo-page .format-controls-zone {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 28px 0 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.service-detail-page.formateo-page .format-controls-zone .format-feature-list,
+body.service-detail-page.formateo-page .format-feature-list {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.service-detail-page.formateo-page .format-controls-zone .format-feature-button,
+body.service-detail-page.formateo-page .format-feature-button {
+  min-width: 0 !important;
+  min-height: 92px !important;
+  height: auto !important;
+  padding: 17px 16px !important;
+  gap: 12px !important;
+  border: 1px solid rgba(37, 63, 82, .14) !important;
+  border-radius: 17px !important;
+  color: #14243a !important;
+  background: linear-gradient(145deg, #ffffff 0%, #edf2f5 100%) !important;
+  box-shadow: 0 12px 25px rgba(31, 45, 61, .09) !important;
+}
+
+body.service-detail-page.formateo-page .format-controls-zone .format-feature-button:hover,
+body.service-detail-page.formateo-page .format-controls-zone .format-feature-button.active,
+body.service-detail-page.formateo-page .format-feature-button:hover,
+body.service-detail-page.formateo-page .format-feature-button.active {
+  color: #ffffff !important;
+  border-color: rgba(33, 150, 243, .46) !important;
+  background: linear-gradient(135deg, #182b40 0%, #244361 65%, #1f553d 100%) !important;
+  box-shadow: 0 16px 32px rgba(31, 45, 61, .18) !important;
+  transform: translateY(-2px) !important;
+}
+
+body.service-detail-page.formateo-page .format-controls-zone .format-feature-button span,
+body.service-detail-page.formateo-page .format-feature-button span {
+  min-width: 0 !important;
+  color: inherit !important;
+  font-size: clamp(14px, 1.15vw, 17px) !important;
+  line-height: 1.22 !important;
+  font-weight: 900 !important;
+  text-align: left !important;
+}
+
+body.service-detail-page.formateo-page .format-controls-zone .format-feature-button strong,
+body.service-detail-page.formateo-page .format-feature-button strong {
+  flex: 0 0 38px !important;
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  border-radius: 50% !important;
+  color: #ffffff !important;
+  background: #15243a !important;
+  font-size: 22px !important;
+}
+
+body.service-detail-page.formateo-page .format-controls-zone .format-feature-button.active strong,
+body.service-detail-page.formateo-page .format-feature-button:hover strong {
+  color: #17283b !important;
+  background: #ffffff !important;
+}
+
+body.service-detail-page.formateo-page .format-showcase-actions {
+  width: 100% !important;
+  margin: 24px 0 0 !important;
+  text-align: center !important;
+}
+
+body.service-detail-page.formateo-page .format-whatsapp-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 54px !important;
+  padding: 15px 28px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #1976d2 0%, #2196f3 54%, #4caf50 100%) !important;
+  box-shadow: 0 14px 30px rgba(33, 150, 243, .22) !important;
+  font-size: 14px !important;
+  font-weight: 950 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+}
+
+@media (max-width: 900px) {
+  body.service-detail-page.formateo-page .format-display ul {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.service-detail-page.formateo-page .format-controls-zone .format-feature-list,
+  body.service-detail-page.formateo-page .format-feature-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 619px) {
+  body.service-detail-page.formateo-page .site-header,
+  body.service-detail-page.formateo-page .site-header .container,
+  body.service-detail-page.formateo-page .site-header .header-content,
+  body.service-detail-page.formateo-page .brand-logo {
+    min-height: 96px !important;
+  }
+
+  body.service-detail-page.formateo-page .site-header .container,
+  body.service-detail-page.formateo-page .site-header .header-content {
+    padding: 0 12px !important;
+  }
+
+  body.service-detail-page.formateo-page .brand-logo img {
+    width: min(430px, 94vw) !important;
+    max-height: 82px !important;
+  }
+
+  body.service-detail-page.formateo-page .service-detail-main,
+  body.service-detail-page.formateo-page .format-showcase-section {
+    padding: 16px 0 34px !important;
+  }
+
+  body.service-detail-page.formateo-page .format-showcase-section > .container {
+    width: calc(100% - 16px) !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display {
+    border-radius: 20px !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display-title {
+    padding: 24px 20px 25px !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display-title::after {
+    left: 20px !important;
+    bottom: 13px !important;
+    width: 70px !important;
+    height: 3px !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display h3 {
+    font-size: clamp(28px, 8.2vw, 38px) !important;
+    line-height: 1.02 !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display-media {
+    aspect-ratio: 16 / 8.6 !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display-copy {
+    padding: 22px 18px 26px !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display p {
+    margin-bottom: 18px !important;
+    font-size: 15px !important;
+    line-height: 1.46 !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display ul {
+    gap: 8px !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display li {
+    min-height: 54px !important;
+    padding: 11px 13px 11px 40px !important;
+    border-radius: 13px !important;
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display li::before {
+    left: 14px !important;
+    font-size: 17px !important;
+  }
+
+  body.service-detail-page.formateo-page .format-controls-zone {
+    margin-top: 16px !important;
+  }
+
+  body.service-detail-page.formateo-page .format-controls-zone .format-feature-list,
+  body.service-detail-page.formateo-page .format-feature-list {
+    gap: 8px !important;
+  }
+
+  body.service-detail-page.formateo-page .format-controls-zone .format-feature-button,
+  body.service-detail-page.formateo-page .format-feature-button {
+    min-height: 72px !important;
+    padding: 11px 10px 11px 12px !important;
+    gap: 8px !important;
+    border-radius: 14px !important;
+  }
+
+  body.service-detail-page.formateo-page .format-controls-zone .format-feature-button span,
+  body.service-detail-page.formateo-page .format-feature-button span {
+    font-size: clamp(12px, 3.45vw, 14px) !important;
+    line-height: 1.12 !important;
+  }
+
+  body.service-detail-page.formateo-page .format-controls-zone .format-feature-button strong,
+  body.service-detail-page.formateo-page .format-feature-button strong {
+    flex-basis: 34px !important;
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    font-size: 20px !important;
+  }
+
+  body.service-detail-page.formateo-page .format-showcase-actions {
+    margin-top: 18px !important;
+  }
+
+  body.service-detail-page.formateo-page .format-whatsapp-link {
+    width: 100% !important;
+    min-height: 50px !important;
+    padding: 13px 16px !important;
+    font-size: 12px !important;
   }
 }

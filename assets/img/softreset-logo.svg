@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="250" viewBox="0 0 980 250" role="img" aria-labelledby="title desc">
+  <title id="title">SoftReset</title>
+  <desc id="desc">Notebook con engranaje y símbolo de Windows. Formateo e instalación de Windows.</desc>
+  <g transform="translate(18 18)">
+    <!-- Notebook -->
+    <rect x="18" y="35" width="235" height="140" rx="16" fill="none" stroke="#212121" stroke-width="16"/>
+    <path d="M0 198h288l-27 30H28z" fill="#212121"/>
+    <rect x="104" y="185" width="78" height="9" rx="4.5" fill="#ffffff" opacity=".72"/>
+    <!-- Gear -->
+    <g transform="translate(208 16)">
+      <path fill="#2196F3" d="M64 0h26l6 22c8 2 16 6 23 10l20-12 19 19-12 20c5 7 8 15 10 23l22 6v27l-22 6c-2 8-5 16-10 23l12 20-19 19-20-12c-7 5-15 8-23 10l-6 22H64l-6-22c-8-2-16-5-23-10l-20 12-19-19 12-20c-5-7-8-15-10-23l-22-6V88l22-6c2-8 5-16 10-23L-4 39 15 20l20 12c7-4 15-8 23-10z"/>
+      <circle cx="77" cy="101" r="52" fill="#ffffff"/>
+      <!-- Windows panes -->
+      <path fill="#1976D2" d="M43 67h29v29H43zm37 0h31v29H80zM43 104h29v30H43zm37 0h31v30H80z"/>
+    </g>
+  </g>
+  <!-- Wordmark -->
+  <text x="350" y="125" font-family="Arial, Helvetica, sans-serif" font-size="92" font-style="italic" font-weight="800" letter-spacing="-4">
+    <tspan fill="#212121">Soft</tspan><tspan fill="#4CAF50">Reset</tspan>
+  </text>
+  <text x="355" y="178" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="2.3" fill="#37474F">FORMATEO E INSTALACIÓN DE WINDOWS</text>
+</svg>
