@@ -67,7 +67,7 @@ if (contactForm) {
     }
 
     const mensaje = `
-*Nueva consulta - SoftCleaning*
+*Nueva consulta - SoftReset*
 
 *Datos del cliente*
 Nombre: ${nombre}
@@ -323,3 +323,58 @@ if (formatFeatureButtons.length && formatDisplayTitle && formatDisplayText && fo
     });
   });
 }
+
+// Tema claro / oscuro integrado en la barra flotante.
+(() => {
+  const STORAGE_KEY = "softreset-theme";
+  const root = document.documentElement;
+  const toggles = document.querySelectorAll(".theme-toggle");
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+  if (!toggles.length) return;
+
+  const getTheme = () => root.dataset.theme === "dark" ? "dark" : "light";
+
+  const updateControls = (theme) => {
+    const dark = theme === "dark";
+    toggles.forEach((toggle) => {
+      toggle.setAttribute("aria-pressed", String(dark));
+      toggle.setAttribute("aria-label", dark ? "Activar modo claro" : "Activar modo oscuro");
+      toggle.setAttribute("title", dark ? "Cambiar a modo claro" : "Cambiar a modo oscuro");
+    });
+
+    if (themeMeta) {
+      themeMeta.setAttribute("content", dark ? "#1b1d1f" : "#f5f7fb");
+    }
+  };
+
+  const applyTheme = (theme, persist = true) => {
+    const normalized = theme === "dark" ? "dark" : "light";
+    root.dataset.theme = normalized;
+    updateControls(normalized);
+
+    if (persist) {
+      try {
+        localStorage.setItem(STORAGE_KEY, normalized);
+      } catch (_) {
+        // El sitio sigue funcionando aunque el navegador bloquee localStorage.
+      }
+    }
+  };
+
+  updateControls(getTheme());
+
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      applyTheme(getTheme() === "dark" ? "light" : "dark");
+    });
+  });
+
+  // Sincroniza pestañas abiertas del mismo sitio.
+  window.addEventListener("storage", (event) => {
+    if (event.key === STORAGE_KEY && (event.newValue === "light" || event.newValue === "dark")) {
+      applyTheme(event.newValue, false);
+    }
+  });
+})();
+

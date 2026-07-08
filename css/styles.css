@@ -8788,3 +8788,580 @@ body.service-detail-page.formateo-page .site-header .brand-logo--horizontal img 
     color-scheme: only light !important;
   }
 }
+
+/* =========================================================
+   V174 — Selector claro/oscuro integrado a la barra flotante
+   ========================================================= */
+html {
+  background: #f5f7fb;
+}
+
+html[data-theme="light"] {
+  color-scheme: only light;
+  background: #f5f7fb;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1d2226;
+  --dark: #0d0f11;
+  --dark-soft: #202427;
+  --text: #eef2f8;
+  --muted: #aeb7c7;
+  --card: #111315;
+  --line: #343a40;
+  --shadow: 0 18px 48px rgba(0, 0, 0, .34);
+  background: #1d2226;
+}
+
+html[data-theme="light"] body,
+html[data-theme="light"] input,
+html[data-theme="light"] select,
+html[data-theme="light"] textarea,
+html[data-theme="light"] button {
+  color-scheme: only light;
+}
+
+body,
+.site-header,
+.hero-clean,
+.hero-panel,
+.arc-services-section,
+.arc-service-card,
+#planes,
+.plan-card,
+.location-section,
+.location-delivery-card,
+.location-copy,
+#contacto,
+.contact-info,
+.contact-form,
+.service-detail-page,
+.format-display,
+.format-display-title,
+.format-display-copy,
+.format-feature-button,
+footer {
+  transition: background-color .28s ease, background .28s ease, color .28s ease, border-color .28s ease, box-shadow .28s ease;
+}
+
+/* Barra flotante: enlaces compactos + selector al extremo derecho */
+.mobile-bottom-bar {
+  left: 14px !important;
+  right: 14px !important;
+  bottom: 12px !important;
+  width: auto !important;
+  max-width: 520px !important;
+  margin-inline: auto !important;
+  padding: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  overflow: visible !important;
+  border-radius: 22px !important;
+  background: rgba(8, 20, 44, .96) !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  box-shadow: 0 16px 38px rgba(2, 8, 23, .32) !important;
+  backdrop-filter: blur(16px) !important;
+}
+
+.mobile-bottom-links {
+  min-width: 0;
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+}
+
+.mobile-bottom-bar a {
+  min-width: 0 !important;
+  padding: 11px 5px !important;
+  color: #ffffff !important;
+  border-radius: 14px !important;
+  font-size: 12.5px !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+.mobile-bottom-bar a:hover,
+.mobile-bottom-bar a:focus-visible {
+  background: rgba(33,150,243,.15) !important;
+}
+
+.theme-toggle {
+  position: relative;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+  color: #0f172a;
+  background: #ffffff;
+  box-shadow: 0 7px 18px rgba(0,0,0,.22);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .2s ease, color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  transform: translateY(-1px) rotate(4deg);
+  outline: 2px solid rgba(33,150,243,.72);
+  outline-offset: 2px;
+}
+
+.theme-toggle-icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  overflow: visible;
+  transition: transform .35s ease;
+}
+
+html[data-theme="dark"] .theme-toggle {
+  color: #ffffff;
+  background: #1e293b;
+  box-shadow: 0 7px 20px rgba(0,0,0,.42), inset 0 0 0 1px rgba(255,255,255,.08);
+}
+
+html[data-theme="dark"] .theme-toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* En escritorio se mantiene el mismo único botón, sin duplicarlo. */
+@media (min-width: 620px) {
+  .mobile-bottom-bar {
+    left: auto !important;
+    right: 22px !important;
+    bottom: 22px !important;
+    width: 56px !important;
+    max-width: 56px !important;
+    padding: 6px !important;
+    border-radius: 18px !important;
+  }
+
+  .mobile-bottom-links {
+    display: none !important;
+  }
+
+  .theme-toggle {
+    flex-basis: 44px;
+  }
+}
+
+/* MODO CLARO: se conserva el diseño actual y se evita el oscurecimiento automático. */
+html[data-theme="light"] body {
+  background-color: #edf1f4 !important;
+  color: #17212b !important;
+  forced-color-adjust: none;
+}
+
+html[data-theme="light"] .site-header.site-header--horizontal-logo,
+html[data-theme="light"] .site-header.site-header--horizontal-logo > .container,
+html[data-theme="light"] .site-header.site-header--horizontal-logo .header-content,
+html[data-theme="light"] .site-header.site-header--horizontal-logo .brand-logo--horizontal {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color-scheme: only light !important;
+  forced-color-adjust: none !important;
+}
+
+html[data-theme="light"] .site-header .brand-logo--horizontal img {
+  content: url("../assets/img/softreset-logo-horizontal.png") !important;
+}
+
+/* MODO OSCURO GENERAL */
+html[data-theme="dark"] body {
+  background: #1d2226 !important;
+  color: #eef2f8 !important;
+}
+
+html[data-theme="dark"] .site-header.site-header--horizontal-logo,
+html[data-theme="dark"] .site-header.site-header--horizontal-logo > .container,
+html[data-theme="dark"] .site-header.site-header--horizontal-logo .header-content,
+html[data-theme="dark"] .site-header.site-header--horizontal-logo .brand-logo--horizontal {
+  background: #1b1d1f !important;
+  background-image: none !important;
+  border-color: rgba(255,255,255,.07) !important;
+  box-shadow: none !important;
+  color-scheme: dark !important;
+}
+
+html[data-theme="dark"] .site-header .brand-logo--horizontal img {
+  content: url("../assets/img/softreset-logo-horizontal-dark.png") !important;
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.30)) !important;
+}
+
+html[data-theme="dark"] .hero-clean,
+html[data-theme="dark"] .hero {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(33,150,243,.10), transparent 32%),
+    radial-gradient(circle at 88% 8%, rgba(76,175,80,.09), transparent 30%),
+    linear-gradient(180deg, #202427 0%, #1b2023 100%) !important;
+  color: #eef2f8 !important;
+}
+
+html[data-theme="dark"] .hero-panel,
+html[data-theme="dark"] .hero-panel--formateo {
+  background: linear-gradient(145deg, #101214 0%, #171a1d 100%) !important;
+  border-color: rgba(255,255,255,.10) !important;
+  box-shadow: 0 24px 64px rgba(0,0,0,.34) !important;
+}
+
+html[data-theme="dark"] .hero-copy,
+html[data-theme="dark"] .hero-copy h1,
+html[data-theme="dark"] .hero-panel--formateo .hero-copy h1,
+html[data-theme="dark"] .hero-summary strong {
+  color: #eef2f8 !important;
+}
+
+html[data-theme="dark"] .hero-copy p,
+html[data-theme="dark"] .hero-panel--formateo .hero-copy p,
+html[data-theme="dark"] .hero-summary small {
+  color: #aeb7c7 !important;
+}
+
+html[data-theme="dark"] .hero-panel--formateo .hero-service-label,
+html[data-theme="dark"] .badge {
+  color: #9bcdf6 !important;
+  background: rgba(33,150,243,.10) !important;
+  border-color: rgba(92,174,239,.44) !important;
+}
+
+html[data-theme="dark"] .hero-summary--compact > div,
+html[data-theme="dark"] .hero-summary div {
+  background: #0d0f11 !important;
+  border-color: rgba(255,255,255,.08) !important;
+  box-shadow: 0 12px 28px rgba(0,0,0,.24) !important;
+}
+
+html[data-theme="dark"] .hero-summary-icon {
+  color: #44c879 !important;
+  background: rgba(45,174,98,.14) !important;
+}
+
+html[data-theme="dark"] .hero-primary-cta,
+html[data-theme="dark"] .btn-primary,
+html[data-theme="dark"] .format-whatsapp-link {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2196f3 0%, #35aacf 48%, #4caf65 100%) !important;
+  box-shadow: 0 16px 34px rgba(27,136,214,.24) !important;
+}
+
+/* Especialidades */
+html[data-theme="dark"] #servicios.arc-services-section {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(33,150,243,.08), transparent 28%),
+    radial-gradient(circle at 92% 6%, rgba(76,175,80,.07), transparent 30%),
+    linear-gradient(180deg, #1e2326 0%, #1a1f22 100%) !important;
+}
+
+html[data-theme="dark"] #servicios .arc-section-title span {
+  color: #9bcdf6 !important;
+  background: rgba(25,46,65,.74) !important;
+  border-color: rgba(111,172,219,.48) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] #servicios .arc-service-card {
+  background: linear-gradient(150deg, #162538 0%, #1a2b3e 62%, #122230 100%) !important;
+  border-color: rgba(71,147,207,.24) !important;
+  box-shadow: 0 22px 54px rgba(0,0,0,.32) !important;
+}
+
+html[data-theme="dark"] #servicios .arc-service-card::before {
+  background: linear-gradient(90deg, rgba(16,29,44,.98), rgba(20,35,52,.90) 48%, rgba(15,29,43,.38) 100%) !important;
+}
+
+html[data-theme="dark"] #servicios .arc-service-content h3,
+html[data-theme="dark"] #servicios .arc-service-link {
+  color: #f5f7fb !important;
+}
+
+html[data-theme="dark"] #servicios .arc-service-content p {
+  color: #c4ceda !important;
+}
+
+html[data-theme="dark"] #servicios .service-quick-benefits li {
+  color: #e7edf5 !important;
+  background: rgba(5,10,16,.55) !important;
+  border-color: rgba(255,255,255,.08) !important;
+}
+
+/* Planes */
+html[data-theme="dark"] #planes {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(249,115,22,.10), transparent 30%),
+    radial-gradient(circle at 88% 6%, rgba(154,52,18,.12), transparent 28%),
+    linear-gradient(180deg, #24211f 0%, #1d1c1b 100%) !important;
+  border-color: rgba(249,115,22,.14) !important;
+}
+
+html[data-theme="dark"] #planes .plan-card {
+  color: #eef2f8 !important;
+  background: linear-gradient(145deg, #11100f 0%, #181513 100%) !important;
+  border-color: rgba(249,115,22,.28) !important;
+  box-shadow: 0 18px 46px rgba(0,0,0,.32) !important;
+}
+
+html[data-theme="dark"] #planes .plan-card h3,
+html[data-theme="dark"] #planes .plan-card strong,
+html[data-theme="dark"] #planes .plan-card .plan-head h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] #planes .plan-desc,
+html[data-theme="dark"] #planes .plan-card li {
+  color: #aeb7c7 !important;
+}
+
+html[data-theme="dark"] #planes .price,
+html[data-theme="dark"] #planes .plan-card li::before {
+  color: #f97316 !important;
+}
+
+html[data-theme="dark"] #planes .prices-note {
+  color: #d2a786 !important;
+  background: rgba(30,23,19,.86) !important;
+  border-color: rgba(249,115,22,.18) !important;
+}
+
+html[data-theme="dark"] #planes .btn-secondary {
+  color: #f7d5bd !important;
+  border-color: rgba(249,115,22,.38) !important;
+  background: rgba(249,115,22,.06) !important;
+}
+
+/* Retiro + Ubicación */
+html[data-theme="dark"] #ubicacion.location-section {
+  background: #1d2226 !important;
+}
+
+html[data-theme="dark"] #ubicacion .location-delivery-card,
+html[data-theme="dark"] #ubicacion .location-card,
+html[data-theme="dark"] #ubicacion .location-info {
+  background: #111315 !important;
+  border-color: rgba(255,255,255,.08) !important;
+  box-shadow: 0 20px 50px rgba(0,0,0,.28) !important;
+}
+
+html[data-theme="dark"] #ubicacion .delivery-mini {
+  background: linear-gradient(135deg, #173146 0%, #18384a 56%, #123929 100%) !important;
+  border-color: rgba(76,175,80,.30) !important;
+}
+
+html[data-theme="dark"] #ubicacion .location-copy {
+  background: #111315 !important;
+}
+
+html[data-theme="dark"] #ubicacion .location-copy h2 {
+  color: #eef2f8 !important;
+}
+
+html[data-theme="dark"] #ubicacion .location-copy p {
+  color: #aeb7c7 !important;
+}
+
+html[data-theme="dark"] #ubicacion .location-copy .badge {
+  color: #66d38b !important;
+  background: rgba(45,174,98,.13) !important;
+  border-color: rgba(76,175,80,.28) !important;
+}
+
+html[data-theme="dark"] #ubicacion .map-frame {
+  border-color: rgba(255,255,255,.08) !important;
+  background: #111315 !important;
+}
+
+html[data-theme="dark"] #ubicacion .map-frame iframe {
+  filter: brightness(.78) contrast(.94) saturate(.82) !important;
+}
+
+/* Contacto */
+html[data-theme="dark"] #contacto {
+  background: #202427 !important;
+}
+
+html[data-theme="dark"] .contact-info,
+html[data-theme="dark"] .contact-form {
+  color: #eef2f8 !important;
+  background: #0f1011 !important;
+  border-color: rgba(255,255,255,.10) !important;
+  box-shadow: 0 20px 50px rgba(0,0,0,.28) !important;
+}
+
+html[data-theme="dark"] .contact-info h2,
+html[data-theme="dark"] .contact-form label {
+  color: #eef2f8 !important;
+}
+
+html[data-theme="dark"] .contact-info p,
+html[data-theme="dark"] .promo-help {
+  color: #aeb7c7 !important;
+}
+
+html[data-theme="dark"] .contact-form input,
+html[data-theme="dark"] .contact-form select,
+html[data-theme="dark"] .contact-form textarea {
+  color: #eef2f8 !important;
+  background: #202225 !important;
+  border-color: #3a3d42 !important;
+  caret-color: #66b7f1 !important;
+}
+
+html[data-theme="dark"] .contact-form input::placeholder,
+html[data-theme="dark"] .contact-form textarea::placeholder {
+  color: #8993a2 !important;
+}
+
+html[data-theme="dark"] .contact-form select option,
+html[data-theme="dark"] .contact-form select optgroup {
+  color: #eef2f8 !important;
+  background: #202225 !important;
+}
+
+html[data-theme="dark"] footer,
+html[data-theme="dark"] .service-detail-footer {
+  color: #aeb7c7 !important;
+  background: #1b1d1f !important;
+  border-top-color: rgba(255,255,255,.07) !important;
+}
+
+/* Páginas internas */
+html[data-theme="dark"] body.service-detail-page.formateo-page,
+html[data-theme="dark"] body.service-detail-page.limpieza-page {
+  color: #eef2f8 !important;
+  background: linear-gradient(180deg, #202427 0%, #1b2023 100%) !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .service-detail-main,
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-showcase-section {
+  background: transparent !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-display {
+  background: #0f1011 !important;
+  border-color: rgba(255,255,255,.09) !important;
+  box-shadow: 0 22px 58px rgba(0,0,0,.34) !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-display-title {
+  background:
+    radial-gradient(circle at 94% 0%, rgba(76,175,80,.18), transparent 30%),
+    linear-gradient(135deg, #17324b 0%, #1a3d57 58%, #143d2c 100%) !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-display h3 {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-display-media {
+  background: #151719 !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-display-media img {
+  opacity: .88 !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-display-copy {
+  background: #0f1011 !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-display p {
+  color: #aeb7c7 !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-display li {
+  color: #eef2f8 !important;
+  background: #202427 !important;
+  border-color: rgba(255,255,255,.07) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-display li::before {
+  color: #20a85d !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-controls-zone .format-feature-button,
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-feature-button {
+  color: #eef2f8 !important;
+  background: linear-gradient(145deg, #111315 0%, #1a1d20 100%) !important;
+  border-color: rgba(255,255,255,.07) !important;
+  box-shadow: 0 12px 28px rgba(0,0,0,.22) !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-controls-zone .format-feature-button:hover,
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-controls-zone .format-feature-button.active,
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-feature-button:hover,
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-feature-button.active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #183550 0%, #174760 58%, #16543b 100%) !important;
+  border-color: rgba(33,150,243,.45) !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-feature-button strong {
+  color: #ffffff !important;
+  background: #0b1b35 !important;
+}
+
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-feature-button.active strong,
+html[data-theme="dark"] body.service-detail-page.formateo-page .format-feature-button:hover strong {
+  color: #111315 !important;
+  background: #ffffff !important;
+}
+
+@media (max-width: 619px) {
+  html[data-theme="dark"] #ubicacion .location-delivery-card,
+  html[data-theme="dark"] #ubicacion .location-card,
+  html[data-theme="dark"] #ubicacion .location-info {
+    box-shadow: none !important;
+  }
+
+  html[data-theme="dark"] #ubicacion .location-copy {
+    background: #111315 !important;
+  }
+
+  html[data-theme="dark"] body.service-detail-page.formateo-page .format-display,
+  html[data-theme="dark"] body.service-detail-page.formateo-page .format-controls-zone {
+    background: transparent !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle,
+  .theme-toggle-icon,
+  body,
+  .site-header,
+  .hero-clean,
+  .hero-panel,
+  .arc-services-section,
+  .arc-service-card,
+  #planes,
+  .plan-card,
+  .location-section,
+  .contact-form,
+  .format-display,
+  .format-feature-button {
+    transition: none !important;
+  }
+}
+
+/* Espacio de seguridad para que la barra no tape el contenido en celulares. */
+@media (max-width: 619px) {
+  body,
+  body.service-detail-page {
+    padding-bottom: calc(82px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  .mobile-bottom-bar {
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  footer,
+  .service-detail-footer {
+    padding-bottom: calc(102px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}
