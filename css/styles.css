@@ -8577,3 +8577,169 @@ body.service-detail-page.formateo-page .format-whatsapp-link {
     font-size: 12px !important;
   }
 }
+
+/* =========================================================
+   V171 — Corrección de ítems recortados en páginas internas
+   Restablece la altura automática que había quedado limitada
+   por reglas mobile anteriores. Aplica a Formateo y Limpieza.
+   ========================================================= */
+body.service-detail-page.formateo-page .format-display {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+}
+
+body.service-detail-page.formateo-page .format-display-copy {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+}
+
+body.service-detail-page.formateo-page .format-display ul {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+}
+
+body.service-detail-page.formateo-page .format-display li {
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  max-height: none !important;
+  box-sizing: border-box !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  overflow-wrap: anywhere !important;
+}
+
+@media (max-width: 619px) {
+  body.service-detail-page.formateo-page .format-display {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display-copy {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 22px 18px 28px !important;
+    overflow: visible !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display ul {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 9px !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display li {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 56px !important;
+    height: auto !important;
+    padding: 12px 14px 12px 42px !important;
+    font-size: 13.5px !important;
+    line-height: 1.3 !important;
+  }
+
+  body.service-detail-page.formateo-page .format-display li::before {
+    left: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+}
+
+
+/* =========================================================
+   V172 — Logo idéntico al de index.html en páginas internas
+   ========================================================= */
+body.service-detail-page.formateo-page .site-header.site-header--horizontal-logo {
+  min-height: 176px !important;
+  height: auto !important;
+  padding: 10px 0 !important;
+}
+
+body.service-detail-page.formateo-page .site-header.site-header--horizontal-logo .container,
+body.service-detail-page.formateo-page .site-header.site-header--horizontal-logo .header-content {
+  width: 100% !important;
+  max-width: 1200px !important;
+  min-height: 176px !important;
+  height: 176px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+body.service-detail-page.formateo-page .site-header .brand-logo--horizontal {
+  width: 100% !important;
+  min-height: 0 !important;
+  padding: 0 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+body.service-detail-page.formateo-page .site-header .brand-logo--horizontal img {
+  width: min(720px, 92vw) !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 150px !important;
+  object-fit: contain !important;
+  transform: none !important;
+  filter: drop-shadow(0 8px 18px rgba(23, 33, 43, .10)) !important;
+}
+
+@media (max-width: 760px) {
+  body.service-detail-page.formateo-page .site-header.site-header--horizontal-logo {
+    min-height: 128px !important;
+    padding: 6px 0 8px !important;
+  }
+
+  body.service-detail-page.formateo-page .site-header.site-header--horizontal-logo .container,
+  body.service-detail-page.formateo-page .site-header.site-header--horizontal-logo .header-content {
+    min-height: 128px !important;
+    height: 128px !important;
+    padding: 0 !important;
+  }
+
+  body.service-detail-page.formateo-page .site-header .brand-logo--horizontal {
+    padding: 0 10px !important;
+  }
+
+  body.service-detail-page.formateo-page .site-header .brand-logo--horizontal img {
+    width: min(94vw, 560px) !important;
+    height: auto !important;
+    max-height: 112px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  body.service-detail-page.formateo-page .site-header.site-header--horizontal-logo,
+  body.service-detail-page.formateo-page .site-header.site-header--horizontal-logo .container,
+  body.service-detail-page.formateo-page .site-header.site-header--horizontal-logo .header-content {
+    min-height: 116px !important;
+    height: 116px !important;
+  }
+
+  body.service-detail-page.formateo-page .site-header .brand-logo--horizontal img {
+    width: 96vw !important;
+    max-height: 102px !important;
+  }
+}
