@@ -8743,3 +8743,48 @@ body.service-detail-page.formateo-page .site-header .brand-logo--horizontal img 
     max-height: 102px !important;
   }
 }
+
+/* =========================================================
+   V173 — Fondo blanco fijo detrás del logo
+   Evita que navegadores o modos oscuros automaticen ese sector.
+   Solo afecta el encabezado del logo; el resto del sitio queda igual.
+   ========================================================= */
+.site-header.site-header--horizontal-logo,
+.site-header.site-header--horizontal-logo > .container,
+.site-header.site-header--horizontal-logo .header-content,
+.site-header.site-header--horizontal-logo .brand-logo--horizontal {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color-scheme: only light !important;
+  forced-color-adjust: none !important;
+}
+
+.site-header.site-header--horizontal-logo {
+  isolation: isolate !important;
+  box-shadow: 0 1px 0 rgba(25, 118, 210, .14) !important;
+}
+
+.site-header.site-header--horizontal-logo::before,
+.site-header.site-header--horizontal-logo::after,
+.site-header.site-header--horizontal-logo .header-content::before,
+.site-header.site-header--horizontal-logo .header-content::after {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+.site-header.site-header--horizontal-logo .brand-logo--horizontal img {
+  background: transparent !important;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .site-header.site-header--horizontal-logo,
+  .site-header.site-header--horizontal-logo > .container,
+  .site-header.site-header--horizontal-logo .header-content,
+  .site-header.site-header--horizontal-logo .brand-logo--horizontal {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color-scheme: only light !important;
+  }
+}
