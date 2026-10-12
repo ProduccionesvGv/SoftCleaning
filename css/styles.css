@@ -9365,3 +9365,28 @@ html[data-theme="dark"] body.service-detail-page.formateo-page .format-feature-b
     padding-bottom: calc(102px + env(safe-area-inset-bottom, 0px)) !important;
   }
 }
+
+
+/* Planes: dos tarjetas centradas y más anchas en escritorio/tablet */
+@media (min-width: 620px) {
+  #planes .plans-grid:has(> .plan-card:nth-child(2):last-child),
+  #planes .plans-two-vertical:has(> .plan-card:nth-child(2):last-child),
+  #planes .plans-three-vertical:has(> .plan-card:nth-child(2):last-child) {
+    grid-template-columns: repeat(2, minmax(0, 520px)) !important;
+    justify-content: center !important;
+    gap: 28px !important;
+    max-width: 1100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* En pantallas medianas se ajustan para no quedar apretadas */
+@media (min-width: 620px) and (max-width: 1099px) {
+  #planes .plans-grid:has(> .plan-card:nth-child(2):last-child),
+  #planes .plans-two-vertical:has(> .plan-card:nth-child(2):last-child),
+  #planes .plans-three-vertical:has(> .plan-card:nth-child(2):last-child) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+  }
+}
