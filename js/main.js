@@ -266,13 +266,11 @@ if (arcServiceCards.length) {
   }
 }
 
-// Interacción de las cuatro opciones de Formateo + Instalación de Windows.
+// Interacción del bloque de Formateo + Instalación de Windows
 const formatFeatureButtons = document.querySelectorAll(".format-feature-button");
+const formatDisplayStep = document.getElementById("formatDisplayStep") || document.querySelector(".format-display-step");
 const formatDisplayTitle = document.getElementById("formatDisplayTitle");
-const formatHeroTitle = document.getElementById("formatHeroTitle");
-const formatDisplayLabel = document.getElementById("formatDisplayLabel");
 const formatDisplayText = document.getElementById("formatDisplayText");
-const formatDetailsText = document.getElementById("formatDetailsText");
 const formatDisplayList = document.getElementById("formatDisplayList");
 const formatDisplayImage = document.getElementById("formatDisplayImage");
 
@@ -281,40 +279,46 @@ if (formatFeatureButtons.length && formatDisplayTitle && formatDisplayText && fo
     button.addEventListener("click", () => {
       formatFeatureButtons.forEach((item) => {
         item.classList.remove("active");
-        item.setAttribute("aria-selected", "false");
+        const icon = item.querySelector("strong");
+        if (icon) icon.textContent = "+";
       });
-      button.classList.add("active");
-      button.setAttribute("aria-selected", "true");
 
-      if (formatHeroTitle) formatHeroTitle.textContent = button.dataset.heroTitle || button.dataset.title || "";
+      button.classList.add("active");
+      const activeIcon = button.querySelector("strong");
+      if (activeIcon) activeIcon.textContent = "−";
+
+      if (formatDisplayStep) formatDisplayStep.textContent = button.dataset.step || "";
       formatDisplayTitle.textContent = button.dataset.title || "";
-      if (formatDisplayLabel) formatDisplayLabel.textContent = button.dataset.label || button.dataset.title || "";
-      formatDisplayText.textContent = button.dataset.heroText || button.dataset.text || "";
-      if (formatDetailsText) formatDetailsText.textContent = button.dataset.text || "";
+      formatDisplayText.textContent = button.dataset.text || "";
 
       if (formatDisplayImage && button.dataset.image) {
         formatDisplayImage.src = button.dataset.image;
         formatDisplayImage.alt = button.dataset.alt || button.dataset.title || "";
         formatDisplayImage.style.setProperty("--format-mobile-position", button.dataset.mobilePosition || "center center");
-        formatDisplayImage.style.setProperty("--format-mobile-scale", button.dataset.mobileScale || "1.08");
-      }
-      const items = (button.dataset.items || "").split("|").map((item) => item.trim()).filter(Boolean);
-      formatDisplayList.innerHTML = items.map((item) => {
-        const li = document.createElement("li");
-        li.textContent = item;
-        return li;
-      }).reduce((html, li) => html + li.outerHTML, "");
+        formatDisplayImage.style.setProperty("--format-mobile-scale", button.dataset.mobileScale || "1.2");
 
-      // En Limpieza y Mantenimiento, llevar suavemente al servicio seleccionado.
-      // Se limita a esta página para no alterar la interacción de Formateo.
-      if (document.body.classList.contains("limpieza-page")) {
-        const display = document.querySelector(".format-display");
-        if (display) {
-          requestAnimationFrame(() => {
-            const top = display.getBoundingClientRect().top + window.scrollY - 14;
-            window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
-          });
+        const formatMedia = formatDisplayImage.closest(".format-display-media");
+        if (formatMedia) {
+          formatMedia.style.setProperty("--format-bg", `url('${button.dataset.image}')`);
+          formatMedia.style.setProperty("--format-mobile-position", button.dataset.mobilePosition || "center center");
         }
+      }
+
+      const items = (button.dataset.items || "")
+        .split("|")
+        .map((item) => item.trim())
+        .filter(Boolean);
+
+      formatDisplayList.innerHTML = items.map((item) => `<li>${item}</li>`).join("");
+
+      const formatDisplay = document.querySelector(".format-display");
+      const siteHeader = document.querySelector(".site-header");
+      if (formatDisplay && window.matchMedia("(max-width: 900px)").matches) {
+        const headerOffset = siteHeader ? siteHeader.offsetHeight : 0;
+        const targetTop = formatDisplay.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.setTimeout(() => {
+          window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+        }, 60);
       }
     });
   });
@@ -374,80 +378,3 @@ if (formatFeatureButtons.length && formatDisplayTitle && formatDisplayText && fo
   });
 })();
 
-
-// Barra flotante: prueba visual rápida al cargar y auto-ocultación con reaparición fiable.
-(() => {
-  const bars = Array.from(document.querySelectorAll('.mobile-bottom-bar'));
-  if (!bars.length) return;
-
-  const HIDE_AFTER_MS = 6000;
-  const TEST_VISIBLE_MS = 650;
-  const TEST_HIDDEN_MS = 650;
-  let hideTimer = null;
-  let reappearTimer = null;
-  let testTimers = [];
-  let testing = false;
-
-  const setHidden = (hidden) => {
-    bars.forEach((bar) => bar.classList.toggle('auto-hidden', hidden));
-  };
-
-  const clearTestTimers = () => {
-    testTimers.forEach((timer) => window.clearTimeout(timer));
-    testTimers = [];
-    testing = false;
-  };
-
-  const scheduleAutoHide = () => {
-    if (hideTimer !== null) window.clearTimeout(hideTimer);
-    if (reappearTimer !== null) window.clearTimeout(reappearTimer);
-    hideTimer = window.setTimeout(() => {
-      setHidden(true);
-      hideTimer = null;
-      // Si no hay interacción, vuelve a mostrarse sola tras una pausa breve.
-      reappearTimer = window.setTimeout(() => {
-        setHidden(false);
-        reappearTimer = null;
-        scheduleAutoHide();
-      }, 1500);
-    }, HIDE_AFTER_MS);
-  };
-
-  // Cualquier interacción, incluida la pulsación de la propia barra,
-  // cancela la prueba si aún está activa, muestra la barra y reinicia el plazo.
-  const showAndRestart = () => {
-    if (testing) clearTestTimers();
-    if (reappearTimer !== null) window.clearTimeout(reappearTimer);
-    reappearTimer = null;
-    setHidden(false);
-    scheduleAutoHide();
-  };
-
-  const runQuickTest = () => {
-    clearTestTimers();
-    testing = true;
-    setHidden(false);
-    for (let i = 0; i < 3; i++) {
-      const hideAt = TEST_VISIBLE_MS + i * (TEST_VISIBLE_MS + TEST_HIDDEN_MS);
-      testTimers.push(window.setTimeout(() => setHidden(true), hideAt));
-      testTimers.push(window.setTimeout(() => setHidden(false), hideAt + TEST_HIDDEN_MS));
-    }
-    const finishAt = 3 * (TEST_VISIBLE_MS + TEST_HIDDEN_MS);
-    testTimers.push(window.setTimeout(() => {
-      testing = false;
-      testTimers = [];
-      scheduleAutoHide();
-    }, finishAt));
-  };
-
-  // Usar document y window mejora la detección en navegadores táctiles y de escritorio.
-  ['pointerdown', 'click', 'touchstart', 'keydown', 'scroll', 'wheel'].forEach((eventName) => {
-    document.addEventListener(eventName, showAndRestart, { passive: true, capture: true });
-  });
-  window.addEventListener('focus', showAndRestart);
-  document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) showAndRestart();
-  });
-
-  runQuickTest();
-})();

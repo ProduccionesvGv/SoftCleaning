@@ -1,62 +1,80 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#171b1d">
-<meta name="description" content="Instalación, formateo y configuración inicial de Windows. SoftReset.">
-<title>Instalación y formateo de Windows | SoftReset</title>
-<style>
-:root{--bg:#171b1d;--surface:#20282e;--surface-glass:rgba(20,28,34,.94);--text:#f5f6f7;--muted:#c7d0d8;--blue:#279cf0;--green:#78b936;--line:rgba(220,235,245,.15);--max:1120px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
-.header{position:sticky;top:0;z-index:20;background:rgba(23,27,29,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{height:88px;display:flex;align-items:center;justify-content:center;gap:18px}.logo{display:flex;align-items:center;justify-content:center}.logo img{display:block;width:270px;max-height:68px;object-fit:contain}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 22px;border-radius:999px;background:linear-gradient(105deg,#249cf2,#40ae79);font-weight:750;color:#fff;transition:filter .2s,transform .2s}.button:hover{filter:brightness(1.08);transform:translateY(-1px)}
-.hero{position:relative;min-height:610px;display:flex;align-items:flex-end;padding:70px 0 64px;isolation:isolate;background:#101820 url('assets/img/configuracion-inicial-equipo.png') center 43%/cover no-repeat}.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(7,15,22,.18),rgba(7,15,22,.04) 55%,rgba(7,15,22,.2)),linear-gradient(0deg,rgba(7,15,22,.8),transparent 65%)}.hero-card{width:min(590px,68%);padding:32px 34px 30px;background:var(--surface-glass);border:1px solid rgba(255,255,255,.13);border-radius:22px;box-shadow:0 22px 60px rgba(0,0,0,.34);backdrop-filter:blur(16px);transform:translateY(20px)}.eyebrow{display:inline-flex;align-items:center;gap:9px;margin:0 0 12px;color:#8bcfff;font-size:11px;font-weight:850;letter-spacing:.16em;text-transform:uppercase}.eyebrow:before{content:"";width:20px;height:2px;background:var(--blue)}h1,h2,p{margin-top:0}.hero h1{font-size:clamp(38px,5.5vw,64px);line-height:1.03;letter-spacing:-.045em;margin-bottom:14px;max-width:550px}.hero h1 span{color:var(--blue)}.hero-card p{font-size:17px;color:#d5dee6;margin-bottom:22px;max-width:480px}.hero-meta{display:flex;flex-wrap:wrap;gap:9px 18px;margin-top:22px;color:#e1e8ed;font-size:12px}.hero-meta span:before{content:"✓";color:#63d98a;font-weight:900;margin-right:7px}
-/* Primera tarjeta: mostrar la imagen completa con Windows 11, 10 y 7 visibles. */
-.features > .feature:first-child .feature-photo {
-  background: #111a21;
-}
-.features > .feature:first-child .feature-photo img {
-  object-fit: contain;
-  object-position: center top;
-}
-/* Cuadro de activación: la imagen llena el marco sin dejar bandas vacías. */
-.features > .feature:nth-child(2) .feature-photo img {
-  object-fit: cover;
-  object-position: center center;
-  background: transparent;
-}
-.features > .feature:nth-child(2) .feature-photo:after {
-  background: linear-gradient(0deg,rgba(8,16,23,.28),rgba(8,16,23,.02));
-}
-/* Secciones fotográficas con tarjetas superpuestas */
-.features{padding:34px 0 22px;overflow:hidden}.feature{position:relative;min-height:360px;margin:0 auto 24px;display:flex;align-items:flex-end;isolation:isolate}.feature:last-child{margin-bottom:8px}.feature-photo{position:absolute;inset:0 0 0 8%;z-index:-2;overflow:hidden;border-radius:24px;background:#111a21}.feature-photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .65s ease}.feature:hover .feature-photo img{transform:scale(1.025)}.feature-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,16,23,.08),rgba(8,16,23,.12) 45%,rgba(8,16,23,.68)),linear-gradient(0deg,rgba(8,16,23,.22),transparent 60%)}.feature-card{width:min(500px,52%);margin:0 0 -24px 0;padding:28px 30px 29px;border-radius:20px;background:var(--surface-glass);border:1px solid rgba(255,255,255,.13);box-shadow:0 20px 50px rgba(0,0,0,.34);backdrop-filter:blur(16px)}.feature-card .eyebrow{margin-bottom:9px}.feature h2{font-size:clamp(26px,3.2vw,38px);line-height:1.1;letter-spacing:-.035em;margin:0 0 12px}.feature-card p{font-size:15px;color:var(--muted);margin:0 0 16px}.specs{list-style:none;padding:0;margin:0;display:grid;gap:8px}.specs li{display:flex;align-items:flex-start;gap:10px;color:#f0f4f6;font-size:13px}.specs li:before{content:"✓";flex:0 0 19px;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;background:rgba(120,185,54,.16);color:#8cdb64;font-weight:900;font-size:12px;margin-top:1px}.feature-number{position:absolute;top:22px;left:calc(8% + 22px);font-size:11px;letter-spacing:.18em;font-weight:800;color:#d7e4ec;text-shadow:0 2px 12px #000}.feature.reverse{justify-content:flex-end}.feature.reverse .feature-photo{inset:0 8% 0 0}.feature.reverse .feature-photo:after{background:linear-gradient(270deg,rgba(8,16,23,.08),rgba(8,16,23,.12) 45%,rgba(8,16,23,.72)),linear-gradient(0deg,rgba(8,16,23,.22),transparent 60%)}.feature.reverse .feature-card{margin-right:0}.feature.reverse .feature-number{left:auto;right:calc(8% + 22px)}
-/* La tarjeta de Office necesita mostrar el logotipo completo, sin un recorte excesivo. */
-#programas-oficina .feature-photo img{object-fit:contain;object-position:center top;background:#e8e8e8;transform:translateY(-28px)}
-#programas-oficina .feature-photo{overflow:hidden}
-#programas-oficina:hover .feature-photo img{transform:translateY(-28px) scale(1.025)}
-#programas-oficina .feature-photo:after{background:linear-gradient(0deg,rgba(8,16,23,.22),transparent 55%)}
-.end{position:relative;isolation:isolate;overflow:hidden;padding:76px 0 82px;background:#101820 url('assets/img/formateo.png') center 48%/cover no-repeat}.end:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,17,24,.96),rgba(9,17,24,.72) 58%,rgba(9,17,24,.36))}.end-card{max-width:660px;padding:30px 32px;background:rgba(18,27,34,.84);border:1px solid var(--line);border-radius:20px;backdrop-filter:blur(12px)}.end h2{font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.03em;margin:0 0 10px}.end p{color:var(--muted);margin:0 0 22px}.footer{background:#111619;border-top:1px solid var(--line);padding:20px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:18px;color:#aebac4;font-size:12px}.footer img{width:165px;max-height:42px;object-fit:contain}
-@media(max-width:700px){.wrap{width:calc(100% - 30px)}.nav{height:76px}.logo img{width:220px;max-height:60px}.hero{min-height:600px;padding:40px 0 42px;background-position:58% center}.hero:before{background:linear-gradient(0deg,rgba(7,15,22,.94),rgba(7,15,22,.26) 80%)}.hero-card{width:100%;padding:25px 23px 24px;transform:translateY(12px);border-radius:19px}.hero h1{font-size:clamp(36px,10vw,48px)}.hero-card p{font-size:15px}.features{padding:24px 0 12px}.feature,.feature.reverse{min-height:500px;margin-bottom:28px;align-items:flex-end;justify-content:flex-start}.feature-photo,.feature.reverse .feature-photo{inset:0 0 65px;border-radius:20px}.feature-photo:after,.feature.reverse .feature-photo:after{background:linear-gradient(0deg,rgba(8,16,23,.38),rgba(8,16,23,.02) 75%)}.feature-card,.feature.reverse .feature-card{width:calc(100% - 20px);margin:0 10px -2px;padding:21px 20px 22px;border-radius:18px}.feature h2{font-size:29px}.feature-card p{font-size:14px}.feature-number,.feature.reverse .feature-number{left:18px;right:auto;top:18px}.end{padding:52px 0;background-position:60% center}.end-card{padding:25px 22px}.footer-row{align-items:flex-start;flex-direction:column;gap:12px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.feature-photo img,.button{transition:none}}
-
-/* Cuadro de activación: mostrar el paquete completo de Windows y Office */
-.feature-photo.activation-photo { background: #f4f5f8; }
-.feature-photo.activation-photo img { object-fit: contain; object-position: center top; transform: none !important; background: #f4f5f8; }
-.feature-photo.activation-photo:after { background: linear-gradient(0deg, rgba(8,16,23,.18), rgba(8,16,23,0) 45%); }
-</style>
+<meta charset="utf-8"/>
+<meta content="light dark" name="color-scheme"/><meta content="#f5f7fb" id="themeColorMeta" name="theme-color"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Formateo + Instalación de Windows - SoftReset" name="description"/>
+<title>Formateo + Instalación de Windows | SoftReset</title>
+<script id="initialThemeScript">(function(){try{var t=localStorage.getItem('softreset-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){document.documentElement.dataset.theme='light';}})();</script><link href="css/styles.css" rel="stylesheet"/>
 </head>
-<body>
-<header class="header"><div class="wrap nav"><a class="logo" href="#inicio" aria-label="SoftReset, inicio"><img src="assets/img/softreset-logo-horizontal-dark.png" alt="SoftReset, formateo e instalación de Windows"></a></div></header>
-<main id="inicio">
-<section class="hero"><div class="wrap"><div class="hero-card"><span class="eyebrow">Formateo e instalación de Windows</span><h1>Tu PC lista para <span>volver a rendir.</span></h1><p>Instalación limpia, preparación del disco y configuración inicial para que vuelvas a trabajar con tu equipo.</p></div></div></section>
-<section class="features" aria-label="Qué incluye el servicio">
-<article class="feature"><div class="feature-photo"><img src="assets/img/instalacion-limpia-windows.jpeg" alt="Versiones de Windows compatibles" loading="lazy"></div><div class="feature-card"><span class="eyebrow">Instalación</span><h2>Windows instalado desde cero</h2><p>Instalamos una copia limpia de Windows y dejamos el sistema preparado para su configuración inicial.</p><ul class="specs"><li>Instalación limpia del sistema operativo</li><li>Formateo del disco según lo acordado</li><li>Preparación de SSD o HDD</li><li>Versión elegida según compatibilidad del equipo</li><li>Preparación para las actualizaciones disponibles</li></ul></div></article>
-<article class="feature"><div class="feature-photo activation-photo"><img src="assets/img/activacion-windows-office-banner.jpg" alt="Windows 11 Pro, Microsoft Office y símbolo de licencia válida" loading="lazy"></div><div class="feature-card"><span class="eyebrow">Activación</span><h2>Activación de Windows con licencia válida</h2><p>Comprobamos el estado de activación y activamos Windows cuando se dispone de una licencia válida compatible.</p><ul class="specs"><li>Verificación del estado de activación</li><li>Uso de la licencia válida disponible</li><li>Sin prometer licencias que no se hayan proporcionado</li></ul></div></article>
-<article class="feature reverse"><div class="feature-photo"><img src="assets/img/configuracion-inicial-equipo.png" alt="Configuración inicial de Windows en una notebook" loading="lazy"></div><div class="feature-card"><span class="eyebrow">Configuración</span><h2>Los ajustes esenciales, revisados</h2><p>Dejamos el sistema configurado y comprobamos el funcionamiento básico antes de dar por terminado el servicio.</p><ul class="specs"><li>Instalación de controladores esenciales disponibles</li><li>Configuración inicial del sistema</li><li>Comprobación básica del funcionamiento</li></ul></div></article>
-<article class="feature reverse" id="programas-oficina"><div class="feature-photo"><img src="assets/img/programas-basicos.jpg" alt="Microsoft Office y programas de oficina" loading="lazy"></div><div class="feature-card"><span class="eyebrow">Programas de oficina</span><h2>Herramientas para trabajar y estudiar</h2><p>Preparamos el equipo con herramientas acordadas según el uso que le des, priorizando opciones compatibles y legítimas.</p><ul class="specs"><li>Herramientas de oficina según necesidad</li><li>Navegador y utilitarios de uso diario</li><li>Lector de archivos PDF</li><li>Instalación de software con licencia válida o alternativas gratuitas</li></ul></div></article>
+<body class="service-detail-page formateo-page">
+<header class="site-header site-header--horizontal-logo" id="siteHeader">
+<div class="container header-content">
+<a aria-label="Volver al inicio de SoftReset" class="brand brand-logo brand-logo--horizontal" href="index.html#inicio">
+<img alt="SoftReset - Formateo e instalación de Windows" src="assets/img/softreset-logo-horizontal.png"/>
+</a>
+</div>
+</header>
+<main class="service-detail-main formateo-detail-main">
+<section class="format-showcase-section">
+<div class="container">
+<div class="format-showcase reveal" id="formatShowcase">
+<article aria-live="polite" class="format-display"><div class="format-display-title"><h3 id="formatDisplayTitle">Instalación limpia de Windows</h3></div><div aria-hidden="true" class="format-display-media" style="--format-bg: url('assets/img/instalacion-limpia-windows.jpeg');">
+<img alt="Instalación limpia de Windows" id="formatDisplayImage" src="assets/img/instalacion-limpia-windows.jpeg" style="--format-mobile-position: 64% center; --format-mobile-scale: 1.16;"/>
+</div><div class="format-display-copy"><p id="formatDisplayText">Formateo completo del disco e instalación de Windows desde cero, evitando restos de instalaciones anteriores.</p><ul id="formatDisplayList">
+<li>Reinstalación limpia del sistema Operativo</li>
+<li>desfragmentación de disco antes de instalar</li>
+<li>Activacion de Windows</li>
+</ul></div></article>
+<section aria-label="Opciones del servicio de formateo" class="format-controls-zone">
+<div class="format-feature-list" role="list">
+<button class="format-feature-button active" data-alt="Instalación limpia de Windows" data-image="assets/img/instalacion-limpia-windows.jpeg" data-items="Reinstalación limpia del sistema Operativo|desfragmentación de disco antes de instalar|Activacion de Windows" data-mobile-position="64% center" data-mobile-scale="1.16" data-step="01" data-text="Formateo completo del disco e instalación de Windows desde cero, evitando restos de instalaciones anteriores." data-title="Instalación limpia de Windows" role="listitem" type="button">
+<span>Instalación limpia de Windows</span>
+<strong aria-hidden="true">−</strong>
+</button>
+<button class="format-feature-button" data-alt="Drivers y actualizaciones de componentes" data-image="assets/img/drivers-actualizaciones.jpg" data-items="Drivers de video, sonido, red y chipset|Actualizaciones iniciales de Windows|Revisión básica de funcionamiento" data-mobile-position="54% center" data-mobile-scale="1.16" data-step="02" data-text="Instalación de controladores principales para que el equipo reconozca correctamente sus componentes." data-title="Drivers y actualizaciones" role="listitem" type="button">
+<span>Drivers y actualizaciones</span>
+<strong aria-hidden="true">+</strong>
+</button>
+<button class="format-feature-button" data-alt="Programas de oficina para Windows" data-image="assets/img/programas-basicos.jpg" data-items="Navegador y herramientas de uso diario|Lector PDF y utilitarios básicos|Programas acordados antes del trabajo" data-mobile-position="50% center" data-mobile-scale="1.16" data-step="03" data-text="Instalación de programas básicos para trabajar, estudiar y usar el equipo desde el primer momento." data-title="Programas de oficina" role="listitem" type="button">
+<span>Programas de oficina</span>
+<strong aria-hidden="true">+</strong>
+</button>
+<button class="format-feature-button" data-alt="Optimización avanzada de Windows" data-image="assets/img/configuracion-inicial-equipo.png" data-items="Limpieza de archivos temporales y residuos del sistema|Eliminación de programas innecesarios o que no se usan|Ajustes de inicio y procesos en segundo plano|Optimización avanzada de Windows para acelerar el rendimiento" data-mobile-position="62% center" data-mobile-scale="1.16" data-step="04" data-text="Limpieza y ajustes del sistema para quitar elementos innecesarios, reducir procesos en segundo plano y mejorar el rendimiento general." data-title="Optimización avanzada de Windows" role="listitem" type="button">
+<span>Optimización avanzada de Windows</span>
+<strong aria-hidden="true">+</strong>
+</button>
+</div>
+<div class="format-showcase-actions">
+<a class="format-whatsapp-link" href="index.html#contacto">Consultar este servicio</a>
+</div>
 </section>
-<section class="end" id="contacto"><div class="wrap"><div class="end-card"><span class="eyebrow">SoftReset</span><h2>¿Necesitás instalar o formatear Windows?</h2><p>Contanos qué equipo tenés y qué necesitás hacer. Te orientamos sobre el servicio adecuado.</p></div></div></section>
+</div>
+</div>
+</section>
 </main>
-
+<nav aria-label="Navegación rápida" class="mobile-bottom-bar">
+<div class="mobile-bottom-links">
+<a href="index.html#servicios">Servicios</a>
+<a href="index.html#planes">Planes</a>
+<a href="index.html#contacto">Contacto</a>
+</div>
+<button aria-label="Activar modo oscuro" aria-pressed="false" class="theme-toggle" title="Cambiar tema" type="button">
+<svg aria-hidden="true" class="theme-toggle-icon" focusable="false" viewbox="0 0 48 48">
+<circle cx="24" cy="24" fill="none" r="12.5" stroke="currentColor" stroke-width="3.5"></circle>
+<path d="M27.5 14.5c-4.4 1.3-7.6 5.4-7.6 10.2 0 5.9 4.8 10.7 10.7 10.7 1.1 0 2.2-.2 3.2-.5-2.2 2.5-5.4 4.1-9 4.1-6.6 0-12-5.4-12-12 0-6.2 4.7-11.3 10.8-11.9 1.4-.2 2.7 0 3.9.4Z" fill="currentColor"></path>
+<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.2">
+<path d="M24 3.5v5"></path><path d="M24 39.5v5"></path><path d="M3.5 24h5"></path><path d="M39.5 24h5"></path>
+<path d="m9.5 9.5 3.6 3.6"></path><path d="m34.9 34.9 3.6 3.6"></path><path d="m38.5 9.5-3.6 3.6"></path><path d="m13.1 34.9-3.6 3.6"></path>
+</g>
+</svg>
+</button>
+</nav><footer class="service-detail-footer">
+<div class="container">
+<p>© 2026 SoftReset. Limpieza, formateo y mantenimiento de PC &amp; notebooks.</p>
+</div>
+</footer>
+<script src="js/main.js"></script>
 </body>
 </html>
